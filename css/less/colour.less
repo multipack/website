@@ -1,0 +1,317 @@
+// Palette
+
+@dark-blue: #295566;
+@mid-blue: #69bcde;
+@mid-grey: #dee1e3;
+@light-grey: #f0f3f5;
+@blue-grey: #8c9ca3;
+@orange: #B9551E;
+@orange-grey: #E3E0DE;
+
+// There should be no reference to palette colours
+// in the main styles - only variables should
+// reference them.
+
+@bg: white;
+@color: @dark-blue;
+@link: @color;
+@link-hover: darken(@color, 10%);
+
+@section-bg: @light-grey;
+@section-alternate: @blue-grey;
+@section-nav-link-bg: darken(@section-bg, 3%);
+@section-nav-link-bg-hover: darken(@section-bg, 6%);
+@section-nav-link-bg-dark: darken(@section-bg, 10%);
+
+@form-text-bg: @mid-grey;
+@form-outline: @mid-blue;
+@form-button-bg: @color;
+@form-button-bg-hover: lighten(@color, 10%);
+
+// These colours must not reference each other,
+// to avoid crazy cross-dependency down the line
+
+@multipack-bg: @color;
+@multipack-color: @mid-grey;
+@multipack-alternate: @mid-blue;
+@multipack-highlight: white;
+@multipack-link: @light-grey;
+@multipack-link-bg: lighten(@multipack-bg, 5%);
+@multipack-link-bg-hover: lighten(@multipack-bg, 10%);
+
+@leampack-bg: @mid-blue;
+@leampack-color: @color;
+@leampack-alternate: @light-grey;
+@leampack-highlight: white;
+@leampack-link: @light-grey;
+@leampack-link-bg: darken(@leampack-bg, 5%);
+@leampack-link-bg-hover: darken(@leampack-bg, 10%);
+
+@staffspack-bg: @blue-grey;
+@staffspack-color: @color;
+@staffspack-alternate: @light-grey;
+@staffspack-highlight: white;
+@staffspack-link: @light-grey;
+@staffspack-link-bg: darken(@staffspack-bg, 5%);
+@staffspack-link-bg-hover: darken(@staffspack-bg, 10%);
+
+@presents-bg: @orange;
+@presents-color: @orange-grey;
+@presents-alternate: darken(@orange, 10%);
+@presents-highlight: white;
+@presents-link: white;
+@presents-link-bg: lighten(@presents-bg, 2%);
+@presents-link-bg-hover: lighten(@presents-bg, 5%);
+
+// color styles
+
+body {
+  background: @bg;
+  color: @color;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:visited {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  color: @link;
+}
+  a:hover, a:active {
+    color: @link-hover;
+    border-bottom: 0.088em solid @multipack-bg;
+  }
+p a {
+  border-bottom: 0.088em dotted @link;
+}
+
+::-moz-selection {
+  color: white;
+  background: @multipack-bg;
+}
+::selection {
+  color: white;
+  background: @multipack-bg;
+}
+  
+header nav {
+  a, a:visited {
+    background: @section-nav-link-bg;
+    outline: none;
+    border-left: 0.444em solid @section-bg;
+  }
+
+  a:hover, a:active {
+    border-bottom: none;
+    background: @section-nav-link-bg-hover;
+  }
+}
+
+/* Event Colours */
+
+.event.focus {
+  border-top: .1875em solid white;
+}
+
+.event.focus .map {
+  display: none;
+}
+
+.event h2 {
+  color: @multipack-bg;
+}
+
+.event .synopsis {
+  margin-top: 1em;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+/* Multipack */
+
+.multipack.event, .multipack.tweet {
+  background-color: @multipack-bg;
+  color: @multipack-color;
+}
+  .multipack.event h2, .multipack.tweet footer {
+    color: @multipack-color;
+  }
+  .multipack.event .date, .multipack.event .location, .multipack.event .synopsis {
+    color: @multipack-alternate;
+  }
+  .multipack.event .type {
+    color: @multipack-highlight;
+  }
+  .multipack.event nav a, .multipack.tweet a {
+    color: @multipack-link;
+    border-color: @multipack-link;
+    background-color: @multipack-link-bg;
+  }
+    .multipack.event nav a:hover, .multipack.tweet a:hover {
+      background-color: @multipack-link-bg-hover;
+      border-bottom: none;
+    }
+    .multipack.event a, .multipack.event a:visited {
+      color: @multipack-link;
+      border-color: @multipack-link;
+    }
+    .multipack.tweet:before {
+      color: @multipack-link;
+    }
+
+/* Leampack */
+
+.leampack.event, .leampack.tweet {
+  background-color: @leampack-bg;
+  color: @leampack-color;
+}
+  .leampack.event h2, .leampack.tweet footer {
+    color: @leampack-color;
+  }
+  .leampack.event .date, .leampack.event .location, .leampack.event .synopsis {
+    color: @leampack-alternate;
+  }
+  .leampack.event .type {
+    color: @leampack-highlight;
+  }
+  .leampack.event nav a, .leampack.tweet a {
+    color: @leampack-link;
+    background-color: @leampack-link-bg;
+  }
+    .leampack.event nav a:hover, .leampack.tweet a:hover {
+      background-color: @leampack-link-bg-hover;
+      border-bottom: none;
+    }
+    .leampack.event a, .leampack.event a:visited {
+      color: @leampack-link;
+      border-color: @leampack-link;
+    }
+    .leampack.tweet:before {
+      color: @leampack-link;
+    }
+    
+/* Staffspack */
+
+.staffspack.event, .staffspack.tweet {
+  background-color: @staffspack-bg;
+  color: @staffspack-color;
+}
+  .staffspack.event h2, .staffspack.tweet footer {
+    color: @staffspack-color;
+  }
+  .staffspack.event .date, .staffspack.event .location, .staffspack.event .synopsis {
+    color: @staffspack-alternate;
+  }
+  .staffspack.event .type {
+    color: @staffspack-highlight;
+  }
+  .staffspack.event nav a, .staffspack.tweet a {
+    color: @staffspack-link;
+    background-color: @staffspack-link-bg;
+  }
+    .staffspack.event nav a:hover, .staffspack.tweet a:hover {
+      background-color: @staffspack-link-bg-hover;
+      border-bottom: none;
+    }
+    .staffspack.event a, .staffspack.event a:visited {
+      color: @staffspack-link;
+      border-color: @staffspack-link;
+    }
+    .staffspack.tweet:before {
+      color: @staffspack-link;
+    }
+
+/* Presents */
+.presents.event, .presents.tweet {
+  background-color: @presents-bg;
+  color: @presents-color;
+}
+  .presents.event h2, .presents.tweet footer {
+    color: @presents-color
+  }
+  .presents.event .date, .presents.event .location {
+    color: @presents-alternate;
+  }
+  .presents.event .type {
+    color: @presents-highlight;
+  }
+  .presents.event nav a, .presents.tweet a {
+    background-color: @presents-link-bg;
+  }
+    .presents.event nav a:hover, .presents.tweet a:hover {
+      background-color: @presents-link-bg-hover;
+      border-bottom: none;
+    }
+    .presents.event a, .presents.event a:visited {
+      color: @presents-link;
+      border-color: @presents-link;
+    }
+
+section {
+  border-top: .1875em solid white;
+  background: @section-bg;
+
+  &[role=color] {
+    box-shadow: 0 -4px 6px -4px rgba(0,0,0,0.2);
+  }
+  h2 {
+    color: @section-alternate;
+  }
+}
+ 
+
+nav {
+  .multipack a:hover {
+    border-color: @multipack-bg;
+  }
+  .leampack a:hover {
+    border-color: @leampack-bg;
+  }
+  .staffspack a:hover {
+    border-color: @staffspack-bg;
+  }
+  .presents a:hover {
+    border-color: @presents-bg;
+  }
+}
+
+.photos li {
+  background: @section-nav-link-bg;
+
+  a:hover {
+    background: @section-nav-link-bg-dark;
+  }
+  img {
+    box-shadow: 0 1px 3px @section-nav-link-bg-dark;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  }
+  .more a {
+    color: @section-alternate;
+  }
+}
+  
+.newsletter {
+  input[type=email] {
+    background: @form-text-bg;
+  }
+    input[type=email]:focus {
+      outline: 1px solid @form-outline;
+    }
+  input[type=submit] {
+    background: @form-button-bg;
+  }
+    input[type=submit]:hover {
+      background-color: @form-button-bg-hover;
+    }
+}
+
+.top, .top:visited {
+  background: @section-nav-link-bg;
+  background: rgba(0,0,0,0.2);
+  color: @link;
+
+  &:hover, &:active {
+    background: rgba(0,0,0,0.3);
+    color: @link-hover;
+    border-bottom: none;
+  }
+}

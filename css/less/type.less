@@ -1,0 +1,153 @@
+// Base
+
+body {
+  font-family: 'open-sans', 'Open Sans', sans-serif;
+  font-size: 100%; /* 16px */
+  line-height: 1.618;
+}
+
+// Links
+
+a, a:visited {
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 0.132em;
+}
+  a:hover, a:visited {
+  }
+
+// General
+
+h1, h2, h3 {
+  font-size: 3.375em;
+  margin: 0;
+  letter-spacing: -.06em;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+p {
+  margin: 0.667em 0;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1em 2em;
+
+  & + p {
+    margin: 1em 2em;
+  }
+
+}
+  
+dt {
+  font-weight: bold;
+}
+
+figure {
+  padding-left: 1em;
+  margin-left: 1em;
+  border-left: 1px solid rgba(0,0,0,.1);
+}
+
+figcaption {
+  
+  h4, p {
+    margin: 0.5em 0;
+  }
+
+}
+  
+small {
+  font-size: 0.667em;
+  text-transform: uppercase;
+}
+
+.example {
+  padding: 1em;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+code {
+  color: #792;
+}
+
+ol.code {
+  color: #999;
+  font: 0.875em/1.7143 Menlo,Monaco,'Courier New',Courier,monospace;
+
+  li {
+    list-style: decimal-leading-zero;
+    background: #f0f0f0;
+    margin: 0 0 -1px 0;
+    border-top: 1px solid #fff;
+    padding: 0 0.5em;
+
+    code {
+      font-size: 1em;
+    }
+  }
+}
+
+// Specific
+
+.branding h1, .branding h2,
+.event h1, .event h2, .event h3 {
+  line-height: 1.05;
+}
+
+
+.event header h1 {
+  font-size: 5.063em;
+  margin-left: -3px;
+}
+
+.upcoming {
+  .event .type {
+    font-weight: normal;
+  }
+  .h2 {
+    font-weight: normal;
+  }
+}
+
+section {
+
+  h1 {
+    text-transform: uppercase;
+    margin-left: -3px;
+  }
+  
+  h2, h3 {
+    font-size: 2.25em;
+    font-weight: 100;
+  }
+
+}
+
+.photos .more a {
+  font-weight: 100;
+  font-size: 1em;
+}
+
+menu h3 {
+  line-height: 1.618;
+  margin-left: 0;
+  font-size: 1.5em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+header nav a {
+  font-weight: 400;
+  color: #8c9ca3;
+  text-transform: uppercase;
+}
+
+footer .footer {
+  font-size: 0.667em;
+}

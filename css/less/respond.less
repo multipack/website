@@ -1,0 +1,120 @@
+// Responsive styles
+
+img, object, video {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  
+  .event, section {
+    padding-left: 8.617021277%;
+    padding-right: 8.617021277%;
+  }
+  
+  .upcoming .folded.event .venue {
+    max-width: 42%;
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .container {
+    width: auto;
+    margin: 0;
+  }
+  
+  .upcoming .folded.event .venue {
+    max-width: 42%;
+  }
+  
+}
+
+@media screen and (max-width: 820px) {
+  
+  .upcoming .folded.event .venue {
+    max-width: 29%;
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+  
+  .folded.event .venue {
+    display: none;
+  }
+
+  .social-media {
+    width: auto;
+    float: none;
+  }
+  
+  form div {
+    margin-bottom: 1em;
+    em {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+    textarea {
+      width: 95%;
+    }
+  }
+
+  .photos li {
+    width: 23%;
+  }
+  
+  .top {
+    display: block;
+  }
+  
+}
+
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  
+  .event {
+    font-size: 0.8em;
+    header h1 {
+      font-size: 6em;
+    }
+  }
+  .folded {
+    font-size: 1em; 
+    a {
+      font-size: 0.8em;
+    }
+    h2 {
+      margin-right: 0.667em;
+      font-size: 1em;
+      padding: .444em 0 3px;
+    }
+  }
+  .focus {
+    .map {
+      display: none;
+    }
+    .mapimage {
+      display: block;
+    }
+  }
+  
+  section h3 {
+    font-size: 1.5em;
+  }
+  .tweet {
+    h2 {
+      margin-bottom: 0.5em;
+    }
+    p {
+      clear: both;
+    }
+  }
+
+  footer {
+    .social-media, .newsletter {
+      float: none;
+      width: auto;
+    }
+  }
+
+}

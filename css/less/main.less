@@ -45,6 +45,9 @@ section > article {
   .findmore {
     display: none;
   }
+  .findless {
+    float: right;
+  }
         
   h2 {
     display: inline;
@@ -55,6 +58,22 @@ section > article {
     text-transform: uppercase;
   }
 
+  &.focus {
+    border-top: .1875em solid white;
+
+    &.next {
+      border-top: none;
+    }
+
+    .eventfocus {
+      display: none;
+    }
+
+    .map {
+      display: none;
+    }
+  }
+
 }
   
 .folded {
@@ -62,8 +81,14 @@ section > article {
   padding: 1.5em 19.3882979%;
  
   header {
-    .visuallyhidden;
+    h1 {
+      .visuallyhidden;
+    }
+    p {
+      margin-top: 0;
+    }
   }
+
   h2 {
     font-size: 1.5em;
     display: block;
@@ -100,15 +125,50 @@ section > article {
     text-overflow: ellipsis;
   }
 }
-
-.next.event {
-
-  .findmore {
-    display: block;
-  }
-
-}
   
+.upcoming {
+  h3 {
+    margin-bottom: 0.667em;
+  }
+  h2 {
+    color: #295566;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .venue {
+    padding-bottom: 0.148em;
+    max-width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .event {
+    header {
+      h1 {}
+      p {
+        margin-top: 0;
+      }
+    }
+    &.folded {
+      header {
+        .visuallyhidden;
+      }
+    }
+    display: block;
+    margin-bottom: 0.444em;
+    box-shadow: inset 0 0 .444 rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(255,255,255,1);
+    padding: 1.5em 1.5em;
+  }
+  .event:not(.folded) {
+    .extra {
+      display: inline;
+    }
+  }
+}
+
 section {
   padding: 3.375em 19.3882979%;
   header {
@@ -152,46 +212,6 @@ section {
   .mapimage {
     margin-top: 1em;
     display: none;
-  }
-}
-  
-.upcoming {
-  h3 {
-    margin-bottom: 0.667em;
-  }
-  h2 {
-    color: #295566;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  .venue {
-    padding-bottom: 0.148em;
-    max-width: 25%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .event {
-    header {
-      h1 {
-        
-      }
-      p {
-        margin-top: 0;
-      }
-    }
-    display: block;
-    margin-bottom: 0.444em;
-    box-shadow: inset 0 0 .444 rgba(0,0,0,.2);
-    border-bottom: 1px solid rgba(255,255,255,1);
-    padding: 1.5em 1.5em;
-  }
-  .event:not(.folded) {
-    .extra {
-      display: inline;
-    }
   }
 }
 
@@ -333,16 +353,19 @@ footer {
 
 .top {
   opacity: 0;
-  -webkit-transition: all .1s linear, top 1s ease, opacity 2s linear;
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   padding: 0.1em 0;
   width: 8.666666%;
   max-width: 2.5em;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: all 0.1s linear, top 1s ease, opacity 2s linear;
+  -moz-transition: all 0.1s linear, top 1s ease, opacity 2s linear;
+  -o-transition: all 0.1s linear, top 1s ease, opacity 2s linear;
+  transition: all 0.1s linear, top 1s ease, opacity 2s linear;
 
   &:before {
     position: relative;

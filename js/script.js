@@ -54,8 +54,6 @@ $(document).ready(function () {
   setTimeout(getTweets, 1000 * 5); // Ahem
 
   // Return to top button
-
-  // Return to top button
   var top = $('.top'), offset = $('section').first().offset().top;
   var hasTransitions = $('html').hasClass('csstransitions');
   var moveFade;
@@ -92,5 +90,14 @@ $(document).ready(function () {
 
   // Trigger a scroll event
   $(window).scroll();
+
+  // Debug info
+  $('.debug').click(function () {
+    if( $(this).height() <= 20 ) {
+      $(this).animate({height: 'auto', background: 'transparent'});
+    } else {
+      $(this).animate({height: '20px', background: '#eee'});
+    }
+  });
   
 });

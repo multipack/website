@@ -1,6 +1,20 @@
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
+# Rewrite non-directory URLs to use index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # RewriteBase /
+
+  # Allow any files or directories that exist to be displayed directly
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Rewrite all other URLs to index.php/URL
+  RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
 # Techniques in here adapted from all over, including:
 #   Kroc Camen: camendesign.com/.htaccess
 #   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/

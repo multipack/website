@@ -108,14 +108,6 @@ header nav {
 
 /* Event Colours */
 
-.event.focus {
-  border-top: .1875em solid white;
-}
-
-.event.focus .map {
-  display: none;
-}
-
 .event h2 {
   color: @multipack-bg;
 }
@@ -131,120 +123,135 @@ header nav {
 .multipack.event, .multipack.tweet {
   background-color: @multipack-bg;
   color: @multipack-color;
-}
-  .multipack.event h2, .multipack.tweet footer {
+
+  &.event h2, &.tweet footer {
     color: @multipack-color;
   }
-  .multipack.event .date, .multipack.event .location, .multipack.event .synopsis {
+  &.event {
+    .date, .location, .synopsis {
     color: @multipack-alternate;
+    }
+    .type {
+      color: @multipack-highlight;
+    }
+    a, a:visited {
+      color: @multipack-link;
+      border-color: @multipack-link;
+    }
   }
-  .multipack.event .type {
-    color: @multipack-highlight;
-  }
-  .multipack.event nav a, .multipack.tweet a {
+  
+  &.event nav a, &.tweet a {
     color: @multipack-link;
     border-color: @multipack-link;
     background-color: @multipack-link-bg;
   }
-    .multipack.event nav a:hover, .multipack.tweet a:hover {
+    &.event nav a:hover, &.tweet a:hover {
       background-color: @multipack-link-bg-hover;
       border-bottom: none;
     }
-    .multipack.event a, .multipack.event a:visited {
-      color: @multipack-link;
-      border-color: @multipack-link;
-    }
-    .multipack.tweet:before {
+    &.tweet:before {
       color: @multipack-link;
     }
+}
 
 /* Leampack */
 
 .leampack.event, .leampack.tweet {
   background-color: @leampack-bg;
   color: @leampack-color;
-}
-  .leampack.event h2, .leampack.tweet footer {
+
+  &.event h2, &.tweet footer {
     color: @leampack-color;
   }
-  .leampack.event .date, .leampack.event .location, .leampack.event .synopsis {
-    color: @leampack-alternate;
-  }
-  .leampack.event .type {
-    color: @leampack-highlight;
-  }
-  .leampack.event nav a, .leampack.tweet a {
-    color: @leampack-link;
-    background-color: @leampack-link-bg;
-  }
-    .leampack.event nav a:hover, .leampack.tweet a:hover {
-      background-color: @leampack-link-bg-hover;
-      border-bottom: none;
+  &.event {
+    .date, .location, .synopsis {
+      color: @leampack-alternate;
     }
-    .leampack.event a, .leampack.event a:visited {
+    .type {
+      color: @leampack-highlight;
+    }
+    a, a:visited {
       color: @leampack-link;
       border-color: @leampack-link;
     }
-    .leampack.tweet:before {
+  }
+  
+  &.event nav a, &.tweet a {
+    color: @leampack-link;
+    background-color: @leampack-link-bg;
+  }
+    &.event nav a:hover, &.tweet a:hover {
+      background-color: @leampack-link-bg-hover;
+      border-bottom: none;
+    }
+    &.tweet:before {
       color: @leampack-link;
     }
+}
     
 /* Staffspack */
 
 .staffspack.event, .staffspack.tweet {
   background-color: @staffspack-bg;
   color: @staffspack-color;
-}
-  .staffspack.event h2, .staffspack.tweet footer {
+
+  &.event h2, &.tweet footer {
     color: @staffspack-color;
   }
-  .staffspack.event .date, .staffspack.event .location, .staffspack.event .synopsis {
-    color: @staffspack-alternate;
-  }
-  .staffspack.event .type {
-    color: @staffspack-highlight;
-  }
-  .staffspack.event nav a, .staffspack.tweet a {
-    color: @staffspack-link;
-    background-color: @staffspack-link-bg;
-  }
-    .staffspack.event nav a:hover, .staffspack.tweet a:hover {
-      background-color: @staffspack-link-bg-hover;
-      border-bottom: none;
+  &.event {
+    .date, .location, .synopsis {
+      color: @staffspack-alternate;
     }
-    .staffspack.event a, .staffspack.event a:visited {
+    .type {
+      color: @staffspack-highlight;
+    }
+    a, a:visited {
       color: @staffspack-link;
       border-color: @staffspack-link;
     }
-    .staffspack.tweet:before {
+  }
+  
+  &.event nav a, &.tweet a {
+    color: @staffspack-link;
+    background-color: @staffspack-link-bg;
+  }
+    &.event nav a:hover, &.tweet a:hover {
+      background-color: @staffspack-link-bg-hover;
+      border-bottom: none;
+    }
+    &.tweet:before {
       color: @staffspack-link;
     }
+}
 
 /* Presents */
 .presents.event, .presents.tweet {
   background-color: @presents-bg;
   color: @presents-color;
-}
-  .presents.event h2, .presents.tweet footer {
+
+  &.event h2, &.tweet footer {
     color: @presents-color
   }
-  .presents.event .date, .presents.event .location {
-    color: @presents-alternate;
-  }
-  .presents.event .type {
-    color: @presents-highlight;
-  }
-  .presents.event nav a, .presents.tweet a {
-    background-color: @presents-link-bg;
-  }
-    .presents.event nav a:hover, .presents.tweet a:hover {
-      background-color: @presents-link-bg-hover;
-      border-bottom: none;
+  &.event {
+    .date, .location {
+      color: @presents-alternate;
     }
-    .presents.event a, .presents.event a:visited {
+    .type {
+      color: @presents-highlight;
+    }
+    a, a:visited {
       color: @presents-link;
       border-color: @presents-link;
     }
+  }
+  &.event nav a, &.tweet a {
+    background-color: @presents-link-bg;
+  }
+    &.event nav a:hover, &.tweet a:hover {
+      background-color: @presents-link-bg-hover;
+      border-bottom: none;
+    }
+}
 
 section {
   border-top: .1875em solid white;

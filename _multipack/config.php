@@ -14,10 +14,10 @@ $config->url = "//multipack.dev";
 $config->salt = "somesalt";
 $config->routes = array(
   "" => "index",
-  "multipack" => "meetup",
-  "leampack" => "meetup",
-  "staffspack" => "meetup",
-  "presents" => "event"
+  "multipack" => "meetup_multipack",
+  "leampack" => "meetup_leampack",
+  "staffspack" => "meetup_staffspack",
+  "presents" => "presents"
 );
 
 // Load any class

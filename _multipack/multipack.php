@@ -15,6 +15,8 @@
      */
     public function index() {
 
+      error_log(print_r($this->model, true));
+
       // Data is passed to the view
       $data = array("title" => "Home", "description" => "The Multipack");
 
@@ -26,20 +28,45 @@
     }
 
     /**
+     * Meetup specifc routes
+     * @param  string $slug [description]
+     * @return [type]       [description]
+     */
+    public function meetup_leampack($slug = '') {
+      $this->meetup('leampack', $slug);
+    }
+
+    public function meetup_multipack($slug = '') {
+      $this->meetup('multipack birmingham', $slug);
+    }
+
+    public function meetup_staffspack($slug = '') {
+      $this->meetup('staffspack', $slug);
+    }
+
+    public function presents($slug = '') {
+    }
+
+    /**
      * serve meetup page
      * 
      * @param  string $slug Lanyrd slug for the event
      */
-    public function meetup($slug = "") {
+    private function meetup($meetup, $slug = '') {
 
       // Data is passed to the view
       $data = array();
 
-      // Get raw events from Lanyrd, or the cache
-      $slug_event = $this->get_event_by_slug($slug);
+      if( $slug !== '' ) {
+        // Get raw events from Lanyrd, or the cache
+        $ev = $this->get_event_by_slug($slug);
+      } else {
+        // Get raw event from Layrd or cache using meetup name
+        $ev = $this->get_event_by_meetup($meetup);
+      }
 
       // Store the ID of the first event
-      $id = $slug_event["id"];
+      $id = $ev["id"];
 
       // Get the event from Lanyrd, or the cache
       $raw_event = $this->get_event_by_id($id);
@@ -79,7 +106,11 @@
 
     }
 
-
+    /**
+     * get single event's details from Lanyrd using slug
+     * @param  string $slug slug event identifier
+     * @return array       event array
+     */
     private function get_event_by_slug($slug) {
 
       // Is it cached? Send it right back
@@ -92,6 +123,30 @@
       $event = $result[0];
       
       Cache::put($slug, $event, strtotime("+6 months"));
+
+      return $event;
+
+    }
+
+    /**
+     * get single event's details from Lanyrd using meetup name
+     * @param  string $meetup meetup name
+     * @return array       event array
+     */
+    private function get_event_by_meetup($meetup) {
+
+      $cache_id = 'event-meetup-' . $meetup;
+
+      // Is it cached? Send it right back
+      if( Cache::cached($cache_id) ) {
+        return Cache::get($cache_id);
+      }
+
+      // Nope, so grab and store it for a long time
+      $result = $this->model->lanyrd->events_search($meetup);
+      $event = $result[0];
+      
+      Cache::put($cache_id, $event, strtotime("+1 week"));
 
       return $event;
 

@@ -6,26 +6,29 @@
    * 
    * Cache
    * 
-   * Cache data as JSON and use it seamlessly (and statically):
+   * Cache data as JSON and use it seamlessly:
    * 
    * Cache::put($id, $data);
    * Cache::get($id);
-   * Cache::cached($id)
-   * Cache::clear([$id]); // NOT IMPLEMENTED (yet)
+   * Cache::cached($id);
+   * Cache::clear([$id]);
    * 
-   * Cache::setPath($dir)
-   * Cache::getPath()
+   * Cache::force($boolean);
+   * 
+   * Cache::setPath($dir);
+   * Cache::getPath();
    */
   
   class Cache {
-
 
     private static $path = __DIR__;
     private static $prefix = "cache-";
     private static $extension = ".json";
     private static $date_format = 'U';
+    private static $force = false;
 
     public static $throw_exceptions = true;
+    public static $log = false;
 
     /**
      * Set cache path
@@ -55,6 +58,16 @@
     }
 
     /**
+     * If $force is true, it will for cache refreshing
+     * for all requests until $force is false
+     * (ie, make sure get() and cached() return false)
+     * @return $force
+     */
+    public static function force($force) {
+      self::$force = $force;
+    }
+
+    /**
      * retrieve cached data with identifier $id
      * 
      * @param $id data identifier
@@ -68,14 +81,19 @@
       $filename = self::$prefix . $id . self::$extension;
       $filepath = self::$path . '/' . $filename;
 
-      error_log("Cache get: " . $id . " - " . $filepath . ". Test: " . ($test ? "Yes." : "No."));
+      if( self::$log ) error_log("Cache get: " . $id . " - " . $filepath . ". Test: " . ($test ? "Yes." : "No."));
+
+      if( self::$force ) {
+        if( self::$log ) error_log("Cache force in effect.");
+        return false;
+      }
 
       $data = null;
 
       // Check file exists
       if( ! file_exists($filepath) ) {
         if( $test ) {
-          error_log("Cache file does not exist.");
+          if( self::$log ) error_log("Cache file does not exist.");
           return false;
         }
         self::__throw($filename . " could not be retrieved from the cache - file does not exist.", __LINE__);
@@ -92,7 +110,7 @@
       // Has this file expired?
       if( time() - $data['expires'] > 0 ) {
         unlink($filepath);
-        error_log("Cache file expired");
+        if( self::$log ) error_log("Cache file expired.");
         return false;
       }
 
@@ -118,6 +136,7 @@
      *
      * @param string $id 
      * @param array $data 
+     * @return string path the cached file
      */
     public static function put($id, $data, $expires = '') {
 
@@ -125,7 +144,7 @@
 
       $id = self::checkID($id);
 
-      error_log("Cache put: " . $id);
+      if( self::$log ) error_log("Cache put: " . $id);
 
       // Set up filename & route to file
       $filename = self::$prefix . $id . self::$extension;
@@ -159,7 +178,7 @@
         "data" => $data
       );
 
-      error_log(print_r($cache_data, true));
+      if( self::$log ) error_log(print_r($cache_data, true));
 
       $json = "";
 
@@ -174,8 +193,63 @@
       fwrite($file, $json);
       fclose($file);
 
+      return $filepath;
+
     }
 
+    /**
+     * Clear the cache, with and optional $id identifier
+     * @param $force
+     */
+    public static function clear($id = false) {
+      
+      $files = array();
+
+      // If we've got an ID, only clear that file
+      if( $id !== false ) {
+        $id = self::checkID($id);
+
+        // Build the filepath
+        $filename = self::$prefix . $id . self::$extension;
+        $filepath = self::$path . '/' . $filename;
+
+        // Add the file to $files array
+        $files[] = $filepath;
+      } else {
+        // Scan the cache directory for files
+        $files = scandir(self::$path);
+
+        // Remove . &  .., and build the array of $files
+        // with correct paths
+        foreach($files as $key => $filename) {
+          if( $filename == '.' || $filename == '..' ) {
+            unset($files[$key]);
+            continue;
+          }
+
+          $files[$key] = self::$path . '/' . $filename;
+
+        }
+      }
+
+      $count = 0;
+
+      // Delete the files
+      foreach($files as $file) {
+        if( self::$log ) error_log("Unlinking " . $file);
+        unlink($file);
+        $count++;
+      }
+
+      return $count;
+
+    }
+
+    /**
+     * check & sanitize file $id
+     * @param  string $id the identifier of the file
+     * @return [type]     [description]
+     */
     private static function checkID($id) {
       // ensure $id is a string
       if( ! is_string($id) ) {

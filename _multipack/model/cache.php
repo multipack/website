@@ -256,6 +256,8 @@
         self::__throw("$id must be string.", __LINE__);
       }
 
+      $id = preg_replace("/[\s+]/i", '-', $id);
+
       // Strip nasties (allow A-Z, a-z, 0-9, '.' and '-')
       return preg_replace("/[^a-z0-9\.\-]/i", '', $id);
     }

@@ -3,10 +3,10 @@
     <?php $this->view_component('nav'); ?>
     <div class="leampack branding">
       <h1>Leampack</h1>
-      <h2>It's the last Tuesday of the month, and Leampack are meeting at the White Horse, Leamington Spa&hellip;</h2>
+      <h2>South Warwickshire's friendly geek community</h2>
     </div>
   </header>
   <article role="about">
-    <p>It's a great opportunity to  meet like-minded web developers, designers and even some normal people!</p>
+    <p>A local midweek offshoot of the Multipack, where you can join geeks in Leamington, Warwick, Coventry, Stratford-upon-Avon and the surrounding areas for a midweek drink, a bite to eat and a chat about all things web, geek and tech.</p>
   </article>
 </section>

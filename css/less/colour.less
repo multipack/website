@@ -120,9 +120,16 @@ header nav {
 
 /* Multipack */
 
-.multipack.event, .multipack.tweet {
-  background-color: @multipack-bg;
-  color: @multipack-color;
+.multipack {
+
+  &.event, &.tweet {
+    background-color: @multipack-bg;
+    color: @multipack-color;
+  }
+
+  &.branding {
+    color: @multipack-bg;
+  }
 
   &.event h2, &.tweet footer {
     color: @multipack-color;
@@ -152,13 +159,21 @@ header nav {
     &.tweet:before {
       color: @multipack-link;
     }
+
 }
 
 /* Leampack */
 
-.leampack.event, .leampack.tweet {
-  background-color: @leampack-bg;
-  color: @leampack-color;
+.leampack {
+
+  &.event, &.tweet {
+    background-color: @leampack-bg;
+    color: @leampack-color;
+  }
+
+  &.branding {
+    color: @leampack-bg;
+  }
 
   &.event h2, &.tweet footer {
     color: @leampack-color;
@@ -191,9 +206,15 @@ header nav {
     
 /* Staffspack */
 
-.staffspack.event, .staffspack.tweet {
-  background-color: @staffspack-bg;
-  color: @staffspack-color;
+.staffspack {
+  &.event, &.tweet {
+    background-color: @staffspack-bg;
+    color: @staffspack-color;
+  }
+
+  &.branding {
+    color: @staffspack-bg;
+  }
 
   &.event h2, &.tweet footer {
     color: @staffspack-color;
@@ -225,9 +246,16 @@ header nav {
 }
 
 /* Presents */
-.presents.event, .presents.tweet {
-  background-color: @presents-bg;
-  color: @presents-color;
+.presents {
+
+  &.event, &.tweet {
+    background-color: @presents-bg;
+    color: @presents-color;
+  }
+
+  &.branding {
+    color: @presents-bg;
+  }
 
   &.event h2, &.tweet footer {
     color: @presents-color
@@ -277,7 +305,9 @@ nav {
     border-color: @staffspack-bg;
   }
   .presents a:hover {
-    border-color: @presents-bg;
+    text-decoration: line-through;
+    // border-color: @presents-bg;
+    background-color: @section-nav-link-bg;
   }
 }
 

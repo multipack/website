@@ -18,7 +18,7 @@
     /* Search & Event Wrapper */
   
     public function search ($query) {
-      return $this->get("search/?q=" . urlencode($query)); // Should be htmlentities() / htmlspecialchars()?
+      return $this->get("search/?context=future&q=" . urlencode($query)); // Should be htmlentities() / htmlspecialchars()?
     }
   
     public function events ($query) {

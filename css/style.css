@@ -95,39 +95,47 @@ header nav a,header nav a:visited{background:#e7ecef;outline:none;border-left:0.
 header nav a:hover,header nav a:active{border-bottom:none;background:#dee4e9;}
 .event h2{color:#295566;}
 .event .synopsis{margin-top:1em;font-weight:normal;font-size:1.5em;}
-.multipack.event,.multipack.tweet{background-color:#295566;color:#dee1e3;}.multipack.event.event h2,.multipack.tweet.event h2,.multipack.event.tweet footer,.multipack.tweet.tweet footer{color:#dee1e3;}
-.multipack.event.event .date,.multipack.tweet.event .date,.multipack.event.event .location,.multipack.tweet.event .location,.multipack.event.event .synopsis,.multipack.tweet.event .synopsis{color:#69bcde;}
-.multipack.event.event .type,.multipack.tweet.event .type{color:#ffffff;}
-.multipack.event.event a,.multipack.tweet.event a,.multipack.event.event a:visited,.multipack.tweet.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
-.multipack.event.event nav a,.multipack.tweet.event nav a,.multipack.event.tweet a,.multipack.tweet.tweet a{color:#f0f3f5;border-color:#f0f3f5;background-color:#306478;}
-.multipack.event.event nav a:hover,.multipack.tweet.event nav a:hover,.multipack.event.tweet a:hover,.multipack.tweet.tweet a:hover{background-color:#38738a;border-bottom:none;}
-.multipack.event.tweet:before,.multipack.tweet.tweet:before{color:#f0f3f5;}
-.leampack.event,.leampack.tweet{background-color:#69bcde;color:#295566;}.leampack.event.event h2,.leampack.tweet.event h2,.leampack.event.tweet footer,.leampack.tweet.tweet footer{color:#295566;}
-.leampack.event.event .date,.leampack.tweet.event .date,.leampack.event.event .location,.leampack.tweet.event .location,.leampack.event.event .synopsis,.leampack.tweet.event .synopsis{color:#f0f3f5;}
-.leampack.event.event .type,.leampack.tweet.event .type{color:#ffffff;}
-.leampack.event.event a,.leampack.tweet.event a,.leampack.event.event a:visited,.leampack.tweet.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
-.leampack.event.event nav a,.leampack.tweet.event nav a,.leampack.event.tweet a,.leampack.tweet.tweet a{color:#f0f3f5;background-color:#54b3d9;}
-.leampack.event.event nav a:hover,.leampack.tweet.event nav a:hover,.leampack.event.tweet a:hover,.leampack.tweet.tweet a:hover{background-color:#3fa9d5;border-bottom:none;}
-.leampack.event.tweet:before,.leampack.tweet.tweet:before{color:#f0f3f5;}
-.staffspack.event,.staffspack.tweet{background-color:#8c9ca3;color:#295566;}.staffspack.event.event h2,.staffspack.tweet.event h2,.staffspack.event.tweet footer,.staffspack.tweet.tweet footer{color:#295566;}
-.staffspack.event.event .date,.staffspack.tweet.event .date,.staffspack.event.event .location,.staffspack.tweet.event .location,.staffspack.event.event .synopsis,.staffspack.tweet.event .synopsis{color:#f0f3f5;}
-.staffspack.event.event .type,.staffspack.tweet.event .type{color:#ffffff;}
-.staffspack.event.event a,.staffspack.tweet.event a,.staffspack.event.event a:visited,.staffspack.tweet.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
-.staffspack.event.event nav a,.staffspack.tweet.event nav a,.staffspack.event.tweet a,.staffspack.tweet.tweet a{color:#f0f3f5;background-color:#7e9098;}
-.staffspack.event.event nav a:hover,.staffspack.tweet.event nav a:hover,.staffspack.event.tweet a:hover,.staffspack.tweet.tweet a:hover{background-color:#70838c;border-bottom:none;}
-.staffspack.event.tweet:before,.staffspack.tweet.tweet:before{color:#f0f3f5;}
-.presents.event,.presents.tweet{background-color:#b9551e;color:#e3e0de;}.presents.event.event h2,.presents.tweet.event h2,.presents.event.tweet footer,.presents.tweet.tweet footer{color:#e3e0de;}
-.presents.event.event .date,.presents.tweet.event .date,.presents.event.event .location,.presents.tweet.event .location{color:#8d4117;}
-.presents.event.event .type,.presents.tweet.event .type{color:#ffffff;}
-.presents.event.event a,.presents.tweet.event a,.presents.event.event a:visited,.presents.tweet.event a:visited{color:#ffffff;border-color:#ffffff;}
-.presents.event.event nav a,.presents.tweet.event nav a,.presents.event.tweet a,.presents.tweet.tweet a{background-color:#c2591f;}
-.presents.event.event nav a:hover,.presents.tweet.event nav a:hover,.presents.event.tweet a:hover,.presents.tweet.tweet a:hover{background-color:#cf5f22;border-bottom:none;}
+.multipack.event,.multipack.tweet{background-color:#295566;color:#dee1e3;}
+.multipack.branding{color:#295566;}
+.multipack.event h2,.multipack.tweet footer{color:#dee1e3;}
+.multipack.event .date,.multipack.event .location,.multipack.event .synopsis{color:#69bcde;}
+.multipack.event .type{color:#ffffff;}
+.multipack.event a,.multipack.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
+.multipack.event nav a,.multipack.tweet a{color:#f0f3f5;border-color:#f0f3f5;background-color:#306478;}
+.multipack.event nav a:hover,.multipack.tweet a:hover{background-color:#38738a;border-bottom:none;}
+.multipack.tweet:before{color:#f0f3f5;}
+.leampack.event,.leampack.tweet{background-color:#69bcde;color:#295566;}
+.leampack.branding{color:#69bcde;}
+.leampack.event h2,.leampack.tweet footer{color:#295566;}
+.leampack.event .date,.leampack.event .location,.leampack.event .synopsis{color:#f0f3f5;}
+.leampack.event .type{color:#ffffff;}
+.leampack.event a,.leampack.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
+.leampack.event nav a,.leampack.tweet a{color:#f0f3f5;background-color:#54b3d9;}
+.leampack.event nav a:hover,.leampack.tweet a:hover{background-color:#3fa9d5;border-bottom:none;}
+.leampack.tweet:before{color:#f0f3f5;}
+.staffspack.event,.staffspack.tweet{background-color:#8c9ca3;color:#295566;}
+.staffspack.branding{color:#8c9ca3;}
+.staffspack.event h2,.staffspack.tweet footer{color:#295566;}
+.staffspack.event .date,.staffspack.event .location,.staffspack.event .synopsis{color:#f0f3f5;}
+.staffspack.event .type{color:#ffffff;}
+.staffspack.event a,.staffspack.event a:visited{color:#f0f3f5;border-color:#f0f3f5;}
+.staffspack.event nav a,.staffspack.tweet a{color:#f0f3f5;background-color:#7e9098;}
+.staffspack.event nav a:hover,.staffspack.tweet a:hover{background-color:#70838c;border-bottom:none;}
+.staffspack.tweet:before{color:#f0f3f5;}
+.presents.event,.presents.tweet{background-color:#b9551e;color:#e3e0de;}
+.presents.branding{color:#b9551e;}
+.presents.event h2,.presents.tweet footer{color:#e3e0de;}
+.presents.event .date,.presents.event .location{color:#8d4117;}
+.presents.event .type{color:#ffffff;}
+.presents.event a,.presents.event a:visited{color:#ffffff;border-color:#ffffff;}
+.presents.event nav a,.presents.tweet a{background-color:#c2591f;}
+.presents.event nav a:hover,.presents.tweet a:hover{background-color:#cf5f22;border-bottom:none;}
 section{border-top:.1875em solid white;background:#f0f3f5;}section[role=color]{box-shadow:0 -4px 6px -4px rgba(0, 0, 0, 0.2);}
 section h2{color:#8c9ca3;}
 nav .multipack a:hover{border-color:#295566;}
 nav .leampack a:hover{border-color:#69bcde;}
 nav .staffspack a:hover{border-color:#8c9ca3;}
-nav .presents a:hover{border-color:#b9551e;}
+nav .presents a:hover{text-decoration:line-through;background-color:#e7ecef;}
 .photos li{background:#e7ecef;}.photos li a:hover{background:#d1dbe1;}
 .photos li img{box-shadow:0 1px 3px #d1dbe1;box-shadow:0 1px 3px rgba(0, 0, 0, 0.2);}
 .photos li .more a{color:#8c9ca3;}
@@ -178,14 +186,14 @@ section>article{margin-bottom:3.375em;}
 .upcoming .event.folded header{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
 .upcoming .event:not(.folded) .extra{display:inline;}
 section{padding:3.375em 19.3882979%;}section header{overflow:hidden;}section header h1{padding-top:1.75em;background:transparent url(../img/bull-blue.png) no-repeat 3px 0.262em;}
-section header nav{margin-bottom:1.5em;overflow:hidden;}section header nav .nav-col{float:left;width:50%;}
-section header nav ul{overflow:hidden;}
-section header nav li{margin:0.444em 0;text-align:left;}
-section header nav a{padding:3px .444em 3px;}
 section header .branding{max-width:500px;padding-bottom:0.444em;}
 section .about{margin-top:2.25em;display:none;}
 section .map{margin-top:1em;}
 section .mapimage{margin-top:1em;display:none;}
+section header nav,footer header nav{margin-bottom:1.5em;overflow:hidden;}section header nav .nav-col,footer header nav .nav-col{float:left;width:50%;}
+section header nav ul,footer header nav ul{overflow:hidden;}
+section header nav li,footer header nav li{margin:0.444em 0;text-align:left;}
+section header nav a,footer header nav a{padding:3px .444em 3px;}
 footer .social{overflow:hidden;}
 footer .tweets{padding-top:1em;}footer .tweets ul{padding:0;margin:0;}
 footer .tweet{background-repeat:no-repeat;overflow:hidden;display:block;margin-bottom:0.444em;border-bottom:1px solid white;padding:1.5em 1.5em;}footer .tweet blockquote{margin:0;overflow:hidden;}

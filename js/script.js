@@ -83,18 +83,19 @@ $(function () {
       // If we're not being forced, and we have some tweets in
       // localStorage, stick em in there
       if( !force && localStorage["tweets"] !== undefined ) {
-        updateText($('.multipack.tweet blockquote'), localStorage["tweets.multipack"]);
-        updateText($('.leampack.tweet blockquote'), localStorage["tweets.leampack"]);
+        console.log(JSON.parse(localStorage["tweet.multipack"]));
+        updateText($('.multipack.tweet blockquote'), JSON.parse(localStorage["tweet.multipack"]));
+        updateText($('.leampack.tweet blockquote'), JSON.parse(localStorage["tweet.leampack"]));
         return;
       }
 
       // Grab that tweet, oh yeah
       $.getJSON(endpoint + "screen_name=multipack" + options, function (data) {
-        localStorage["tweets.multipack"] = data[0];
+        localStorage["tweet.multipack"] = JSON.stringify(data[0]);
         updateText($('.multipack.tweet blockquote'), data[0]);
       });
       $.getJSON(endpoint + "screen_name=leampack" + options, function (data) {
-        localStorage["tweets.leampack"] = data[0];
+        localStorage["tweet.leampack"] = JSON.stringify(data[0]);
         updateText($('.leampack.tweet blockquote'), data[0]);
       });
 

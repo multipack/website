@@ -45,7 +45,7 @@
     </footer>
   </div>
 
-  <div class="top icon-top"></div>
+  <a class="top icon-top" href="#"></a>
 
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="/js/libs/jquery-1.7.1.min.js"></script>

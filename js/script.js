@@ -82,8 +82,7 @@ $(function () {
 
       // If we're not being forced, and we have some tweets in
       // localStorage, stick em in there
-      if( !force && localStorage["tweets"] !== undefined ) {
-        console.log(JSON.parse(localStorage["tweet.multipack"]));
+      if( !force && localStorage["tweets"] === "yes" ) {
         updateText($('.multipack.tweet blockquote'), JSON.parse(localStorage["tweet.multipack"]));
         updateText($('.leampack.tweet blockquote'), JSON.parse(localStorage["tweet.leampack"]));
         return;
@@ -100,7 +99,7 @@ $(function () {
       });
 
       // We got the tweets
-      localStorage["tweets"] = true;
+      localStorage["tweets"] = "yes";
     };
 
     // Auto update
@@ -131,8 +130,15 @@ $(function () {
     var moveFade;
 
     // Move up on click
-    $(top).click(function () {
+    $(top).click(function (e) {
+      e.preventDefault();
+      var initialPosition = $('body').scrollTop();
       $('body').animate({scrollTop: 0});
+      setTimeout(function () {
+        if( $('body').scrollTop() >= initialPosition ) {
+          $('body').scrollTop(0);
+        }
+      }, 200);
     });
 
     // Move the button as the user scrolls

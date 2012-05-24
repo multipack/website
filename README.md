@@ -13,11 +13,6 @@ There's no database to worry about, so just head to `_multipack/view` to edit th
 ### Coding style
 
 - **Two spaces** for indentation
-- ```javascript
-  if( brackets ) {
-    like(); // this
-  }
-  ```
 - Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript ninja/rockstar/goddess/hipster/pirate to make this site better
 - Use a slow, easy to understand method above an incomprehensible, fast method
 

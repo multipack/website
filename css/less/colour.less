@@ -1,69 +1,87 @@
 // Palette
 
-@dark-blue: #295566;
-@mid-blue: #69bcde;
-@mid-grey: #dee1e3;
-@light-grey: #f0f3f5;
-@blue-grey: #8c9ca3;
-@orange: #B9551E;
-@orange-grey: #E3E0DE;
+// @dark-blue: #295566;
+// @mid-blue: #69bcde;
+// @mid-grey: #dee1e3;
+// @light-grey: #f0f3f5;
+// @blue-grey: #8c9ca3;
+// @orange: #B9551E;
+// @orange-grey: #E3E0DE;
+
+@base-blue: hsl(198, 64%, 55%);
+@dark-blue: saturate(darken(@base-blue, 30%), 10%);
+@grey-blue: desaturate(darken(@base-blue, 10%), 30%);
+
+@base-green: desaturate(spin(@base-blue, -120), 10%);
+@dark-green: saturate(darken(@base-green, 30%), 10%);
+@grey-green: desaturate(darken(@base-green, 10%), 30%);
+
+@base-pink: spin(@base-blue, 120);
+@dark-pink: saturate(darken(@base-pink, 30%), 10%);
+@grey-pink: desaturate(darken(@base-pink, 10%), 30%);
+
+@light-grey: #f3f3f3;
+@dark-grey: #444;
 
 // There should be no reference to palette colours
 // in the main styles - only variables should
 // reference them.
 
 @bg: white;
-@color: @dark-blue;
+@color: @dark-grey;
 @link: @color;
 @link-hover: darken(@color, 10%);
 
 @section-bg: @light-grey;
-@section-alternate: @blue-grey;
-@section-nav-link-bg: darken(@section-bg, 3%);
-@section-nav-link-bg-hover: darken(@section-bg, 6%);
-@section-nav-link-bg-dark: darken(@section-bg, 10%);
+@section-alternate: @grey-green;
+@section-nav-link-bg: darken(@section-bg, 4%);
+@section-nav-link-bg-hover: darken(@section-bg, 8%);
+@section-nav-link-bg-dark: darken(@section-bg, 16%);
 
-@form-text-bg: @mid-grey;
-@form-outline: @mid-blue;
-@form-button-bg: @color;
-@form-button-bg-hover: lighten(@color, 10%);
+@form-text-bg: @section-nav-link-bg-hover;
+@form-outline: @base-green;
+@form-button-bg: @base-green;
+@form-button-bg-hover: darken(@form-button-bg, 10%);
 
-// These colours must not reference each other,
+// These colours must not reference each other (between meetups),
 // to avoid crazy cross-dependency down the line
 
-@multipack-bg: @color;
-@multipack-color: @mid-grey;
-@multipack-alternate: @mid-blue;
+@multipack-bg: @base-green;
+@multipack-color: @light-grey;
+@multipack-alternate: @dark-green;
+@multipack-fade: @grey-green;
 @multipack-highlight: white;
-@multipack-link: @light-grey;
+@multipack-link: @dark-green;
 @multipack-link-bg: lighten(@multipack-bg, 5%);
 @multipack-link-bg-hover: lighten(@multipack-bg, 10%);
 
-@leampack-bg: @mid-blue;
-@leampack-color: @color;
-@leampack-alternate: @light-grey;
+@leampack-bg: @base-blue;
+@leampack-color: @light-grey;
+@leampack-alternate: @dark-blue;
+@leampack-fade: @grey-blue;
 @leampack-highlight: white;
-@leampack-link: @light-grey;
+@leampack-link: @dark-blue;
 @leampack-link-bg: darken(@leampack-bg, 5%);
 @leampack-link-bg-hover: darken(@leampack-bg, 10%);
 
-@staffspack-bg: @blue-grey;
-@staffspack-color: @color;
-@staffspack-alternate: @light-grey;
-@staffspack-highlight: white;
-@staffspack-link: @light-grey;
-@staffspack-link-bg: darken(@staffspack-bg, 5%);
-@staffspack-link-bg-hover: darken(@staffspack-bg, 10%);
+// @staffspack-bg: @blue-grey;
+// @staffspack-color: @color;
+// @staffspack-alternate: @light-grey;
+// @staffspack-highlight: white;
+// @staffspack-link: @light-grey;
+// @staffspack-link-bg: darken(@staffspack-bg, 5%);
+// @staffspack-link-bg-hover: darken(@staffspack-bg, 10%);
 
-@presents-bg: @orange;
-@presents-color: @orange-grey;
-@presents-alternate: darken(@orange, 10%);
+@presents-bg: @base-pink;
+@presents-color: @light-grey;
+@presents-alternate: @dark-pink;
+@presents-fade: @grey-pink;
 @presents-highlight: white;
-@presents-link: white;
+@presents-link: @grey-pink;
 @presents-link-bg: lighten(@presents-bg, 2%);
 @presents-link-bg-hover: lighten(@presents-bg, 5%);
 
-// color styles
+// Main
 
 body {
   background: @bg;
@@ -78,7 +96,7 @@ a, a:visited {
 }
   a:hover, a:active {
     color: @link-hover;
-    border-bottom: 0.088em solid @multipack-bg;
+    border-bottom: 0.088em solid @link-hover;
   }
 p a {
   border-bottom: 0.088em dotted @link;
@@ -108,14 +126,31 @@ header nav {
 
 /* Event Colours */
 
-.event h2 {
-  color: @multipack-bg;
+.event {
+  h2 {
+    color: @color;
+  }
+  .date, .location, .synopsis {
+    color: @section-nav-link-bg-dark;
+  }
 }
 
 .event .synopsis {
   margin-top: 1em;
   font-weight: normal;
   font-size: 1.5em;
+}
+
+.upcoming {
+  h2 {
+    color: @color;
+  }
+  nav a {
+    background-color: @section-nav-link-bg;
+    &:hover {
+      background-color: @section-nav-link-bg-hover;
+    }
+  }
 }
 
 /* Multipack */
@@ -129,6 +164,9 @@ header nav {
 
   &.branding {
     color: @multipack-bg;
+    h2 {
+      color: @multipack-fade;
+    }
   }
 
   &.event h2, &.tweet footer {
@@ -136,7 +174,7 @@ header nav {
   }
   &.event {
     .date, .location, .synopsis {
-    color: @multipack-alternate;
+      color: @multipack-alternate;
     }
     .type {
       color: @multipack-highlight;
@@ -173,6 +211,9 @@ header nav {
 
   &.branding {
     color: @leampack-bg;
+    h2 {
+      color: @leampack-fade;
+    }
   }
 
   &.event h2, &.tweet footer {
@@ -206,44 +247,44 @@ header nav {
     
 /* Staffspack */
 
-.staffspack {
-  &.event, &.tweet {
-    background-color: @staffspack-bg;
-    color: @staffspack-color;
-  }
+// .staffspack {
+//   &.event, &.tweet {
+//     background-color: @staffspack-bg;
+//     color: @staffspack-color;
+//   }
 
-  &.branding {
-    color: @staffspack-bg;
-  }
+//   &.branding {
+//     color: @staffspack-bg;
+//   }
 
-  &.event h2, &.tweet footer {
-    color: @staffspack-color;
-  }
-  &.event {
-    .date, .location, .synopsis {
-      color: @staffspack-alternate;
-    }
-    .type {
-      color: @staffspack-highlight;
-    }
-    a, a:visited {
-      color: @staffspack-link;
-      border-color: @staffspack-link;
-    }
-  }
+//   &.event h2, &.tweet footer {
+//     color: @staffspack-color;
+//   }
+//   &.event {
+//     .date, .location, .synopsis {
+//       color: @staffspack-alternate;
+//     }
+//     .type {
+//       color: @staffspack-highlight;
+//     }
+//     a, a:visited {
+//       color: @staffspack-link;
+//       border-color: @staffspack-link;
+//     }
+//   }
   
-  &.event nav a, &.tweet a {
-    color: @staffspack-link;
-    background-color: @staffspack-link-bg;
-  }
-    &.event nav a:hover, &.tweet a:hover {
-      background-color: @staffspack-link-bg-hover;
-      border-bottom: none;
-    }
-    &.tweet:before {
-      color: @staffspack-link;
-    }
-}
+//   &.event nav a, &.tweet a {
+//     color: @staffspack-link;
+//     background-color: @staffspack-link-bg;
+//   }
+//     &.event nav a:hover, &.tweet a:hover {
+//       background-color: @staffspack-link-bg-hover;
+//       border-bottom: none;
+//     }
+//     &.tweet:before {
+//       color: @staffspack-link;
+//     }
+// }
 
 /* Presents */
 .presents {
@@ -255,13 +296,16 @@ header nav {
 
   &.branding {
     color: @presents-bg;
+    h2 {
+      color: @presents-fade;
+    }
   }
 
   &.event h2, &.tweet footer {
-    color: @presents-color
+    color: @presents-color;
   }
   &.event {
-    .date, .location {
+    .date, .location, .synopsis {
       color: @presents-alternate;
     }
     .type {
@@ -272,12 +316,17 @@ header nav {
       border-color: @presents-link;
     }
   }
+  
   &.event nav a, &.tweet a {
+    color: @presents-link;
     background-color: @presents-link-bg;
   }
     &.event nav a:hover, &.tweet a:hover {
       background-color: @presents-link-bg-hover;
       border-bottom: none;
+    }
+    &.tweet:before {
+      color: @presents-link;
     }
 }
 
@@ -301,9 +350,9 @@ nav {
   .leampack a:hover {
     border-color: @leampack-bg;
   }
-  .staffspack a:hover {
-    border-color: @staffspack-bg;
-  }
+  // .staffspack a:hover {
+  //   border-color: @staffspack-bg;
+  // }
   .presents a:hover {
     text-decoration: line-through;
     // border-color: @presents-bg;

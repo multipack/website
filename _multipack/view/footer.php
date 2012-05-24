@@ -15,12 +15,6 @@
                 <p>Synergising core competencies...</p>
               </blockquote>
             </li>
-            <li role="tweet" class="staffspack tweet">
-              <blockquote role="contents">
-                <h2><a href="//twitter.com/staffspack" class="follow">@staffspack</a></h2>
-                <p>Leveraging paradigm-shift potentialities...</p>
-              </blockquote>
-            </li>
           </ul>
         </article>
         <article class="social-media">

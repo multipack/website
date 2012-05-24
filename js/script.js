@@ -45,9 +45,6 @@ $(document).ready(function () {
     $.getJSON(endpoint + "screen_name=leampack" + options, function (data) {
       updateText($('.leampack.tweet blockquote'), data[0]);
     });
-    $.getJSON(endpoint + "screen_name=staffspack" + options, function (data) {
-      updateText($('.staffspack.tweet blockquote'), data[0]);
-    });
   };
 
   setInterval(getTweets, 1000 * 60 * 5); // Check for tweets every five minutes

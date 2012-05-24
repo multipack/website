@@ -38,9 +38,6 @@
     public function meetup_multipack($slug = '') {
       $this->meetup('multipack birmingham', $slug);
     }
-    public function meetup_staffspack($slug = '') {
-      $this->meetup('staffspack', $slug);
-    }
 
     /**
      * serve meetup page
@@ -86,6 +83,7 @@
 
       $data = array();
       
+      $data['title'] = "Presents";
       $data["events"] = $this->get_events();
 
       $this->view('coming_soon', $data);

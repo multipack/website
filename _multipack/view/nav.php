@@ -9,7 +9,6 @@
     <ul>
       <li class="multipack"><a href="/multipack">Multipack</a></li>
       <li class="leampack"><a href="/leampack">Leampack</a></li>
-      <li class="staffspack"><a href="/staffspack">Staffspack</a></li>
     </ul>
   </div>
 </nav>

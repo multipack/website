@@ -93,6 +93,7 @@ p a{border-bottom:0.088em dotted #444444;}
 ::selection{color:white;background:#a5ca4e;}
 header nav a,header nav a:visited{background:#e9e9e9;outline:none;border-left:0.444em solid #f3f3f3;}
 header nav a:hover,header nav a:active{border-bottom:none;background:#dfdfdf;}
+.branding{color:#444444;}.branding h2{color:#444444;}
 .event h2{color:#444444;}
 .event .date,.event .location,.event .synopsis{color:#cacaca;}
 .event .synopsis{margin-top:1em;font-weight:normal;font-size:1.5em;}

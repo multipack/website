@@ -1,7 +1,7 @@
 <section role="main">
   <header>
     <?php $this->view_component('nav'); ?>
-    <div class="multipack branding">
+    <div class="branding">
       <h1>Multipack</h1>
       <h2>A community of web designers &amp; developers in the West Midlands</h2>
     </div>

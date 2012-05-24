@@ -19,9 +19,6 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Pictos Icon Font -->
-  <link href="//get.pictos.cc/fonts/1780/1" rel="stylesheet" type="text/css">
-
   <!-- Consumately Super Stylesheetage -->
   <link rel="stylesheet" href="/css/style.css">
   

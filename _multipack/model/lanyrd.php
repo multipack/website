@@ -66,10 +66,10 @@
       error_log("Getting: " . $url);
       $url = $this->base . $url;
       $results = file_get_contents($url);
-      $fp = fopen("./results", "w");
+      $fp = fopen(__DIR__ . "/results", "w");
       fwrite($fp, $results);
       fclose($fp);
-      return $this->parse("./results");
+      return $this->parse(__DIR__ . "/results");
     }
   
     private function parse ($file) {

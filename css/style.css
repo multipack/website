@@ -86,9 +86,9 @@ footer .footer{font-size:0.667em;}
 .icon-rss:before{content:'r';}
 .icon-top:before{content:'u';}
 body{background:#ffffff;color:#444444;-webkit-font-smoothing:antialiased;}
-a,a:visited{-webkit-transition:all .1s linear;transition:all .1s linear;color:#444444;}
-a:hover,a:active{color:#2b2b2b;border-bottom:0.088em solid #2b2b2b;}
-p a{border-bottom:0.088em dotted #444444;}
+a,a:visited{-webkit-transition:all .1s linear;transition:all .1s linear;color:#2b2b2b;}
+a:hover,a:active{color:#444444;border-bottom:0.088em solid #444444;}
+p a{border-bottom:0.088em dotted #2b2b2b;}
 ::-moz-selection{color:white;background:#a5ca4e;}
 ::selection{color:white;background:#a5ca4e;}
 header nav a,header nav a:visited{background:#e9e9e9;outline:none;border-left:0.444em solid #f3f3f3;}
@@ -113,24 +113,24 @@ header nav a:hover,header nav a:active{border-bottom:none;background:#dfdfdf;}
 .leampack.event h2,.leampack.tweet footer{color:#f3f3f3;}
 .leampack.event .date,.leampack.event .location,.leampack.event .synopsis{color:#11536f;}
 .leampack.event .type{color:#ffffff;}
-.leampack.event a,.leampack.event a:visited{color:#11536f;border-color:#11536f;}
-.leampack.event nav a,.leampack.tweet a{color:#11536f;background-color:#2ea0d1;}
-.leampack.event nav a:hover,.leampack.tweet a:hover{background-color:#2990bc;border-bottom:none;}
-.leampack.tweet:before{color:#11536f;}
-.presents.event,.presents.tweet{background-color:#d643aa;color:#f3f3f3;}
-.presents.branding{color:#d643aa;}.presents.branding h2{color:#9a4c82;}
+.leampack.event a,.leampack.event a:visited{color:#0d4259;border-color:#0d4259;}
+.leampack.event nav a,.leampack.tweet a{color:#0d4259;background-color:#2ea0d1;}
+.leampack.event nav a:hover,.leampack.tweet a:hover{background-color:#2b97c5;border-bottom:none;}
+.leampack.tweet:before{color:#0d4259;}
+.presents.event,.presents.tweet{background-color:#d66f43;color:#f3f3f3;}
+.presents.branding{color:#d66f43;}.presents.branding h2{color:#9a634c;}
 .presents.event h2,.presents.tweet footer{color:#f3f3f3;}
-.presents.event .date,.presents.event .location,.presents.event .synopsis{color:#6f1153;}
+.presents.event .date,.presents.event .location,.presents.event .synopsis{color:#6f2d11;}
 .presents.event .type{color:#ffffff;}
-.presents.event a,.presents.event a:visited{color:#9a4c82;border-color:#9a4c82;}
-.presents.event nav a,.presents.tweet a{color:#9a4c82;background-color:#d84bad;}
-.presents.event nav a:hover,.presents.tweet a:hover{background-color:#da58b3;border-bottom:none;}
-.presents.tweet:before{color:#9a4c82;}
+.presents.event a,.presents.event a:visited{color:#9a634c;border-color:#9a634c;}
+.presents.event nav a,.presents.tweet a{color:#9a634c;background-color:#d8754b;}
+.presents.event nav a:hover,.presents.tweet a:hover{background-color:#da7f58;border-bottom:none;}
+.presents.tweet:before{color:#9a634c;}
 section{border-top:.1875em solid white;background:#f3f3f3;}section[role=color]{box-shadow:0 -4px 6px -4px rgba(0, 0, 0, 0.2);}
 section h2{color:#7e8e57;}
 nav .multipack a:hover{border-color:#a5ca4e;}
 nav .leampack a:hover{border-color:#43aad6;}
-nav .presents a:hover{text-decoration:line-through;background-color:#e9e9e9;}
+nav .presents a:hover{text-decoration:line-through;border-color:#d66f43;background-color:#e9e9e9;}
 .photos li{background:#e9e9e9;}.photos li a:hover{background:#cacaca;}
 .photos li img{box-shadow:0 1px 3px #cacaca;box-shadow:0 1px 3px rgba(0, 0, 0, 0.2);}
 .photos li .more a{color:#7e8e57;}
@@ -138,7 +138,7 @@ nav .presents a:hover{text-decoration:line-through;background-color:#e9e9e9;}
 .newsletter input[type=email]:focus{outline:1px solid #a5ca4e;}
 .newsletter input[type=submit]{background:#a5ca4e;}
 .newsletter input[type=submit]:hover{background-color:#8cb135;}
-.top,.top:visited{background:#e9e9e9;background:rgba(0, 0, 0, 0.2);color:#444444;}.top:hover,.top:visited:hover,.top:active,.top:visited:active{background:rgba(0, 0, 0, 0.3);color:#2b2b2b;border-bottom:none;}
+.top,.top:visited{background:#e9e9e9;background:rgba(0, 0, 0, 0.2);color:#2b2b2b;}.top:hover,.top:visited:hover,.top:active,.top:visited:active{background:rgba(0, 0, 0, 0.3);color:#444444;border-bottom:none;}
 .extra{display:none;}
 .focus .extra{display:block;}
 .photos{margin:1.5em 0 0;}.photos ul{margin:0;overflow:hidden;list-style:none;padding-left:0;}

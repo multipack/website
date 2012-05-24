@@ -39,7 +39,7 @@
         <p class="copyright">&copy; 2012 The Multipack</p>
         <p class="feed icon-rss"><a href="/blog/feed/" rel="alternate" type="application/atom+xml">Grab our feed</a></p>
         <p class="license">
-          <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">The Multipack website</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License</a> and is open-sourced on <a href="//github.com/phuu/multipack" title="Multipack on Github">Github</a>.
+          <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">The Multipack website</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License</a> and is open-sourced on <a href="//github.com/multipack/website" title="Multipack on Github">Github</a>.
         </p>
       </section>
     </footer>

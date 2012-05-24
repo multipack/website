@@ -162,7 +162,7 @@
      * of use in the view
      * @param $count number of events retrieved
      */
-    private function get_events($count = 3) {
+    private function get_events($count = 2) {
 
       $cached = Cache::cached('events');
 

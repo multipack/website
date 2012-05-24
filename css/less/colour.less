@@ -16,7 +16,7 @@
 @dark-green: saturate(darken(@base-green, 30%), 10%);
 @grey-green: desaturate(darken(@base-green, 10%), 30%);
 
-@base-pink: spin(@base-blue, 120);
+@base-pink: spin(@base-blue, 180);
 @dark-pink: saturate(darken(@base-pink, 30%), 10%);
 @grey-pink: desaturate(darken(@base-pink, 10%), 30%);
 
@@ -29,8 +29,8 @@
 
 @bg: white;
 @color: @dark-grey;
-@link: @color;
-@link-hover: darken(@color, 10%);
+@link: darken(@color, 10%);
+@link-hover: @color;
 
 @section-bg: @light-grey;
 @section-alternate: @grey-green;
@@ -60,9 +60,9 @@
 @leampack-alternate: @dark-blue;
 @leampack-fade: @grey-blue;
 @leampack-highlight: white;
-@leampack-link: @dark-blue;
+@leampack-link: darken(@dark-blue, 5%);
 @leampack-link-bg: darken(@leampack-bg, 5%);
-@leampack-link-bg-hover: darken(@leampack-bg, 10%);
+@leampack-link-bg-hover: darken(@leampack-bg, 8%);
 
 // @staffspack-bg: @blue-grey;
 // @staffspack-color: @color;
@@ -362,7 +362,7 @@ nav {
   // }
   .presents a:hover {
     text-decoration: line-through;
-    // border-color: @presents-bg;
+    border-color: @presents-bg;
     background-color: @section-nav-link-bg;
   }
 }

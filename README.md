@@ -13,7 +13,7 @@ There's no database to worry about, so just head to `_multipack/view` to edit th
 ### Coding style
 
 - **Two spaces** for indentation
-- Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript ninja/rockstar/goddess/hipster/pirate to make this site better
+- Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript ninjarockstargoddesshipsterpirate to make this site better
 - Use a slow, easy to understand method above an incomprehensible, fast method
 
 ### Changing styles

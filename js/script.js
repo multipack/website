@@ -128,6 +128,13 @@ $(function () {
         offset = $('section').first().offset().top;
     var hasTransitions = $('html').hasClass('csstransitions');
     var moveFade;
+
+    // Move up on click
+    $(top).click(function () {
+      $('body').animate({scrollTop: 0});
+    });
+
+    // Move the button as the user scrolls
     $(window).scroll(function () {
 
       // Don't move yet, still scrollin'

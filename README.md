@@ -4,9 +4,22 @@ This here's the website of the [Multipack](http://multipack.co.uk).
 
 You're very welcome to submit an issue or a pull request if you spot anything that need imporoving, be it content, code or comments.
 
+This site is a gracefully-degrading responsive site. It's not prefect on every device, and we rely on the community to help. If you don't feel you can make a contribution directly in code, please submit a new issue so someone else can pick it up.
+
 ### Editing content
 
 There's no database to worry about, so just head to `_multipack/view` to edit the content if you spot an error, or want to add something.
+
+### Coding style
+
+- **Two spaces** for indentation
+- ```javascript
+  if( brackets ) {
+    like(); // this
+  }
+  ```
+- Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript ninja/rockstar/goddess/hipster/pirate to make this site better
+- Use a slow, easy to understand method above an incomprehensible, fast method
 
 ### Changing styles
 
@@ -20,9 +33,13 @@ The site pulls all event data from Lanyrd and then caches it on the server (in `
 
 ### The framework
 
-The framework is based on [Lowcarb](https://github.com/phuu/lowcarb), and is essentially a very lightweight version of CodeIgniter. You can follow how it loads by starting at the index.php and working through.
+The framework is based on [Lowcarb](https://github.com/phuu/lowcarb), and is essentially a very lightweight version of CodeIgniter. You can follow how it loads by starting at the `index.php` and working through.
 
 Configuration is kept in `config.php`, and supports multiple environments.
+
+The controller is `_multipack/multipack.php`.
+
+I'll document the framework more soon.
 
 ### License
 

@@ -11,6 +11,8 @@
     
     // Allow for multiple deploy enviroments
     private $environment;
+    private $default = 'development';
+    
     
     private $config = array();
   
@@ -56,8 +58,13 @@
      * 
      */
     public function __get($name) {
+      // If we have this data in the current environment, use it
       if( array_key_exists($name, $this->config[$this->environment]) ) {
         return $this->config[$this->environment][$name];
+      }
+      // Is it in the default environment?
+      if( array_key_exists($name, $this->config[$this->default]) ) {
+        return $this->config[$this->default][$name];
       }
       return null;
     }

@@ -21,6 +21,9 @@
 
   <!-- Consumately Super Stylesheetage -->
   <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Pictos Icon Font -->
+  <link rel="stylesheet" href="//get.pictos.cc/fonts/1780/1">
   
   <!-- Modernizr Custom Build -->
   <script src="/js/libs/modernizr-custom.js"></script>

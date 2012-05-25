@@ -3,13 +3,13 @@
         <h3>Stay connected and up-to-date:</h3>
         <article class="tweets">
           <ul>
-            <li role="tweet" class="multipack tweet">
+            <li role="tweet" class="multipack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/multipack" class="follow">@multipack</a></h2>
                 <p>Aggregating real-time data streams...</p>
               </blockquote>
             </li>
-            <li role="tweet" class="leampack tweet">
+            <li role="tweet" class="leampack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/leampack" class="follow">@leampack</a></h2>
                 <p>Synergising core competencies...</p>

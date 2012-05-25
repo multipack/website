@@ -7,16 +7,6 @@
  *   - comment it
  */
 $(function () {
-
-  /**
-   * Add icon font from Pictos asynchronously (they're not *that* important)
-   */
-  ;(function () {
-    var url = "//get.pictos.cc/fonts/1780/1",
-        elem = document.createElement('link');
-    $(elem).prop({rel: "stylesheet", href: url});
-    $('head').append(elem);
-  }());
   
   /**
    * set up event interactions

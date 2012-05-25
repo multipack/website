@@ -15,8 +15,6 @@
      */
     public function index() {
 
-      error_log(print_r($this->model, true));
-
       // Data is passed to the view
       $data = array("title" => "Home", "description" => "The Multipack");
 
@@ -24,6 +22,24 @@
       $data["events"] = $this->get_events();
       
       $this->view('home', $data);
+      
+    }
+
+    /**
+     * serve style guide
+     *
+     */
+    public function style() {
+
+      error_log(print_r($this->model, true));
+
+      // Data is passed to the view
+      $data = array("title" => "Style Guide", "description" => "The Multipack Style Huide");
+
+      // Get raw events from Lanyrd, or cache
+      $data["events"] = $this->get_events();
+      
+      $this->view('style', $data);
       
     }
 

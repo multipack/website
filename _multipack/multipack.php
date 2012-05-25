@@ -220,6 +220,8 @@
      */
     private function extract_event($raw_event) {
 
+      error_log(print_r($raw_event, true));
+
       // Grab the meetup name
       $raw_meetup = explode('-',  $raw_event['slug']);
       $meetup = $raw_meetup[0];
@@ -238,7 +240,8 @@
         "location" => $raw_location[0],
         "lanyrd" => $raw_event['web_url'],
         "map_url" => $raw_event['gmap_url'],
-        "url" => $meetup . "/" . $raw_event['slug']
+        "url" => $meetup . "/" . $raw_event['slug'],
+        "tagline" => $raw_event['tagline']
       );
 
       // And send it all back with some other useful data (as a Store)

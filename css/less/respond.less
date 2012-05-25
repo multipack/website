@@ -83,6 +83,16 @@ img, object, video {
     .findless {
       float: left;
     }
+
+    &.focus {
+      .map.iframe {
+        display: none;
+      }
+      .mapimage {
+        display: block;
+      }
+    }
+
   }
   .folded {
     font-size: 1em; 
@@ -95,14 +105,7 @@ img, object, video {
       padding: .444em 0 3px;
     }
   }
-  .focus {
-    .map {
-      display: none;
-    }
-    .mapimage {
-      display: block;
-    }
-  }
+  
   
   section h3 {
     font-size: 1.5em;

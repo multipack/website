@@ -155,12 +155,13 @@ section>article{margin-bottom:3.375em;}
 .event nav li{float:left;margin-right:1em;padding-bottom:0.444em;}
 .event nav a{padding:3px .444em 3px;display:block;}
 .event .findmore{display:none;}
-.event .findless{float:right;}
+.event .findless{float:right;margin-right:0;}
+.event .map{display:none;}
 .event h2{display:inline;}
 .event h2.type{display:block;text-transform:uppercase;}
 .event.focus{border-top:.1875em solid white;}.event.focus.next{border-top:none;}
 .event.focus .eventfocus{display:none;}
-.event.focus .map{display:none;}
+.event.focus .map.iframe{display:block;}
 .folded{overflow:hidden;padding:1.5em 19.3882979%;}.folded header h1{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
 .folded header p{margin-top:0;}
 .folded h2{font-size:1.5em;display:block;float:left;margin-right:0.667em;}
@@ -178,8 +179,9 @@ section>article{margin-bottom:3.375em;}
 .upcoming .event{display:block;margin-bottom:0.444em;box-shadow:inset 0 0 0.444 rgba(0, 0, 0, 0.2);border-bottom:1px solid #ffffff;padding:1.5em 1.5em;}
 .upcoming .event header p{margin-top:0;}
 .upcoming .event.folded header{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
+.upcoming .event .synopsis{font-size:1em;margin-top:0.667em;}
 .upcoming .event nav a:hover{border-bottom:none;}
-.upcoming .event:not(.folded) .extra{display:inline;}
+.upcoming .event:not(.folded) .extra{display:block;}
 section{padding:3.375em 19.3882979%;}section header{overflow:hidden;}section header h1{padding-top:1.75em;background:transparent url(../img/bull-dark.png) no-repeat 3px 0.262em;}
 section header .branding{max-width:500px;padding-bottom:0.444em;}
 section .about{margin-top:2.25em;display:none;}
@@ -216,4 +218,4 @@ input{font-family:'open-sans','Open Sans',sans-serif;}
 .backgroundsize.svg .event header h1{background:transparent url(../img/bull-white.svg) no-repeat 0 bottom;-o-background-size:1.2em auto;-moz-background-size:1.2em auto;-webkit-background-size:1.2em auto;background-size:1.2em auto;}
 .backgroundsize.svg .upcoming .event header h1{-o-background-size:1.2em auto;-moz-background-size:1.2em auto;-webkit-background-size:1.2em auto;background-size:1.2em auto;}
 img,object,video{max-width:100%;}
-@media screen and (max-width:1400px){.event,section{padding-left:8.617021277%;padding-right:8.617021277%;} .upcoming .folded.event .venue{max-width:42%;}}@media screen and (max-width:1024px){.container{width:auto;margin:0;} .upcoming .folded.event .venue{max-width:42%;}}@media screen and (max-width:820px){.upcoming .folded.event .venue{max-width:29%;}}@media screen and (max-width:680px){.folded.event .venue{display:none;} .social-media{width:auto;float:none;} form div{margin-bottom:1em;}form div em{display:block;margin-bottom:0.5em;} form div textarea{width:95%;} .photos li{width:23%;} .top{display:block;}}@media screen and (max-device-width:480px),screen and (max-width:480px){body{font-size:0.9em;} .event{font-size:0.8em;}.event header h1{font-size:6em;} .event .findless{float:left;} .folded{font-size:1em;}.folded a{font-size:0.8em;} .folded h2{margin-right:0.667em;font-size:1em;padding:.444em 0 3px;} .focus .map{display:none;} .focus .mapimage{display:block;} section h3{font-size:1.5em;} .tweet h2{margin-bottom:0.5em;} .tweet p{clear:both;} footer .social-media,footer .newsletter{float:none;width:auto;}}
+@media screen and (max-width:1400px){.event,section{padding-left:8.617021277%;padding-right:8.617021277%;} .upcoming .folded.event .venue{max-width:42%;}}@media screen and (max-width:1024px){.container{width:auto;margin:0;} .upcoming .folded.event .venue{max-width:42%;}}@media screen and (max-width:820px){.upcoming .folded.event .venue{max-width:29%;}}@media screen and (max-width:680px){.folded.event .venue{display:none;} .social-media{width:auto;float:none;} form div{margin-bottom:1em;}form div em{display:block;margin-bottom:0.5em;} form div textarea{width:95%;} .photos li{width:23%;} .top{display:block;}}@media screen and (max-device-width:480px),screen and (max-width:480px){body{font-size:0.9em;} .event{font-size:0.8em;}.event header h1{font-size:6em;} .event .findless{float:left;} .event.focus .map.iframe{display:none;} .event.focus .mapimage{display:block;} .folded{font-size:1em;}.folded a{font-size:0.8em;} .folded h2{margin-right:0.667em;font-size:1em;padding:.444em 0 3px;} section h3{font-size:1.5em;} .tweet h2{margin-bottom:0.5em;} .tweet p{clear:both;} footer .social-media,footer .newsletter{float:none;width:auto;}}

@@ -47,6 +47,10 @@ section > article {
   }
   .findless {
     float: right;
+    margin-right: 0;
+  }
+  .map {
+    display: none;
   }
         
   h2 {
@@ -69,9 +73,10 @@ section > article {
       display: none;
     }
 
-    .map {
-      display: none;
+    .map.iframe {
+      display: block;
     }
+
   }
 
 }
@@ -153,6 +158,10 @@ section > article {
         .visuallyhidden;
       }
     }
+    .synopsis {
+      font-size: 1em;
+      margin-top: 0.667em;
+    }
     nav a:hover {
       border-bottom: none;
     }
@@ -164,7 +173,7 @@ section > article {
   }
   .event:not(.folded) {
     .extra {
-      display: inline;
+      display: block;
     }
   }
 }

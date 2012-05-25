@@ -33,7 +33,7 @@
   
   <header>
     <h1>Multipack</h1>
-    <p>Next Event</p>
+    <p>Next Event:</p>
   </header>
   <?php $this->view_component('event', $this->view_data->events[0]); ?>
 </article>

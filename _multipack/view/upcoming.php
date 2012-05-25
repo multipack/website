@@ -38,7 +38,7 @@
       <li role="event" class="folded <?=$event->meetup?> event">
         <header>
           <h1>Multipack</h1>
-          <p>Upcoming Event</p>
+          <p>Upcoming Event:</p>
         </header>
         <?php $this->view_component('event', $event); ?>
       </li>

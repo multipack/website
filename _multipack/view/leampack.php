@@ -7,6 +7,6 @@
     </div>
   </header>
   <article role="about">
-    <p>A local midweek offshoot of the Multipack, where you can join geeks in Leamington, Warwick, Coventry, Stratford-upon-Avon and the surrounding areas for a midweek drink, a bite to eat and a chat about all things web, geek and tech.</p>
+    <p>A local midweek offshoot of the Multipack, where you can join geeks in Leamington, Warwick, Coventry, Stratford-upon-Avon and the surrounding areas for a midweek drink, a bite to eat and a chat about all things web, geek, tech and &mdash; every two months &mdash; iOS and mobile development with the iOS Midlands Meetups crowd.</p>
   </article>
 </section>

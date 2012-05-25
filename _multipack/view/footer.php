@@ -51,5 +51,8 @@
   <!-- defer tells the browser to wait for DOM load before running -->
   <script defer src="/js/script.js"></script>
 
+  <!-- Google Analytics -->
+  <script>var _gaq=[['_setAccount','UA-32139617-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+
 </body>
 </html>

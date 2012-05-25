@@ -229,9 +229,15 @@
       // And the location
       $raw_location = explode(',', $raw_event['place_name']);
 
+      $times = array(
+        "multipack" => "2pm",
+        "leampack" => "7:30pm"
+      );
+
       $event = array(
         "meetup" => $meetup,
         "date" => $date,
+        "time" => $times[$meetup],
         "venue" => $raw_event['venues'][0],
         "location" => $raw_location[0],
         "lanyrd" => $raw_event['web_url'],

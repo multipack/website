@@ -154,7 +154,7 @@ section>article{margin-bottom:3.375em;}
 .event nav{margin-top:1em;}.event nav ul{overflow:hidden;}
 .event nav li{float:left;margin-right:1em;padding-bottom:0.444em;}
 .event nav a{padding:3px .444em 3px;display:block;}
-.event .findmore{display:none;}
+.event .findmore{display:none;margin-right:0;}
 .event .findless{float:right;margin-right:0;}
 .event .map{display:none;}
 .event h2{display:inline;}

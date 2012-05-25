@@ -38,8 +38,11 @@
   
     public function guide ($query) {
       return $this->get("search/?q=" . urlencode($query) . "&type=guide");
-      $results = $this->search($query . "&type=guide");
-      return $results;
+    }
+
+    public function schedule_from_id ($id) {
+      $result = $this->get("schedule/" . $id);
+      error_log(print_r($result, true));
     }
   
     public function events_from_guide ($query) {

@@ -31,8 +31,6 @@
      */
     public function style() {
 
-      error_log(print_r($this->model, true));
-
       // Data is passed to the view
       $data = array("title" => "Style Guide", "description" => "The Multipack Style Huide");
 
@@ -219,8 +217,6 @@
      * @param  array $raw_event
      */
     private function extract_event($raw_event) {
-
-      error_log(print_r($raw_event, true));
 
       // Grab the meetup name
       $raw_meetup = explode('-',  $raw_event['slug']);

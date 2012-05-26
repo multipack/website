@@ -78,12 +78,7 @@ header nav a{font-weight:400;text-transform:uppercase;}
 footer .footer{font-size:0.667em;}
 [class^="icon-"]:before,[class*=" icon-"]:before,.tweet:before{font-family:'Pictos Custom';font-style:normal;font-weight:normal;display:inline-block;vertical-align:middle;text-decoration:inherit;font-size:1.5em;padding-right:0.25em;-webkit-font-smoothing:antialiased;content:'';}
 .tweet:before{float:left;padding-right:0.5em;}
-.icon-twitter:before,.tweet:before{content:attr(data-icon);}
-.icon-lanyrd:before{content:'l';}
-.icon-facebook:before{content:'f';}
-.icon-flickr:before{content:'k';}
-.icon-vimeo:before{content:'v';}
-.icon-rss:before{content:'r';}
+[data-icon]:before{font-family:'Pictos Custom';font-style:normal;font-weight:normal;display:inline-block;vertical-align:middle;text-decoration:inherit;font-size:1.5em;padding-right:0.25em;-webkit-font-smoothing:antialiased;content:attr(data-icon);speak:none;}
 .icon-top:before{content:'⇧';}
 body{background:#ffffff;color:#444444;-webkit-font-smoothing:antialiased;}
 a,a:visited{-webkit-transition:all .1s linear;transition:all .1s linear;color:#2b2b2b;}

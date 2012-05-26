@@ -20,10 +20,10 @@
         <article class="social-media">
           <h4>Also find us on...</h4>
           <ul>
-            <li><a class="lanyrd icon-lanyrd" href="//lanyrd.com/guides/multipack">Lanyrd</a></li>
-            <li><a class="facebook icon-facebook" href="//www.facebook.com/group.php?gid=2230777424">Facebook</a></li>
-            <li><a class="flickr icon-flickr" href="//flickr.com/groups/multipack/">Flickr</a></li>
-            <li><a class="vimeo icon-vimeo" href="//vimeo.com/multipack/">Vimeo</a></li>
+            <li><a class="lanyrd" data-icon="l" href="//lanyrd.com/guides/multipack">Lanyrd</a></li>
+            <li><a class="facebook" data-icon="f" href="//www.facebook.com/group.php?gid=2230777424">Facebook</a></li>
+            <li><a class="flickr" data-icon="k" href="//flickr.com/groups/multipack/">Flickr</a></li>
+            <li><a class="vimeo" data-icon="v" href="//vimeo.com/multipack/">Vimeo</a></li>
           </ul>
         </article>
         <article class="newsletter">
@@ -44,7 +44,7 @@
     </footer>
   </div>
 
-  <a class="top icon-top" href="#"></a>
+  <a class="top" href="#" aria-hidden="true" data-icon="⇧"></a>
 
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="/js/libs/jquery-1.7.1.min.js"></script>

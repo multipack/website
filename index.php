@@ -4,6 +4,8 @@
  * ✨
  * MULTIPACK
  * 
+ * Read the README before making changes!
+ * 
  * Welcome! CMS is based on lowcarb (https://github.com/phuu/lowcarb).
  * 
  * There is one controller that handles all routes.

@@ -69,7 +69,7 @@
         
         $this->uri = explode('/', substr($str, 1));
 
-        error_log($uri_string);
+        error_log($this->uri_string);
         
       }
       

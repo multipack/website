@@ -122,11 +122,11 @@ $(function () {
     // Move up on click
     $(top).click(function (e) {
       e.preventDefault();
-      var initialPosition = $('body').scrollTop();
-      $('body').animate({scrollTop: 0});
+      var initialPosition = $(window).scrollTop();
+      $(window).animate({scrollTop: 0});
       setTimeout(function () {
-        if( $('body').scrollTop() >= initialPosition ) {
-          $('body').scrollTop(0);
+        if( $(window).scrollTop() >= initialPosition ) {
+          $(window).scrollTop(0);
         }
       }, 200);
     });
@@ -144,21 +144,18 @@ $(function () {
           if( hasTransitions ) {
             $(top).css({opacity: 0});
           } else {
-            $(top).fadeOut('slow');
+            $(top).animate({opacity: 0});
           }
         } else {
           if( hasTransitions ) {
             $(top).css({opacity: 0.5});
           } else {
-            $(top).fadeIn('slow');
+            $(top).animate({opacity: 0.5});
           }
         }
+
         // Move it real good
-        if( hasTransitions ) {
-          $(top).css({top: $(window).scrollTop()});
-        } else {
-          $(top).animate({top: $(window).scrollTop()});
-        }
+        $(top).animate({top: $(window).scrollTop()});
       }, 200);
 
     });

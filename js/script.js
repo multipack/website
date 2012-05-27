@@ -119,6 +119,9 @@ $(function () {
     var hasTransitions = $('html').hasClass('csstransitions');
     var moveFade;
 
+    // Absolutely!
+    $(top).css({position: 'absolute'});
+
     // Move up on click
     $(top).click(function (e) {
       e.preventDefault();

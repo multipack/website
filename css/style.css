@@ -205,7 +205,7 @@ footer .footer{overflow:hidden;}footer .footer a,footer .footer a:hover{border-w
 footer .footer .copyright{float:left;}
 footer .footer .feed{float:right;}
 footer .footer .license{clear:both;}
-.top{opacity:0;display:block;position:absolute;top:0px;left:0px;padding:0.1em 0;width:8.666666%;max-width:2.5em;text-align:center;cursor:pointer;-webkit-transition:all 0.1s linear, opacity 2s linear;-moz-transition:all 0.1s linear, opacity 2s linear;-o-transition:all 0.1s linear, opacity 2s linear;transition:all 0.1s linear, opacity 2s linear;}.top:before{position:relative;top:1px;left:1px;}
+.top{opacity:0;display:block;position:fixed;top:0px;left:0px;padding:0.1em 0;width:8.666666%;max-width:2.5em;text-align:center;cursor:pointer;-webkit-transition:all 0.1s linear, opacity 2s linear;-moz-transition:all 0.1s linear, opacity 2s linear;-o-transition:all 0.1s linear, opacity 2s linear;transition:all 0.1s linear, opacity 2s linear;}.top:before{position:relative;top:1px;left:1px;}
 form div{margin-bottom:0.5em;}
 input{font-family:'open-sans','Open Sans',sans-serif;}
 ::-webkit-validation-bubble-message{font-family:'open-sans','Open Sans',sans-serif;font-size:1em;padding:0.3em 0.667em;padding-left:0.444em;box-shadow:0 3px 2px -3px rgba(0, 0, 0, 0.2);}

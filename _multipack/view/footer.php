@@ -38,7 +38,7 @@
       <section class="block footer">
         <p class="copyright">&copy; 2012 The Multipack</p>
         <p class="license">
-          <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">The Multipack website</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License</a> and is open-sourced on <a href="//github.com/multipack/website" title="Multipack on Github">Github</a>.
+          <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">The Multipack website</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License</a> and is open-sourced on <a href="//github.com/multipack/website" title="Multipack on Github">Github</a>.<br/>This site uses <a href="http://en.wikipedia.org/wiki/HTTP_cookie" title="Cookies">cookies</a> – your data will not be shared with any third parties.
         </p>
       </section>
     </footer>

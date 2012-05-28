@@ -6,19 +6,19 @@
             <li role="tweet" class="multipack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/multipack" class="follow">@multipack</a></h2>
-                <p>Aggregating real-time data streams...</p>
+                <p>Aggregating real-time data streams&hellip;</p>
               </blockquote>
             </li>
             <li role="tweet" class="leampack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/leampack" class="follow">@leampack</a></h2>
-                <p>Synergising core competencies...</p>
+                <p>Synergising core competencies&hellip;</p>
               </blockquote>
             </li>
           </ul>
         </article>
         <article class="social-media">
-          <h4>Also find us on...</h4>
+          <h4>Also find us on&hellip;</h4>
           <ul>
             <li><a class="lanyrd" data-icon="l" href="//lanyrd.com/guides/multipack">Lanyrd</a></li>
             <li><a class="facebook" data-icon="f" href="//www.facebook.com/group.php?gid=2230777424">Facebook</a></li>

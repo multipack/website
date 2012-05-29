@@ -29,9 +29,9 @@
         <article class="newsletter">
           <form action="#" method="get">
             <h4>Sign up for our newsletter:</h4>
-            <input type="email" name="email" placeholder="joe@example.co">
+            <input type="email" name="email" placeholder="joe@example.com">
             <input type="submit" value="Sign up">
-            <aside>No spam, or you can tell our mums.</aside>
+            <aside>No spam, or you can tell our mum.</aside>
           </form>
         </article>
       </section>

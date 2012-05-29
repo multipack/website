@@ -222,22 +222,32 @@
       $raw_meetup = explode('-',  $raw_event['slug']);
       $meetup = $raw_meetup[0];
 
-      // And the date
-      $raw_date = explode('-', $raw_event['start_date']);
-      $date = date('j M', mktime(0, 0, 0, $raw_date[1], $raw_date[2], $raw_date[0]));
-
-      // And the location
-      $raw_location = explode(',', $raw_event['place_name']);
-
+      // What hours do the events start at?
       $times = array(
+        "multipack" => "14:00:00",
+        "leampack" => "19:30:00"
+      );
+      
+      // This should be the responsiiblity of the view layer really
+      $display_times = array(
         "multipack" => "2pm",
         "leampack" => "7:30pm"
       );
 
+      $datetime = $raw_event['start_date'];
+      if (isset( $times[$meetup] )) {
+        $datetime = $raw_event['start_date'] . ' ' . $times[$meetup];
+      }
+      $datetime = new DateTime($datetime, new DateTimeZone('Europe/London'));
+
+      // And the location
+      $raw_location = explode(',', $raw_event['place_name']);
+
       $event = array(
         "meetup" => $meetup,
-        "date" => $date,
-        "time" => $times[$meetup],
+        "date" => $datetime->format('j M'),
+        "time" => isset( $display_times[$meetup] ) ? $display_times[$meetup] : '',
+        "datetime" => $datetime->format('c'), // ISO 8601
         "venue" => $raw_event['venues'][0],
         "location" => $raw_location[0],
         "lanyrd" => $raw_event['web_url'],

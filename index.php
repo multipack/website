@@ -93,7 +93,7 @@ $model = new Store();
 // Lanyrd API is a model
 $model->lanyrd = new Lanyrd();
 //$model->cache = new Cache();
-Cache::setPath(DIR_APP . '/cache');
+Cache::setPath('/tmp');
 
 /**
  * Controller

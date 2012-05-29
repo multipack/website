@@ -35,7 +35,7 @@
     <ul>
     <?php foreach( $this->view_data->events as $event ): ?>
 
-      <li role="event" class="folded <?=$event->meetup?> event">
+      <li class="folded <?=$event->meetup?> event">
         <header>
           <h1>Multipack</h1>
           <p>Upcoming Event:</p>

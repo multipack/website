@@ -6,6 +6,13 @@ You're very welcome to submit an issue or a pull request if you spot anything th
 
 This site is a gracefully-degrading responsive site. It's not prefect on every device, and we rely on the community to help. If you don't feel you can make a contribution directly in code, please submit a new issue so someone else can pick it up.
 
+## Development Tips
+
+A few quick tips to get you going:
+
+- You'll need to make sure your version of PHP supports short opening tags and that your `php.ini` file has `short_open_tag = On`.
+- Create a directory called `_multipack/cache/`, a file called `_multipack/model/results` and ensure they're both writable – these are within the `.gitignore` file to prevent cached files and temporary results ending up in source control.
+
 ### Editing content
 
 There's no database to worry about, so just head to `_multipack/view` to edit the content if you spot an error, or want to add something.
@@ -13,7 +20,7 @@ There's no database to worry about, so just head to `_multipack/view` to edit th
 ### Coding style
 
 - **Two spaces** for indentation
-- Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript ninjarockstargoddesshipsterpirate to make this site better
+- Comment anything that is not immediately obvious – you shouldn't have to be a PHP/Javascript expert to make this site better
 - Use a slow, easy to understand method above an incomprehensible, fast method
 
 ### Changing styles
@@ -36,13 +43,13 @@ The controller is `_multipack/multipack.php`.
 
 I'll document the framework more soon.
 
-### License
+## License
 
 The website and all code is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported](http://creativecommons.org/licenses/by-nc/3.0/).
 
 You are free to copy, distribute and transmit the site, and to adapt the code & content (unless it is pulled from Lanyrd - check their license) according to the following conditions:
 
-- You must attribute the work by providing a link to this repository, but do not suggest that we endorse you or your use of the work.
-- Noncommercial — You may not use this work for commercial purposes.
+- You must attribute the work by providing a link to this repository, but do not suggest that The Multipack endorses you or your use of the work.
+- Noncommercial — you may not use this work for commercial purposes.
 
 Please see the link above for more information.

@@ -15,8 +15,8 @@ $config->environment('development');
 $config->url = "//multipack.dev";
 $config->routes = array(
   "" => "index",
-  "multipack" => "meetup_multipack",
-  "leampack" => "meetup_leampack",
+  "birmingham" => "meetup_multipack",
+  "leamington" => "meetup_leampack",
   "staffspack" => "meetup_staffspack",
   "presents" => "presents",
   "style" => "style"

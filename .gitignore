@@ -1,2 +1,4 @@
-cache/
 .DS_STORE
+_multipack/model/results
+_multipack/cache/
+cache/

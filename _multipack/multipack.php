@@ -97,7 +97,7 @@
 
       $data = array();
       
-      $data['title'] = "Show and Tel";
+      $data['title'] = "Show and Tell";
       $data["events"] = $this->get_events();
 
       $this->view('showandtell', $data);

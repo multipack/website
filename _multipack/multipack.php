@@ -91,16 +91,16 @@
     }
 
     /**
-     * presents page
+     * Show and Tell page
      */
-    public function presents() {
+    public function event_showandtell() {
 
       $data = array();
       
-      $data['title'] = "Presents";
+      $data['title'] = "Show and Tel";
       $data["events"] = $this->get_events();
 
-      $this->view('coming_soon', $data);
+      $this->view('showandtell', $data);
     }
 
     /**

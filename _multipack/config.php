@@ -18,7 +18,7 @@ $config->routes = array(
   "birmingham" => "meetup_multipack",
   "leamington" => "meetup_leampack",
   "staffspack" => "meetup_staffspack",
-  "presents" => "presents",
+  "show-and-tell" => "event_showandtell",
   "style" => "style"
 );
 

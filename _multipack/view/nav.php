@@ -2,7 +2,7 @@
   <div class="nav-col">
     <ul>
       <li><a href="/">Home</a></li>
-      <li class="presents"><a href="/presents">Presents</a></li>
+      <li class="presents"><a href="/show-and-tell">Show and Tell</a></li>
     </ul>
   </div>
   <div class="nav-col meetups">

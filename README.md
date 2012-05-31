@@ -45,11 +45,15 @@ I'll document the framework more soon.
 
 ## License
 
-The website and all code is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported](http://creativecommons.org/licenses/by-nc/3.0/).
+The website and all code is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 2.0 UK: England & Wales license][cc].
 
-You are free to copy, distribute and transmit the site, and to adapt the code & content (unless it is pulled from Lanyrd - check their license) according to the following conditions:
+You are free to copy, distribute and transmit the code within this repository, and to make derivative works from the code & content (excluding content pulled in from third parties such as Lanyrd, Foursquare and others – check their licenses) according to the following conditions:
 
-- You must attribute the work by providing a link to this repository, but do not suggest that The Multipack endorses you or your use of the work.
-- Noncommercial — you may not use this work for commercial purposes.
+- You must attribute the work by providing a link to this repository.
+- You may not use this work for commercial purposes.
+- If you alter, transform, or build upon this work, you may distribute the resulting work only under a license identical to this one.
+- You must not suggest that The Multipack endorses you or your use of the work.
 
-Please see the link above for more information.
+Please see the [Creative Commons license page][cc] for further information.
+
+[cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/uk/

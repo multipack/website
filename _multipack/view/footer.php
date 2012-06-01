@@ -27,11 +27,12 @@
           </ul>
         </article>
         <article class="newsletter">
-          <form action="#" method="get">
+          <form action="http://multipack.createsend.com/t/y/s/akjr/" method="post" id="subForm">
             <h4>Sign up for our newsletter:</h4>
-            <input type="email" name="email" placeholder="joe@example.com">
-            <input type="submit" value="Sign up">
-            <aside>No spam, or you can tell our mum.</aside>
+            <input type="text" name="cm-name" id="name" placeholder="Your Name" />
+            <input type="text" name="cm-akjr-akjr" id="akjr-akjr" placeholder="Your Email Address" />
+            <input type="submit" value="Sign up" />
+            <aside>No spam, or you can tell our mums.</aside>
           </form>
         </article>
       </section>

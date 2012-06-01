@@ -8,10 +8,33 @@ This site is a gracefully-degrading responsive site. It's not prefect on every d
 
 ## Development Tips
 
-A few quick tips to get you going:
+If you're au fait with editing php.ini, and making sure things are writable by your apache process:
 
-- You'll need to make sure your version of PHP supports short opening tags and that your `php.ini` file has `short_open_tag = On`.
+- Make sure your version of PHP supports short opening tags
+- Make sure that your `php.ini` file has the setting `short_open_tag` set to `On`.
 - Create a directory called `_multipack/cache/`, a file called `_multipack/model/results` and ensure they're both writable – these are within the `.gitignore` file to prevent cached files and temporary results ending up in source control.
+
+If you're not sure how to do this, open up a terminal window and follow these instructions:
+
+- Find out where your `php.ini` file is – type `php -i | grep php.ini` and hit enter. It's usually in `/etc/` or `/private/etc/'.
+- Go to the directory you found earlier - type `cd /private/etc/' and hit enter.
+- If `php.ini` doesn't exist (`ls | grep php.ini` will show you if it does) then type `sudo cp php.ini.default php.ini` and hit enter.
+- Using the editor of your choice (I'll assume nano) edit your new `php.ini` file - type `sudo nano php.ini` and hit enter.
+- Hit CTRL-W (where-is), type `short_open_tag` and hit enter. Make sure this is uncommented and set to `On`.
+- Hit CTRL-W again, type `date.timezone` and hit enter. For the purposes of the Multipack, you'll want to uncomment this and set it to `Europe/London`.
+- Hit CTRL-O (write-out) and hit enter to write the file to its existing location.
+- Hit CTRL-X (exit).
+- Type `sudo apachectl graceful` and hit enter to restart Apache.
+
+That sorts out the short tags and timezone settings. Next, you'll want to create the cache directory and results file:
+
+- Use `cd` to move to the directory containing the website files.
+- Type `mkdir _multipack/cache` and hit enter.
+- Type `chmod 666 _multipack/cache` and hit enter.
+- Type `touch _multipack/model/results` and hit enter.
+- Type `chmod 666 _multipack/model/results` and hit enter.
+
+Note, of course, that this method of making the directory and files writable is only suitable for a local development environment as it makes them writable by anyone. **It is totally not suitable for a production environment.** This is a quick and dirty method to help you get these bits writable without having to worry about what group your apache process is running under or having to use `chgrp` on these files.
 
 ### Editing content
 

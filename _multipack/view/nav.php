@@ -2,13 +2,13 @@
   <div class="nav-col">
     <ul>
       <li><a href="/">Home</a></li>
-      <li class="presents"><a href="/presents">Presents</a></li>
+      <li class="presents"><a href="/show-and-tell">Show and Tell</a></li>
     </ul>
   </div>
   <div class="nav-col meetups">
     <ul>
-      <li class="multipack"><a href="/multipack">Multipack</a></li>
-      <li class="leampack"><a href="/leampack">Leampack</a></li>
+      <li class="multipack"><a href="/birmingham">Birminhgam</a></li>
+      <li class="leampack"><a href="/leamington">Leamington Spa</a></li>
     </ul>
   </div>
 </nav>

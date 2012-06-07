@@ -91,16 +91,16 @@
     }
 
     /**
-     * presents page
+     * Show and Tell page
      */
-    public function presents() {
+    public function event_showandtell() {
 
       $data = array();
       
-      $data['title'] = "Presents";
+      $data['title'] = "Show and Tell";
       $data["events"] = $this->get_events();
 
-      $this->view('coming_soon', $data);
+      $this->view('showandtell', $data);
     }
 
     /**
@@ -242,7 +242,7 @@
         "location" => $raw_location[0],
         "lanyrd" => $raw_event['web_url'],
         "map_url" => $raw_event['gmap_url'],
-        "url" => $meetup . "/" . $raw_event['slug'],
+        "url" => $raw_event['place']['id'] . "/" . $raw_event['slug'],
         "tagline" => $raw_event['tagline']
       );
 

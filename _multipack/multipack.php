@@ -242,7 +242,7 @@
         "location" => $raw_location[0],
         "lanyrd" => $raw_event['web_url'],
         "map_url" => $raw_event['gmap_url'],
-        "url" => $meetup . "/" . $raw_event['slug'],
+        "url" => $raw_event['place']['id'] . "/" . $raw_event['slug'],
         "tagline" => $raw_event['tagline']
       );
 

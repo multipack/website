@@ -2,7 +2,7 @@
 
 This here's the website of the [Multipack](http://multipack.co.uk).
 
-You're very welcome to submit an issue or a pull request if you spot anything that need imporoving, be it content, code or comments.
+You're very welcome to submit an issue or a pull request if you spot anything that need improving, be it content, code or comments.
 
 This site is a gracefully-degrading responsive site. It's not prefect on every device, and we rely on the community to help. If you don't feel you can make a contribution directly in code, please submit a new issue so someone else can pick it up.
 

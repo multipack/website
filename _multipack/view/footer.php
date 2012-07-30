@@ -45,8 +45,6 @@
     </footer>
   </div>
 
-  <a class="top" href="#" aria-hidden="true" data-icon="⇧"></a>
-
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="/js/libs/jquery-1.7.1.min.js"></script>
   <!-- defer tells the browser to wait for DOM load before running -->

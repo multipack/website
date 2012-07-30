@@ -5,6 +5,8 @@
  *   - wrap new functionality in a closure to avoid polluting the namespace
  *   - if you're loading anything, do it as infrequently as possible
  *   - comment it
+ *
+ * Thank you!
  */
 $(function () {
   
@@ -41,9 +43,9 @@ $(function () {
     // Swap out tweet text
     var updateText = function (elem, data) {
       // Does this element actually exist?
-      if( $(elem).length === 0 ) return;
+      if( $(elem).length === 0 ) { return; }
       // Did we get any data?
-      if( !data.text ) return;
+      if( !data.text ) { return; }
 
       // Find text element
       var p = $(elem).find('p');
@@ -105,66 +107,6 @@ $(function () {
         getTweets(true); // Dont't force a refresh
       }, 1000 * 5); // Ahem. Synergising.
     }
-
-  }());
-  
-  
-  /**
-   * Return to top button
-   */
-  ;(function () {
-
-    var top = $('.top'),
-        offset = $('section').first().offset().top;
-    var hasTransitions = $('html').hasClass('csstransitions');
-    var moveFade;
-
-    // Absolutely!
-    $(top).css({position: 'absolute'});
-
-    // Move up on click
-    $(top).click(function (e) {
-      e.preventDefault();
-      var initialPosition = $(window).scrollTop();
-      $(window).animate({scrollTop: 0});
-      setTimeout(function () {
-        if( $(window).scrollTop() >= initialPosition ) {
-          $(window).scrollTop(0);
-        }
-      }, 200);
-    });
-
-    // Move the button as the user scrolls
-    $(window).scroll(function () {
-
-      // Don't move yet, still scrollin'
-      clearTimeout(moveFade);
-
-      // Move the button after 100ms of no scrolling
-      moveFade = setTimeout(function () {
-        // Fade it out at the top
-        if( $(window).scrollTop() < offset) {
-          if( hasTransitions ) {
-            $(top).css({opacity: 0});
-          } else {
-            $(top).animate({opacity: 0});
-          }
-        } else {
-          if( hasTransitions ) {
-            $(top).css({opacity: 0.5});
-          } else {
-            $(top).animate({opacity: 0.5});
-          }
-        }
-
-        // Move it real good
-        $(top).animate({top: $(window).scrollTop()});
-      }, 200);
-
-    });
-
-    // Trigger a scroll event
-    $(window).scroll();
 
   }());
   

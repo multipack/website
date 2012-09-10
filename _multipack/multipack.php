@@ -190,22 +190,28 @@
       $cache_data = array();
 
       $events = array();
+      $used = 0;
       foreach( $raw_events as $key => $event ) {
         // We only want $count events
-        if( $key === $count ) break;
+        if( $used === $count ) break;
+        // Don't inlude past events
+        $end = strtotime($event["end_date"]);
+        if( $end < time() ) continue;
+        // This one's OK
+        $used += 1;
         // Pull out the id
-        $id = $raw_events[$key]["id"];
+        $id = $event["id"];
         // Get detailed event information
         $raw_e = $this->get_event_by_id($id);
         // Extract the important info
         $e = $this->extract_event($raw_e);
         // Store it
-        $events[$key] = $e;
-        $cache_data[$key] = $raw_e;
+        $events[] = $e;
+        $cache_data[] = $raw_e;
       }
 
       if( !$cached ) {
-        Cache::put('events', $cache_data, strtotime("+3 days"));
+        Cache::put('events', $cache_data, strtotime("+1 days"));
       }
 
       return $events;

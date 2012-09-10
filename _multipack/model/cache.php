@@ -28,7 +28,7 @@
     private static $force = false;
 
     public static $throw_exceptions = true;
-    public static $log = false;
+    public static $log = true;
 
     /**
      * Set cache path
@@ -41,7 +41,6 @@
 
       // Check that directory exists
       if( is_dir($path) && is_writable($path) ) {
-
         self::$path = $path;
       } else {
         self::__throw("Cache path does not exist or is not writable.", __LINE__);
@@ -58,7 +57,7 @@
     }
 
     /**
-     * If $force is true, it will for cache refreshing
+     * If $force is true, it will force cache refreshing
      * for all requests until $force is false
      * (ie, make sure get() and cached() return false)
      * @return $force

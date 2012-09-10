@@ -338,18 +338,19 @@ nav {
 }
   
 .newsletter {
-  input[type=email] {
+  input[type=email], input[type=text] {
     background: @form-text-bg;
-  }
-    input[type=email]:focus {
+    border: none;
+    &:focus {
       outline: 1px solid @form-outline;
     }
-  input[type=submit] {
-    background: @form-button-bg;
   }
-    input[type=submit]:hover {
+  button[type=submit] {
+    background: @form-button-bg;
+    &:hover {
       background-color: @form-button-bg-hover;
     }
+  }
 }
 
 .top, .top:visited {

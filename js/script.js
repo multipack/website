@@ -35,6 +35,8 @@ $(function () {
     var endpoint = "http://api.twitter.com/1/statuses/user_timeline.json?",
         options = "&exclude_replies=true&count=5&callback=?"; // Callback prevents XHR http://bit.ly/HbQsH7
 
+    var twenty_minutes = 1000 * 60 * 20;
+
     // Don't reload the tweets if we have them in local storage
     var localStorage = window.localStorage;
     
@@ -72,6 +74,11 @@ $(function () {
     // Go get em, tiger
     var getTweets = function (force) {
 
+      if( ! localStorage["tweet.check"] ||
+            (new Date()).getTime() - localStorage["tweet.check"] > twenty_minutes) {
+        force = true;
+      }
+
       // If we're not being forced, and we have some tweets in
       // localStorage, stick em in there
       if( !force && localStorage["tweets"] === "yes" ) {
@@ -79,6 +86,8 @@ $(function () {
         updateText($('.leampack.tweet blockquote'), JSON.parse(localStorage["tweet.leampack"]));
         return;
       }
+
+      localStorage["tweet.check"] = (new Date()).getTime();
 
       // Grab that tweet, oh yeah
       $.getJSON(endpoint + "screen_name=multipack" + options, function (data) {

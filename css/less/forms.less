@@ -6,6 +6,30 @@ form div {
 
 input {
   font-family: 'open-sans', 'Open Sans', sans-serif;
+  font-size: 0.8em;
+}
+
+button[type=submit] {
+  border: none;
+  color: white;
+  font-size: 0.667em;
+  text-transform: uppercase;
+  padding: 0.56em;
+  position: relative;
+  top: -2px;
+}
+  input[type=submit]:hover {
+  }
+
+input[type="text"],
+input[type="email"] {
+  padding: 0.262em 0.444em;
+  margin-bottom: 0.262em;
+  border: none;
+
+  &:focus {
+
+  }
 }
 
 ::-webkit-validation-bubble-message {

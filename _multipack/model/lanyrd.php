@@ -37,7 +37,7 @@
     }
   
     public function guide ($query) {
-      return $this->get("search/?q=" . urlencode($query) . "&type=guide");
+      return $this->get("search/?context=future&q=" . urlencode($query) . "&type=guide");
     }
 
     public function schedule_from_id ($id) {

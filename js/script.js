@@ -1,8 +1,13 @@
 /**
- * Multipack JS
- *
+ * Copyright (C) 2012 Multipack
+ */
+;(function(){ /* ... */ }());
+/**
+ * This file should be minified to /js/script.min.js.
+ * 
  * If you add to this file, please be a good Javascript citizen:
- *   - wrap new functionality in a closure to avoid polluting the namespace
+ *   - wrap new functionality in a closure (the function above)
+ *     to avoid polluting the namespace
  *   - if you're loading anything, do it as infrequently as possible
  *   - comment it
  *
@@ -74,8 +79,9 @@ $(function () {
     // Go get em, tiger
     var getTweets = function (force) {
 
-      if( ! localStorage["tweet.check"] ||
-            (new Date()).getTime() - localStorage["tweet.check"] > twenty_minutes) {
+      var time_diff = (new Date()).getTime() - localStorage["tweet.check"];
+
+      if( ! localStorage["tweet.check"] || time_diff > twenty_minutes) {
         force = true;
       }
 

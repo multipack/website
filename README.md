@@ -64,7 +64,7 @@ Configuration is kept in `config.php`, and supports multiple environments.
 
 The controller is `_multipack/multipack.php`.
 
-I'll document the framework more soon.
+Ask @phuu if problems with Lowcarb crop up.
 
 ## License
 

@@ -1121,7 +1121,6 @@ input[type="text"],
 input[type="email"] {
   padding: 0.262em 0.444em;
   margin-bottom: 0.262em;
-  border: none;
 }
 ::-webkit-validation-bubble-message {
   font-family: 'open-sans', 'Open Sans', sans-serif;

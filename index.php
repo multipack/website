@@ -4,13 +4,13 @@
  * ✨
  * MULTIPACK
  * 
- * Read the README before making changes!
+ * Read the README before making changes.
  * 
- * Welcome! CMS is based on lowcarb (https://github.com/phuu/lowcarb).
+ * Welcome! This framework is based on lowcarb (https://github.com/phuu/lowcarb).
  * 
  * There is one controller that handles all routes.
  * 
- * To edit some content on the site, check out the _content/ directory.
+ * To edit some content on the site, take a look in _multipack/view/.
  * 
  * Coding style:
  *   - Indentation using 2 spaces, no tabs
@@ -34,9 +34,9 @@ error_log('');
 define('BOOT', true);
 
 // CMS directories
-define('DIR_ROOT', __DIR__);
-define('DIR_APP',DIR_ROOT . '/_multipack');
-define('DIR_LIB', DIR_APP . '/lib');
+define('DIR_ROOT',  __DIR__);
+define('DIR_APP',   DIR_ROOT . '/_multipack');
+define('DIR_LIB',   DIR_APP . '/lib');
 define('DIR_MODEL', DIR_APP . '/model');
 
 // Supress page errors?
@@ -107,15 +107,14 @@ $controller = new Multipack($model, $config->url, $uri);
  * Away we go!
  */
 
-// Method should always exists as the Router
-// handles 404 errors
+// Method should always exists as the Router handles 404 errors
 if( method_exists($controller, $route['function']) ) {
   
   // Debuggin'
   $buf = "Req: " . $route['function'];
   error_log($buf);
   
-  // This is nasty nasty nasty
+  // This is nasty, nasty, nasty.
   call_user_func_array(array($controller, $route['function']), $route['arguments']);
   
 } else {

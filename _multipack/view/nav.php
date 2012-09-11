@@ -7,7 +7,7 @@
   </div>
   <div class="nav-col meetups">
     <ul>
-      <li class="multipack"><a href="/birmingham">Birminhgam</a></li>
+      <li class="multipack"><a href="/birmingham">Birmingham</a></li>
       <li class="leampack"><a href="/leamington">Leamington Spa</a></li>
     </ul>
   </div>

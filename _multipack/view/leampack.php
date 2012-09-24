@@ -7,6 +7,7 @@
     </div>
   </header>
   <article role="about">
-    <p>A local midweek offshoot of the Multipack, where you can join geeks in Leamington, Warwick, Coventry, Stratford-upon-Avon and the surrounding areas for a midweek drink, a bite to eat and a chat about all things web, geek, tech and &mdash; every two months &mdash; iOS and mobile development with the iOS Midlands Meetups crowd.</p>
+    <p>Join us a the <strong>White Horse</strong> in <strong>Leamington Spa</strong> for a local midweek offshoot of the Multipack, where you can join geeks from Leamington, Warwick, Coventry, Stratford-upon-Avon and the surrounding areas for a midweek drink, a bite to eat and a chat about all things web, geek and tech.</p>
+    <p>Every two months we combine with the iOS Midlands Meetups crowd for an added iOS and mobile development dimenion.</p>
   </article>
 </section>

@@ -32,7 +32,7 @@
     public function style() {
 
       // Data is passed to the view
-      $data = array("title" => "Style Guide", "description" => "The Multipack Style Huide");
+      $data = array("title" => "Style Guide", "description" => "The Multipack Style Guide");
 
       // Get raw events from Lanyrd, or cache
       $data["events"] = $this->get_events();

@@ -7,6 +7,7 @@
     </div>
   </header>
   <article role="about">
-	<p>Come for a drink, and an optional bite to eat, with one of the friendliest communities of web professionals, geeks, techies &mdash; and normal people &mdash; from across the West Midlands.</p>
+	  <p>Head to the <strong>Old Joint Stock</strong> in <strong>Birmingham</strong> for a drink, and optional bite to eat, with a friendly community of web professionals, geeks, techies and (some)normal people from across the West Midlands.</p>
+    <p>Whatever technology you're into and whatever you do, we'd be happy to see you!</p> 
   </article>
 </section>

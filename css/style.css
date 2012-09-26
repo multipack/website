@@ -936,12 +936,16 @@ section .about {
   margin-top: 2.25em;
   display: none;
 }
-section .map {
+.map {
   margin-top: 1em;
 }
-section .mapimage {
+.mapimage {
   margin-top: 1em;
   display: none;
+}
+.mapimage p {
+  margin: 0 0 0.667em;
+  font-size: 0.8em;
 }
 section header nav,
 footer header nav {

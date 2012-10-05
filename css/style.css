@@ -655,13 +655,11 @@ nav .presents a:hover {
 .photos li .more a {
   color: #7e8e57;
 }
-.newsletter input[type=email],
-.newsletter input[type=text] {
+.newsletter input {
   background: #dfdfdf;
   border: none;
 }
-.newsletter input[type=email]:focus,
-.newsletter input[type=text]:focus {
+.newsletter input:focus {
   outline: 1px solid #a5ca4e;
 }
 .newsletter button[type=submit] {

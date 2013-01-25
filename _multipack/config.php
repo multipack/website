@@ -26,4 +26,4 @@ $config->models = array("lanyrd", "cache");
 
 // Production
 $config->environment('production');
-$config->url = "//beta.multipack.co.uk";
+$config->url = "//multipack.co.uk";

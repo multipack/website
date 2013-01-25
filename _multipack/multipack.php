@@ -81,7 +81,7 @@
       $event = $this->extract_event($raw_event);
       
       // Add view data
-      $data['title'] = ucwords($event->meetup);
+      $data['title'] = !empty($event->meetup) ? ucwords($event->meetup) : ucwords($meetup);
       if( $slug !== '' ) $data['title'] = ucwords(str_replace('-', ' ', $slug));
       $data["event"] = $event;
 

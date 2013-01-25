@@ -12,7 +12,7 @@
     <?php $this->view_component('nav'); ?>
     <div class="branding">
       <h1>Multipack</h1>
-      <h2>Events…</h2>
+      <h2><?=$this->view_data->title; ?></h2>
     </div>
   </header>
   <article role="about">

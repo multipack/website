@@ -1,3 +1,4 @@
+<?php if(!empty($view_component_data->meetup)): ?>
 <article role="details">
   <h2 class="type"><?=$view_component_data->meetup?></h2>
   <h2 class="date"><?=$view_component_data->date?></h2>
@@ -23,3 +24,4 @@
     <li class="findless"><a href="#">Close</a></li>
   </ul>
 </nav>
+<?php endif; ?>

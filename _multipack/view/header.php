@@ -15,7 +15,7 @@
   <meta property="og:url" content="http://www.multipack.co.uk" />
   <meta property="og:determiner" content="the" />
   <meta property="og:locale" content="en_GB" />
-  <meta name="description" content="Multipack &ndash; Every month we get together in Birmingham, Leamington Spa or Staffordshire to discuss all things design, code, standards and technology, and share our knowledge, skills and talents.">
+  <meta name="description" content="Multipack – Every month we get together in Birmingham, Leamington Spa or Staffordshire to discuss all things design, code, standards and technology, and share our knowledge, skills and talents.">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 

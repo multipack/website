@@ -7,6 +7,6 @@
     </div>
   </header>
   <article role="about">
-    <p>It's a great opportunity to  meet like-minded web developers, designers and even some normal people!</p>
+    <p>It’s a great opportunity to meet like-minded web developers, designers and even some normal people!</p>
   </article>
 </section>

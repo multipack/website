@@ -7,7 +7,7 @@
     </div>
   </header>
   <article role="about">
-    <p>You are currently reading the style guide for the website, used for ensuring new elements don't screw up the design and for responsive testing.</p>
+    <p>You are currently reading the style guide for the website, used for ensuring new elements don’t screw up the design and for responsive testing.</p>
     <p>This document is a guide to the mark-up styles used throughout the site.</p>
     <h2>Sections</h2>
     <p>The main page header of this guide is an <code>h1</code> element. Any header elements may include links, as depicted in the example.</p>

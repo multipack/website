@@ -21,6 +21,20 @@ $config->routes = array(
   "show-and-tell" => "event_showandtell",
   "style" => "style"
 );
+$config->redirects = array(
+	'about'		=> '/',
+	'events'	=> '/show-and-tell',
+	'presents'	=> '/show-and-tell',
+	
+	// old presents URLs
+	'presents/mobile-development' => 'http://v2.multipack.co.uk/presents/mobile-development/',
+	'presents/show-and-tell' => 'http://v2.multipack.co.uk/presents/show-and-tell/',
+	'presents/the-design-process' => 'http://v2.multipack.co.uk/presents/the-design-process/',
+	'presents/rich-internet-applications' => 'http://v2.multipack.co.uk/presents/rich-internet-applications/',
+	'presents/coding-standards' => 'http://v2.multipack.co.uk/presents/coding-standards/',
+	'presents/being-green' => 'http://v2.multipack.co.uk/presents/being-green/',
+	'presents/emerging-standards' => 'http://v2.multipack.co.uk/presents/emerging-standards/',
+);
 
 $config->models = array("lanyrd", "cache");
 

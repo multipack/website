@@ -39,6 +39,29 @@
       $this->view('error', $data, $errors);
       
     }
+    
+    /**
+     * redirect URLs
+     *
+     * @return	void
+	 * @desc	First argument should be all the config->redirects
+	 *			Further arguments are the matched URI
+	 *			Should only enter here if the redirect matches the URI, but incase, check and throw 404
+	 * @author	Trevor Morris
+     */
+    public function redirect() {
+		$arguments	= func_get_args();
+		$redirects	= array_shift($arguments);
+		$redirect_key = implode('/', $arguments);
+		
+		if(!empty($redirects[$redirect_key])) {
+			header('Location: ' . $redirects[$redirect_key], true, 301);
+			exit;
+		}
+		
+		// throw 404
+		$this->error();
+    }
 
     /**
      * serve style guide

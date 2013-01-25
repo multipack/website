@@ -13,15 +13,19 @@
     
     private $uri;
     
+    private $redirect = false;
+    
     /**
      *  constructor
      * 
      */
-    function __construct($routes) {
+    function __construct($routes, $redirect = false) {
       
       foreach($routes as $uri => $function) {
         $this->_add($uri, $function);
       }
+	  
+	  $this->redirect = $redirect;
       
     }
     
@@ -43,8 +47,10 @@
       foreach($segments as &$segment) {
         $segment = trim(preg_replace('/\d+/i',':num',$segment), '/');
       }
-      
-      if( $segments[0] !== ':num' ) {
+	  
+      if( $this->redirect === true ) {
+        return array("function" => 'redirect', "arguments" => $arguments, 'is_error' => $this->_get_route($segments[0]) === 'error');
+      } elseif( $segments[0] !== ':num' ) {
         array_shift($arguments);
         return array("function" => $this->_get_route($segments[0]), "arguments" => $arguments);
       } elseif( $segments[0] == ':num' ) {
@@ -66,6 +72,16 @@
       } else {
         return 'error';
       }
+      
+    }
+    
+    /**
+     *  get all the routes
+     * 
+     */
+    public function get_routes() {
+      
+		return $this->routes;
       
     }
     

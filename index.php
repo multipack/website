@@ -81,8 +81,10 @@ unset($path);
 $uri = new URI($config->prefix);
 
 $router = new Router($config->routes);
+$route	= $router->match($uri->segments());
 
-$route = $router->match($uri->segments());
+$redirects	= new Router($config->redirects, true);
+$redirect	= $redirects->match($uri->segments());
 
 /**
  * Model
@@ -108,7 +110,16 @@ $controller = new Multipack($model, $config->url, $uri);
  */
 
 // Method should always exists as the Router handles 404 errors
-if( method_exists($controller, $route['function']) ) {
+if($redirect['is_error'] === false && method_exists($controller, $redirect['function']) ) {
+  
+  // Debuggin'
+  $buf = "Redirect: " . $redirect['function'];
+  error_log($buf);
+  
+  // This is nasty, nasty, nasty.
+  call_user_func_array(array($controller, $redirect['function']), array_merge(array($redirects->get_routes()), $redirect['arguments']));
+}
+else if( method_exists($controller, $route['function']) ) {
   
   // Debuggin'
   $buf = "Req: " . $route['function'];

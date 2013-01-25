@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title><?php echo $this->view_title(); ?> &ndash; Multipack</title>
+  <title><?php echo $this->view_title(); ?>Multipack</title>
 
   <!-- Meta Information -->
   <meta property="og:title" content="" />

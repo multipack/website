@@ -271,5 +271,14 @@
       return new Store($event);
 
     }
+
+    /**
+     * get view titile
+     * @return string view title
+     */
+    protected function view_title() {
+      $title = $this->view_data->title;
+      return !empty($title) ? sprintf('%s — ', $title) : '';
+    }
     
   }

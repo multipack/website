@@ -29,6 +29,7 @@
 
 ?>
 
+<?php if(!empty($this->view_data->events)): ?>
 <article role="event" class="next <?=$this->view_data->events[0]->meetup?> event folded">
   
   <header>
@@ -37,3 +38,4 @@
   </header>
   <?php $this->view_component('event', $this->view_data->events[0]); ?>
 </article>
+<?php endif; ?>

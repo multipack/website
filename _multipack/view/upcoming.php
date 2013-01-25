@@ -29,6 +29,7 @@
 
 ?>
 
+<?php if(!empty($this->view_data->events)): ?>
 <section>
   <article role="upcoming" class="upcoming">
     <h3>Upcoming events:</h3>
@@ -47,3 +48,4 @@
     </ul>
   </article>
 </section>
+<?php endif; ?>

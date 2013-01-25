@@ -370,7 +370,9 @@ abstract class CFBinaryPropertyList {
       for($i=0;$i<$length;++$i) {
         $key = $this->readBinaryObjectAt($keys[$i+1]+1);
         $object = $this->readBinaryObjectAt($objects[$i+1]+1);
-        $dict->add($key->getValue(),$object);
+		if($object instanceof CFType) {
+			$dict->add($key->getValue(),$object);
+		}
       }
     }
 
@@ -427,7 +429,7 @@ abstract class CFBinaryPropertyList {
       case 'd': // dictionary
         $retval = $this->readBinaryDict($object_length);
         break;
-    }
+    }	
 
     return $retval;
   }

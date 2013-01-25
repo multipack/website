@@ -7,7 +7,7 @@
     </div>
   </header>
   <article role="about">
-    <p>Every month we get together in <a href="multipack">Birmingham</a> and <a href="leampack">Leamington Spa</a> to discuss all things design, code, standards and technology, and we put on regular events to help us all <a href="presents">share our knowledge</a>, skills and talents.</p>
+    <p>Every month we get together in <a href="multipack">Birmingham</a> and <a href="leamington">Leamington Spa</a> to discuss all things design, code, standards and technology, and we put on regular events to help us all <a href="presents">share our knowledge</a>, skills and talents.</p>
     <p>It's a great opportunity to meet like-minded web developers, designers and even some normal people!</p>
   </article>
 </section>

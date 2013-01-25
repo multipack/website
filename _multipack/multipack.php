@@ -24,6 +24,21 @@
       $this->view('home', $data);
       
     }
+    
+    /**
+     * serve error page
+     *
+     * @return void
+     * @author Tom Ashworth
+     */
+    public function error() {
+
+      // Data is passed to the view
+      $data = array("title" => "Page Not Found");
+      
+      $this->view('error', $data, $errors);
+      
+    }
 
     /**
      * serve style guide

@@ -6,19 +6,19 @@
             <li role="tweet" class="multipack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/multipack" class="follow">@multipack</a></h2>
-                <p>Aggregating real-time data streams&hellip;</p>
+                <p>Aggregating real-time data streams…</p>
               </blockquote>
             </li>
             <li role="tweet" class="leampack tweet" data-icon="t">
               <blockquote role="contents">
                 <h2><a href="//twitter.com/leampack" class="follow">@leampack</a></h2>
-                <p>Synergising core competencies&hellip;</p>
+                <p>Synergising core competencies…</p>
               </blockquote>
             </li>
           </ul>
         </article>
         <article class="social-media">
-          <h4>Also find us on&hellip;</h4>
+          <h4>Also find us on…</h4>
           <ul>
             <li><a class="lanyrd" data-icon="l" href="//lanyrd.com/guides/multipack">Lanyrd</a></li>
             <li><a class="facebook" data-icon="f" href="//www.facebook.com/groups/2230777424/">Facebook</a></li>
@@ -39,7 +39,7 @@
         </article>
       </section>
       <section class="block footer">
-        <p class="copyright">&copy; 2012 The Multipack</p>
+        <p class="copyright">© 2012 The Multipack</p>
         <p class="license">
           <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">The Multipack website</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License</a> and is open-sourced on <a href="//github.com/multipack/website" title="Multipack on Github">Github</a>.
         </p>

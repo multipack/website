@@ -25,6 +25,7 @@ $config->redirects = array(
 	'about'		=> '/',
 	'events'	=> '/show-and-tell',
 	'presents'	=> '/show-and-tell',
+	'leampack'	=> '/leamington',
 	
 	// old presents URLs
 	'presents/mobile-development' => 'http://v2.multipack.co.uk/presents/mobile-development/',

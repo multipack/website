@@ -16,8 +16,10 @@
     </div>
   </header>
   <article role="about">
-    <p>Sorry, we couldn’t find any upcoming events, but please check back soon.
-		In the meantime, you can find out about all our events on <a class="lanyrd" href="//lanyrd.com/guides/multipack">Lanyrd</a>.</p>
+    <p>Sorry, we couldn&rsquo;t get details of upcoming events from Lanyrd. 
+        Birmingham&rsquo;s meet-up takes place at 2pm on the second Saturday of each month and 
+        Leamington&rsquo;s meet-up takes place at 7:30pm on the last Tuesday of each month.
+		For further details, find out about all our events on <a class="lanyrd" href="//lanyrd.com/guides/multipack">Lanyrd</a>.</p>
   </article>
 </section>
 <?php endif; ?>

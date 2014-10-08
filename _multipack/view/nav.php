@@ -3,12 +3,7 @@
     <ul>
       <li><a href="/">Home</a></li>
       <li class="presents"><a href="/show-and-tell">Show and Tell</a></li>
-    </ul>
-  </div>
-  <div class="nav-col meetups">
-    <ul>
       <li class="multipack"><a href="/birmingham">Birmingham</a></li>
-      <li class="leampack"><a href="/leamington">Leamington Spa</a></li>
     </ul>
   </div>
 </nav>

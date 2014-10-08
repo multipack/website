@@ -3,9 +3,9 @@
 /**
  * ✨
  * MULTIPACK
- * 
+ *
  * Site Configuration
- * 
+ *
  * Choose which environment you are configuring
  * using $config->environment(...)
  */
@@ -16,8 +16,6 @@ $config->url = "//multipack.dev";
 $config->routes = array(
   "" => "index",
   "birmingham" => "meetup_multipack",
-  "leamington" => "meetup_leampack",
-  "staffspack" => "meetup_staffspack",
   "show-and-tell" => "event_showandtell",
   "style" => "style"
 );
@@ -26,7 +24,7 @@ $config->redirects = array(
 	'events'	=> '/show-and-tell',
 	'presents'	=> '/show-and-tell',
 	'leampack'	=> '/leamington',
-	
+
 	// old presents URLs
 	'presents/mobile-development' => 'http://v2.multipack.co.uk/presents/mobile-development/',
 	'presents/show-and-tell' => 'http://v2.multipack.co.uk/presents/show-and-tell/',

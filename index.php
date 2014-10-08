@@ -3,21 +3,21 @@
 /**
  * ✨
  * MULTIPACK
- * 
+ *
  * Read the README before making changes.
- * 
+ *
  * Welcome! This framework is based on lowcarb (https://github.com/phuu/lowcarb).
- * 
+ *
  * There is one controller that handles all routes.
- * 
+ *
  * To edit some content on the site, take a look in _multipack/view/.
- * 
+ *
  * Coding style:
  *   - Indentation using 2 spaces, no tabs
  *   - Brackets are ... {
  *     } like that
  *   - Please comment anything that is not immediately obvious
- * 
+ *
  */
 
 /**
@@ -111,28 +111,26 @@ $controller = new Multipack($model, $config->url, $uri);
 
 // Method should always exists as the Router handles 404 errors
 if($redirect['is_error'] === false && method_exists($controller, $redirect['function']) ) {
-  
+
   // Debuggin'
   $buf = "Redirect: " . $redirect['function'];
   error_log($buf);
-  
+
   // This is nasty, nasty, nasty.
   call_user_func_array(array($controller, $redirect['function']), array_merge(array($redirects->get_routes()), $redirect['arguments']));
 }
 else if( method_exists($controller, $route['function']) ) {
-  
+
   // Debuggin'
   $buf = "Req: " . $route['function'];
   error_log($buf);
-  
+
   // This is nasty, nasty, nasty.
   call_user_func_array(array($controller, $route['function']), $route['arguments']);
-  
+
 } else {
-  
+
   // http://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol
   exit("418 Error. I'm a teapot.");
-  
+
 }
-
-

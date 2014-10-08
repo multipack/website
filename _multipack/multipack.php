@@ -3,12 +3,12 @@
   /**
    * ✨
    * MULTIPACK
-   * 
+   *
    * Controller
    */
-  
+
   class Multipack extends Controller {
-    
+
     /**
      * serve home page with events
      *
@@ -20,11 +20,11 @@
 
       // Get raw events from Lanyrd, or cache
       $data["events"] = $this->get_events();
-      
+
       $this->view('home', $data);
-      
+
     }
-    
+
     /**
      * serve error page
      *
@@ -35,11 +35,11 @@
 
       // Data is passed to the view
       $data = array("title" => "Page Not Found");
-      
+
       $this->view('error', $data, $errors);
-      
+
     }
-    
+
     /**
      * redirect URLs
      *
@@ -53,12 +53,12 @@
 		$arguments	= func_get_args();
 		$redirects	= array_shift($arguments);
 		$redirect_key = implode('/', $arguments);
-		
+
 		if(!empty($redirects[$redirect_key])) {
 			header('Location: ' . $redirects[$redirect_key], true, 301);
 			exit;
 		}
-		
+
 		// throw 404
 		$this->error();
     }
@@ -74,9 +74,9 @@
 
       // Get raw events from Lanyrd, or cache
       $data["events"] = $this->get_events();
-      
+
       $this->view('style', $data);
-      
+
     }
 
     /**
@@ -93,7 +93,7 @@
 
     /**
      * serve meetup page
-     * 
+     *
      * @param  string $slug Lanyrd slug for the event
      */
     private function meetup($meetup, $slug = '') {
@@ -114,10 +114,10 @@
 
       // Get the event from Lanyrd, or the cache
       $raw_event = $this->get_event_by_id($id);
-      
+
       // Extract the event
       $event = $this->extract_event($raw_event);
-      
+
       // Add view data
       $data['title'] = !empty($event->meetup) ? ucwords($event->meetup) : ucwords($meetup);
       if( $slug !== '' ) $data['title'] = ucwords(str_replace('-', ' ', $slug));
@@ -134,7 +134,7 @@
     public function event_showandtell() {
 
       $data = array();
-      
+
       $data['title'] = "Show and Tell";
       $data["events"] = $this->get_events();
 
@@ -155,7 +155,7 @@
       }
 
       // Store it and cache it (with a long expiry time)
-      $event = $this->model->lanyrd->event_by_id($id);
+      //$event = $this->model->lanyrd->event_by_id($id);
 
       Cache::put($cache_id, $event, strtotime("+6 months"));
 
@@ -178,7 +178,7 @@
       // Nope, so grab and store it for a long time
       $result = $this->model->lanyrd->events_search($slug);
       $event = $result[0];
-      
+
       Cache::put($slug, $event, strtotime("+6 months"));
 
       return $event;
@@ -202,7 +202,7 @@
       // Nope, so grab and store it for a long time
       $result = $this->model->lanyrd->events_search($meetup);
       $event = $result[0];
-      
+
       Cache::put($cache_id, $event, strtotime("+1 week"));
 
       return $event;
@@ -222,7 +222,7 @@
       if( $cached ) {
         $raw_events = Cache::get('events');
       } else {
-        $raw_events = $this->model->lanyrd->events_from_guide("multipack");
+        //$raw_events = $this->model->lanyrd->events_from_guide("multipack");
       }
 
       $cache_data = array();
@@ -303,5 +303,5 @@
       $title = $this->view_data->title;
       return !empty($title) ? sprintf('%s — ', $title) : '';
     }
-    
+
   }

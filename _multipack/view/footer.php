@@ -2,20 +2,8 @@
       <section class="social">
         <h3>Stay connected and up-to-date:</h3>
         <article class="tweets">
-          <ul>
-            <li role="tweet" class="multipack tweet" data-icon="t">
-              <blockquote role="contents">
-                <h2><a href="//twitter.com/multipack" class="follow">@multipack</a></h2>
-                <p>Aggregating real-time data streams…</p>
-              </blockquote>
-            </li>
-            <li role="tweet" class="leampack tweet" data-icon="t">
-              <blockquote role="contents">
-                <h2><a href="//twitter.com/leampack" class="follow">@leampack</a></h2>
-                <p>Synergising core competencies…</p>
-              </blockquote>
-            </li>
-          </ul>
+          <a class="twitter-timeline" href="https://twitter.com/multipack" data-widget-id="519945419745267712" data-tweet-limit="3" data-chrome="nofooter transparent" >Tweets by @multipack</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </article>
         <article class="social-media">
           <h4>Also find us on…</h4>

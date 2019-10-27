@@ -36,7 +36,7 @@
       // Data is passed to the view
       $data = array("title" => "Page Not Found");
 
-      $this->view('error', $data, $errors);
+      $this->view('error', $data, []);
 
     }
 

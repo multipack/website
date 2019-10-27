@@ -110,7 +110,7 @@ $controller = new Multipack($model, $config->url, $uri);
  */
 
 // Method should always exists as the Router handles 404 errors
-if($redirect['is_error'] === false && method_exists($controller, $redirect['function']) ) {
+if((!array_key_exists('is_error', $redirect) || $redirect['is_error'] === false) && method_exists($controller, $redirect['function']) ) {
 
   // Debuggin'
   $buf = "Redirect: " . $redirect['function'];

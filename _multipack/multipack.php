@@ -19,7 +19,7 @@
       $data = array("title" => "Home", "description" => "The Multipack");
 
       // Get raw events from Lanyrd, or cache
-      $data["events"] = $this->get_events();
+      // $data["events"] = $this->get_events();
 
       $this->view('home', $data);
 
@@ -85,10 +85,10 @@
      * @return [type]       [description]
      */
     public function meetup_leampack($slug = '') {
-      $this->meetup('leampack', $slug);
+      $this->view('leampack', []);
     }
     public function meetup_multipack($slug = '') {
-      $this->meetup('multipack birmingham', $slug);
+      $this->view('multipack', []);
     }
 
     /**
@@ -155,7 +155,7 @@
       }
 
       // Store it and cache it (with a long expiry time)
-      //$event = $this->model->lanyrd->event_by_id($id);
+      $event = $this->model->lanyrd->event_by_id($id);
 
       Cache::put($cache_id, $event, strtotime("+6 months"));
 

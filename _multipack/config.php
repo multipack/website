@@ -16,10 +16,12 @@ $config->url = "//multipack.dev";
 $config->routes = array(
   "" => "index",
   "birmingham" => "meetup_multipack",
+  "leamington" => "meetup_leampack",
   "show-and-tell" => "event_showandtell",
   "style" => "style"
 );
 $config->redirects = array(
+	''		    => 'index',
 	'about'		=> '/',
 	'events'	=> '/show-and-tell',
 	'presents'	=> '/show-and-tell',

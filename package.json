@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "build": "snap http://multipack.test -o www",
+    "deploy": "push-dir --dir=www --branch=gh-pages --force",
     "release": "standard-version",
     "php-sniff": "",
     "php-sniff-fix": "",
@@ -18,7 +19,8 @@
     "lint:php": "npm run php-sniff"
   },
   "dependencies": {
-    "@remy/snap": "^1.1.1"
+    "@remy/snap": "^1.1.1",
+    "push-dir": "^0.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",

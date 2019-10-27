@@ -2,8 +2,11 @@
 /* humanstxt.org */
 
 /* MULTIPACK */
+  Trevor Morris
+  @trovster
+  https://www.trovster.com
 
 /* SITE */
   Tom Ashworth
-  @phuunet
-  phuu.net
+  @tgvashworth
+  https://tgvashworth.com

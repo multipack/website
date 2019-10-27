@@ -22,9 +22,6 @@
   <!-- Consumately Super Stylesheetage -->
   <link rel="stylesheet" href="/css/style.css">
   
-  <!-- Modernizr Custom Build -->
-  <script src="/js/libs/modernizr-custom.js"></script>
-  
   <!-- Typekit (serving Open Sans) -->
   <script src="//use.typekit.com/kmc0but.js"></script>
   <script>try{Typekit.load()}catch(e){}</script>

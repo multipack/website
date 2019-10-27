@@ -1,5 +1,5 @@
 <article class="social-media">
-  <h4>Also find us on…</h4>
+  <h4>Find us on…</h4>
   <ul>
     <li><a class="lanyrd" href="//lanyrd.com/guides/multipack">Lanyrd</a></li>
     <li><a class="facebook" href="//www.facebook.com/groups/2230777424/">Facebook</a></li>

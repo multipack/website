@@ -1,9 +1,7 @@
     <footer class="main-footer">
       <section class="social">
         <h3>Stay connected and up-to-date:</h3>
-        <?php $this->view_component('tweets'); ?>
         <?php $this->view_component('social_media'); ?>
-        <?php $this->view_component('newsletter'); ?>
       </section>
       <section class="block footer">
         <p class="copyright">&copy; The Multipack</p>

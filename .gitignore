@@ -3,3 +3,5 @@ _multipack/model/results
 _multipack/cache/
 cache/
 logs
+node_modules/
+www/

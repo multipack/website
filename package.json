@@ -1,0 +1,103 @@
+{
+  "name": "multipack",
+  "title": "Multipack Website",
+  "description": "Work in progress of getting the Multipack website back up and running.",
+  "author": "Trevor Morris",
+  "version": "0.0.1",
+  "updated": "2019-10-27",
+  "private": true,
+  "scripts": {
+    "build": "snap http://multipack.test -o www",
+    "release": "standard-version",
+    "php-sniff": "",
+    "php-sniff-fix": "",
+    "js-sniff": "standardx js/**/*.js' --verbose | snazzy",
+    "js-sniff-fix": "standardx js/**/*.js' --fix",
+    "lint": "npm run lint:js && npm run lint:php",
+    "lint:js": "npm run js-sniff",
+    "lint:php": "npm run php-sniff"
+  },
+  "dependencies": {
+    "@remy/snap": "^1.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.9",
+    "json": "^9.0.6",
+    "lint-staged": "^9.4.2",
+    "standard-version": "^7.0.0",
+    "standardx": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/multipack/website.git"
+  },
+  "lint-staged": {
+    "*.(vue|js)": [
+      "npm run lint:js"
+    ],
+    "*.(php)": [
+      "npm run lint:php"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ]
+    }
+  },
+  "standard-version": {
+    "changelogHeader": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n",
+    "infile": "SITE-CHANGELOG.md",
+    "scripts": {
+      "prebump": "json --in-place -f package.json -e '$date = new Date().toISOString().split(\"T\")[0]; this.updated=$date'"
+    },
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "hidden": true
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "hidden": true
+      },
+      {
+        "type": "perf",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "hidden": true
+      }
+    ]
+  }
+}

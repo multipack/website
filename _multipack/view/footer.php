@@ -12,11 +12,6 @@
     </footer>
   </div>
 
-  <!-- JavaScript at the bottom for fast page loading -->
-  <script src="/js/libs/jquery-1.7.1.min.js"></script>
-  <!-- defer tells the browser to wait for DOM load before running -->
-  <script defer src="/js/script.min.js"></script>
-
   <!-- Google Analytics -->
   <script>var _gaq=[['_setAccount','UA-32139617-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 

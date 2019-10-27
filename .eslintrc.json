@@ -1,0 +1,26 @@
+{
+    "root": true,
+    "env": {
+        "es6": false
+    },
+    "globals": {
+        "google": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "no-new": [
+            "off"
+        ],
+        "import/no-extraneous-dependencies": [
+            "error", {
+                "devDependencies": true
+            }
+        ]
+    }
+}

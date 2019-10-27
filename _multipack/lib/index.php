@@ -1,1 +1,0 @@
-<?php if(!BOOT) exit("No direct script access."); ?>

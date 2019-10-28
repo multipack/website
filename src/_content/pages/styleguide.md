@@ -100,16 +100,16 @@ The `ul` element denotes an unordered list (ie. a list of loose items that donâ€
 
 <div class="example">
 
-*   United Kingdom of Great Britain and Northern Ireland:
-    *   England
-    *   Scotland
-    *   Wales
-    *   Northern Ireland
-*   Republic of Ireland
-*   Isle of Man
-*   Channel Islands:
-    *   Bailiwick of Guernsey
-    *   Bailiwick of Jersey
+* United Kingdom of Great Britain and Northern Ireland:
+  * England
+  * Scotland
+  * Wales
+  * Northern Ireland
+* Republic of Ireland
+* Isle of Man
+* Channel Islands:
+  * Bailiwick of Guernsey
+  * Bailiwick of Jersey
 
 </div>
 

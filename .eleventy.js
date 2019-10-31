@@ -48,7 +48,8 @@ module.exports = function (eleventy) {
         dir: {
             input: 'src',
             output: 'www',
-            layouts: '_layouts'
+            layouts: '_layouts',
+            data: '_data'
         },
         templateFormats: ['liquid', 'md'],
         passthroughFileCopy: true

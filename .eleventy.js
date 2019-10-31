@@ -37,7 +37,8 @@ module.exports = function (eleventy) {
     // Passthrough
     eleventy.addPassthroughCopy({
         './src/images': 'images',
-        './src/assets/*.ico': '/'
+        './src/assets/*.ico': '/',
+        './README-DEPLOY.md': '/README.md'
     })
 
     // Enable data deep merge

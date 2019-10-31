@@ -20,7 +20,8 @@
     "lint:scripts": "standardx src/**/*.js",
     "lint:styles": "stylelint src/**/*.css",
     "lint": "npm-run-all lint:*",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "deploy": "npm run build && push-dir --dir=www --branch=gh-pages --force"
   },
   "dependencies": {},
   "devDependencies": {

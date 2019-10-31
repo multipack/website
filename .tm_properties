@@ -1,5 +1,0 @@
-# Project Settings (see README.md for more information)
-
-[ *.{php,css,js,less} ]
-softTabs			= true
-tabSize				= 2

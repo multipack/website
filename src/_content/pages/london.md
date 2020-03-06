@@ -8,7 +8,7 @@ For those folk who used to work in and around Birmingham but can now be found in
 
 The first reunion is on **Thursday 5th March 2020** from 6pm at **The Marquis of Granby in Westminster**. 
 
-A small group of the original crowd are planning to attend including [Paul](https://twitter.com/paulrobertlloyd), [Andy H](https://twitter.com/aajhiggs), [Ant](https://twitter.com/abitgone), [Matt](https://twitter.com/shuckle), [Gaz](https://twitter.com/gaznet) and [Si](https://twitter.com/Si). Some willhave to travel back to the Midlands afterwards so banter will likely continue along the North West Coast mainline.
+A small group of the original crowd are planning to attend including [Paul](https://twitter.com/paulrobertlloyd), [Andy H](https://twitter.com/aajhiggs), [Matt](https://twitter.com/shuckle), [Gaz](https://twitter.com/gaznet) and [Si](https://twitter.com/Si). Some will have to travel back to the Midlands afterwards so banter will likely continue along the North West Coast mainline.
 
 Here's the gang smiling after pizza...
 

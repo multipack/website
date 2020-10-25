@@ -14,5 +14,9 @@
     {
         "label": "Leamington",
         "url": "/leamington/"
+    },
+    {
+        "label": "London",
+        "url": "/london/"
     }
 ]

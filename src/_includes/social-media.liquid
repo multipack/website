@@ -1,8 +1,0 @@
-<article class="social-media">
-    <h4>Find us on…</h4>
-    <ul>
-    {%- for item in social-media -%}
-      <li><a href="{{ item.url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
-    {%- endfor -%}
-  </ul>
-</article>

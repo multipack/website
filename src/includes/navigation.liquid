@@ -1,0 +1,12 @@
+<nav class="navigation">
+  <ul class="navigation__list">
+    <li class="navigation__list-item">
+      <a rel="home" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+    </li>
+  {% for item in navigation %}
+    <li class="navigation__list-item">
+      <a href="{{ item.url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</nav>

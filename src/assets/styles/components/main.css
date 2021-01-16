@@ -1,0 +1,4 @@
+.main {
+  flex: 1;
+  margin-block-end: var(--gap);
+}

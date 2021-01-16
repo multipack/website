@@ -1,0 +1,42 @@
+{% layout "default" %}
+{% block "main" %}
+{% assign location = locations[location.postal-code] | default: location %}
+<div class="s-linear | e-content">
+{% if content != "" %}
+  {{ content }}
+  <hr>
+{% endif %}
+  <dl>
+    {% if url %}
+      <dt>Website</dt>
+      <dd><a href="{{ url }}">{{ url }}</a></dd>
+    {% endif %}
+    <dt>Date</dt>
+    {% assign start = start | default: date %}
+    {% assign end = end | default: date %}
+    {% assign date-start = start | default: date | date: '%Y-%m-%d' %}
+    {% assign date-end = end | date: '%Y-%m-%d' %}
+    <dd>
+      {% if date-start != date-end %}
+        <time class="dt-start" datetime="{{ start }}">{{ start  | date: '%e %B %Y' }}</time> -
+        <time class="dt-end" datetime="{{ end }}">{{ end | date: '%e %B %Y' }}</time>
+      {% else %}
+        <time class="dt-start" datetime="{{ start }}">{{ start | date: '%A, %e %B %Y at %l:%M%P' }}</time>
+        <time class="dt-end" datetime="{{ end }}"></time>
+      {% endif %}
+    </dd>
+  {% if location %}
+    <dt>Venue</dt>
+    <dd class="p-location h-card">
+      <span class="p-name">{{ location.title }}</span>
+      <address class="p-adr h-adr">
+        {% if location.address.street-address %}<span class="p-street-address">{{ location.address.street-address }}</span>,{% endif %}
+        {% if location.address.locality %}<span class="p-locality">{{ location.address.locality }}</span>,{% endif %}
+        {% if location.address.region %}<span class="p-region">{{ location.address.region }}</span>,{% endif %}
+        {% if location.address.postal-code %}<a class="p-postal-code" href="https://duckduckgo.com/?q={{ location.address.postal-code }}&iaxm=maps">{{ location.address.postal-code }}</a>{% endif %}
+      </address>
+    </dd>
+  {% endif %}
+  </dl>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+.section + .section {
+  margin-block-start: var(--gap);
+}
+
+.section__title {
+  @extend %heading;
+
+  margin-block-end: var(--space-block);
+}
+
+.section__list {
+  --flow-inset: 0;
+  --list-display: block;
+}
+
+.section__list > * + * {
+  margin-block-start: var(--space-block);
+}

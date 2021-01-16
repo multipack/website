@@ -1,0 +1,3 @@
+.contentinfo {
+  @extend %caption;
+}

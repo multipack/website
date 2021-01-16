@@ -1,0 +1,13 @@
+@media screen {
+  .brand-leamington {
+    --color-accent: var(--color-page-accent, var(--color-leamington));
+  }
+
+  .brand-multipack {
+    --color-accent: var(--color-page-accent, var(--color-multipack-green));
+  }
+
+  .brand-staffordshire {
+    --color-accent: var(--color-page-accent, var(--color-multipack-purple));
+  }
+}

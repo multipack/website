@@ -1,0 +1,10 @@
+<article class="item | h-{{ item.data.vocab }}">
+  <h3 class="item__title | p-name">
+    <a href="{{ item.url }}">
+      {{ item.data.title | default: "Multipack" }}
+    </a>
+  </h3>
+  <footer class="item__footer">
+    <time class="dt-start" datetime="{{ item.date }}">{{ item.date | date: "%e %B %Y" }}</time>
+  </footer>
+</article>

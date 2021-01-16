@@ -1,0 +1,6 @@
+{
+  "layout": "page",
+  "changefreq": "yearly",
+  "permalink": "{{ page.fileSlug }}/index.html",
+  "priority": 0.9
+}

@@ -1,0 +1,9 @@
+.item__title {
+  @extend %body;
+}
+
+.item__footer {
+  @extend %caption;
+
+  margin-block-start: 0;
+}

@@ -1,0 +1,119 @@
+.s-linear {
+  @extend %body;
+
+  --flow-inset: 1.25em;
+  --list-display: list-item;
+  --linear-measure: var(--line-measure);
+}
+
+.s-linear > * {
+  max-inline-size: var(--linear-measure);
+  word-break: break-word;
+}
+
+.s-linear * + * {
+  margin-block-start: var(--flow-space);
+}
+
+.s-linear hr {
+  border-block-end: var(--border-width-thick) solid var(--color-offset);
+  inline-size: calc(33% - calc(var(--gap) / 2));
+  margin-block: var(--gap);
+  margin-inline-start: 0;
+}
+
+.s-linear :--caption {
+  @extend %caption;
+
+  padding-block-start: var(--space-block);
+}
+
+.s-linear blockquote {
+  border-inline-start: var(--border-width-thicker) solid var(--color-offset);
+  margin-inline-start: 0;
+  padding-inline-start: var(--flow-inset);
+}
+
+.s-linear pre {
+  background-color: var(--color-offset);
+  display: block;
+  font-size: var(--step-0);
+  overflow-x: scroll;
+  padding: var(--inset-small);
+}
+
+.s-linear table {
+  font-size: var(--step-0);
+  inline-size: 100%;
+  max-inline-size: 100%;
+}
+
+.s-linear th,
+.s-linear td {
+  padding: var(--inset-small-squished);
+  padding-block-end: var(--space-block);
+  padding-inline-start: 0;
+}
+
+.s-linear tbody th,
+.s-linear tbody td {
+  border-block-start: var(--border-width-thin) solid var(--color-rule);
+}
+
+.s-linear tbody th {
+  color: var(--color-neutral);
+}
+
+.s-linear * + pre,
+.s-linear * + aside,
+.s-linear * + blockquote,
+.s-linear * + figure,
+.s-linear * + table {
+  margin-block-start: var(--gap);
+}
+
+.s-linear h2:not([class]) {
+  @extend %heading;
+}
+
+.s-linear h3:not([class]) {
+  @extend %subhead;
+}
+
+.s-linear h4:not([class]) {
+  color: var(--color-accent);
+  margin-block-end: calc(var(--flow-space) * -0.5);
+}
+
+.s-linear li :--list {
+  margin-block-start: var(--flow-space);
+}
+
+.s-linear dt + dd {
+  margin-block-start: 0;
+}
+
+.s-linear dt,
+.s-linear strong {
+  font-weight: bold;
+}
+
+.s-linear small {
+  font-size: var(--step-0);
+}
+
+.s-linear img {
+  margin-block-start: 0;
+}
+
+.s-linear code {
+  background-color: var(--color-offset);
+}
+
+.s-linear :not(pre) code {
+  padding: var(--text-spacing);
+}
+
+.s-linear pre code {
+  padding: 0;
+}

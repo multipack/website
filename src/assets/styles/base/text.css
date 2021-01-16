@@ -1,0 +1,49 @@
+/*
+ * Text-level semantics
+ * ====================
+ * https://w3c.github.io/html/textlevel-semantics
+ */
+
+a {
+  color: var(--color-link, inherit);
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 0.1em;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration-color: currentColor;
+}
+
+a[aria-current] {
+  font-weight: bold;
+}
+
+/* Reset font size for smallprint/legal text */
+small {
+  font-size: 100%;
+}
+
+/* Correct text decoration in Chrome/Edge/IE/Opera/Safari */
+abbr[title] {
+  text-decoration: none;
+}
+
+cite {
+  font-style: italic;
+}
+
+:--heading cite {
+  font-style: normal;
+}
+
+code,
+var {
+  font-family: var(--font-family-monospace);
+  font-variant-numeric: tabular-nums;
+  hanging-punctuation: none;
+}
+
+mark {
+  background-color: var(--color-highlight);
+}

@@ -1,28 +1,36 @@
 module.exports = function (eleventy) {
+  // Collections
+  eleventy.addCollection('sitemap', collection => collection.getFilteredByGlob('**/*.md'))
+  eleventy.addCollection('upcoming-events', collection => collection.getFilteredByTag('event').filter(item => item.date > new Date()))
+  eleventy.addCollection('past-events', collection => collection.getFilteredByTag('event').filter(item => item.date < new Date()))
+
   // Template libraries
   eleventy.setLiquidOptions({
     cache: true,
     dynamicPartials: true,
-    greedy: false,
-    root: ['./src/_includes', './src/_layouts'],
     strictFilters: true
   })
+
+  // Filters
+  eleventy.addFilter('markdown', require('./lib/filters/markdown.js'))
+
+  // Shortcodes
+  eleventy.addShortcode('icon', require('./lib/shortcodes/icon.js'))
 
   // Transforms
   eleventy.addTransform('minify', require('./lib/transforms/minify.js'))
 
-  // Collections
-  eleventy.addCollection('sitemap', collection => {
-    return collection.getFilteredByGlob('**/*.md')
-  })
-
   // Passthrough
   eleventy.addPassthroughCopy({
-    './src/images': 'images',
-    './src/assets/favicon.ico': '/favicon.ico',
-    './src/CNAME': '/CNAME',
-    './README-DEPLOY.md': '/README.md'
+    './src/assets/fonts/': '/assets/fonts',
+    './src/assets/vectors/': '/assets/vectors',
+    './src/images': '/images',
+    './src/images/favicon.ico': '/favicon.ico',
+    './src/CNAME': '/CNAME'
   })
+
+  // Watch targets
+  eleventy.addWatchTarget('./src/assets/')
 
   // Enable data deep merge
   eleventy.setDataDeepMerge(true)
@@ -32,8 +40,9 @@ module.exports = function (eleventy) {
     dir: {
       input: 'src',
       output: 'www',
-      layouts: '_layouts',
-      data: '_data'
+      includes: 'includes',
+      layouts: 'layouts',
+      data: 'data'
     },
     templateFormats: ['liquid', 'md'],
     passthroughFileCopy: true

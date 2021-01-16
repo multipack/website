@@ -1,0 +1,46 @@
+.elsewhere {
+  --color-link: var(--color-text);
+  --color-link-underline: var(--color-accent);
+
+  border-block-start: var(--border-width-thick) solid var(--color-offset);
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-start: var(--gap);
+  padding-block-start: var(--step-1);
+}
+
+.elsewhere__title {
+  margin-inline-start: calc(var(--inset-large) * -1);
+  padding: var(--inset-large);
+}
+
+.elsewhere__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elsewhere__list-item a {
+  align-items: center;
+  display: flex;
+  padding: var(--inset-large);
+  text-decoration-color: var(--elsewhere-brand-color);
+}
+
+.elsewhere__list-item a:hover {
+  color: var(--elsewhere-brand-color);
+}
+
+.elsewhere__list-item svg {
+  fill: var(--elsewhere-brand-color);
+  margin-inline-end: var(--space-inline);
+}
+
+.elsewhere__list-item--facebook { --elsewhere-brand-color: #1877f2; }
+.elsewhere__list-item--flickr { --elsewhere-brand-color: #ff0084; }
+.elsewhere__list-item--github { --elsewhere-brand-color: #4e277b; }
+.elsewhere__list-item--twitter { --elsewhere-brand-color: #1da1f2; }
+.elsewhere__list-item--vimeo { --elsewhere-brand-color: #1ab7ea; }
+
+@media (prefers-color-scheme: dark) {
+  .elsewhere__list-item--github { --elsewhere-brand-color: #cab2e6; }
+}

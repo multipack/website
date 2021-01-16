@@ -1,0 +1,7 @@
+---
+date: 2012-09-08T14:00:00+01:00
+summary: Join a group of friendly web professionals, designers and tech enthusiasts from the greater Multipack community, in the lovely setting of the Old Joint Stock, situated in the centre of Birmingham, for a drink or two and a bite to eat.
+location:
+  postal-code: B2 5NY
+---
+Meeting from 2pm on the second Saturday of every month, if you’re in any way connected to working with media or the internet in the Midlands or surrounding areas, you might not just enjoy it, but find it immensely valuable!

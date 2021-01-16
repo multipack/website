@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ app.title }}{% endif %}">
+  <meta property="og:description" name="description" content="{% if summary %}{{ summary | markdown | strip_html | strip_newlines }}{% else %}{{ app.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | prepend: app.url }}">
+  <meta property="og:image" content="{{ "/images/opengraph-image.png" | prepend: app.url }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ app.icon | prepend: app.url }}">
+  <meta name="twitter:site" content="@multipack">
+
+  <meta name="theme-color" content="{{ app.theme_color }}">
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="{% if hidden == true %}noindex{% else %}index{% endif %}, follow">
+
+  <link rel="canonical" href="{{ page.url }}">
+  <link rel="manifest" href="/app.webmanifest">
+  <link rel="stylesheet" href="/assets/styles/app.css">
+
+  <link rel="apple-touch-icon" href="{{ app.icon }}">
+  <link rel="mask-icon" href="{{ app.favicon }}" color="{{ app.theme_color }}">
+  <link rel="icon" href="{{ app.favicon }}">
+{% if accent-color %}
+  <style>
+    :root {
+      --color-page-accent: {{ accent-color }}
+    }
+  </style>
+{% endif %}
+  <title>{% if title %}{{ title }} — {% endif %}{{ app.title }}</title>
+</head>
+
+<body class="brand-{{ brand | default: "multipack" }}{% if vocab %} | h-{{ vocab }}{% endif %}">
+  {% include "navigation" %}
+
+  {% include "banner" %}
+
+  <main class="main">
+    {% block "main" %}
+      {{ layoutContent }}
+    {% endblock %}
+
+    {% include "elsewhere" %}
+  </main>
+
+  {% include "contentinfo" %}
+
+  <script>var _gaq=[['_setAccount','UA-32139617-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</body>
+</html>

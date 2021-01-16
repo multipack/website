@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'standard'
   ],
+  ignorePatterns: ['!.eleventy.js'],
   parserOptions: {
     ecmaVersion: 12
   },

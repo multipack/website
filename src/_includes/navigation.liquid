@@ -1,9 +1,0 @@
-<nav>
-  <div class="nav-col">
-    <ul>
-      {%- for item in navigation -%}
-        <li><a href="{{ item.url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</nav>

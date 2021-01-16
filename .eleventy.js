@@ -1,6 +1,5 @@
 module.exports = function (eleventy) {
   // Template libraries
-  eleventy.setLibrary('md', require('./lib/libraries/markdown.js'))
   eleventy.setLiquidOptions({
     cache: true,
     dynamicPartials: true,
@@ -8,9 +7,6 @@ module.exports = function (eleventy) {
     root: ['./src/_includes', './src/_layouts'],
     strictFilters: true
   })
-
-  // Filters
-  eleventy.addFilter('markdownify', require('./lib/filters/markdownify.js'))
 
   // Transforms
   eleventy.addTransform('minify', require('./lib/transforms/minify.js'))

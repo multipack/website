@@ -110,7 +110,7 @@ p a {
   color: white;
   background: @multipack-bg;
 }
-  
+
 header nav {
   a, a:visited {
     background: @section-nav-link-bg;
@@ -131,169 +131,36 @@ header nav {
     }
   }
 
-/* Event Colours */
-
-.event {
-  h2 {
-    color: @color;
-  }
-  .date, .location, .synopsis {
-    color: @section-nav-link-bg-dark;
-  }
-}
-
-.event .synopsis {
-  margin-top: 1em;
-  font-weight: normal;
-  font-size: 1.5em;
-}
-
-.upcoming {
-  h2 {
-    color: @color;
-  }
-  nav a {
-    background-color: @section-nav-link-bg;
-    &:hover {
-      background-color: @section-nav-link-bg-hover;
-    }
-  }
-}
-
 /* Multipack */
 
 .multipack {
-
-  &.event, &.tweet {
-    background-color: @multipack-bg;
-    color: @multipack-color;
-  }
-
   &.branding {
     color: @multipack-bg;
     h2 {
       color: @multipack-fade;
     }
   }
-
-  &.event h2, &.tweet footer {
-    color: @multipack-color;
-  }
-  &.event {
-    .date, .location, .synopsis {
-      color: @multipack-alternate;
-    }
-    .type {
-      color: @multipack-highlight;
-    }
-    a, a:visited {
-      color: @multipack-link;
-      border-color: @multipack-link;
-    }
-  }
-  
-  &.event nav a, &.tweet a {
-    color: @multipack-link;
-    border-color: @multipack-link;
-    background-color: @multipack-link-bg;
-  }
-    &.event nav a:hover, &.tweet a:hover {
-      background-color: @multipack-link-bg-hover;
-      border-bottom: none;
-    }
-    &.tweet:before {
-      color: @multipack-link;
-    }
-
 }
 
 /* Leampack */
 
 .leampack {
-
-  &.event, &.tweet {
-    background-color: @leampack-bg;
-    color: @leampack-color;
-  }
-
   &.branding {
     color: @leampack-bg;
     h2 {
       color: @leampack-fade;
     }
   }
-
-  &.event h2, &.tweet footer {
-    color: @leampack-color;
-  }
-  &.event {
-    .date, .location, .synopsis {
-      color: @leampack-alternate;
-    }
-    .type {
-      color: @leampack-highlight;
-    }
-    a, a:visited {
-      color: @leampack-link;
-      border-color: @leampack-link;
-    }
-  }
-  
-  &.event nav a, &.tweet a {
-    color: @leampack-link;
-    background-color: @leampack-link-bg;
-  }
-    &.event nav a:hover, &.tweet a:hover {
-      background-color: @leampack-link-bg-hover;
-      border-bottom: none;
-    }
-    &.tweet:before {
-      color: @leampack-link;
-    }
 }
 
 /* Presents */
 .presents {
-
-  &.event, &.tweet {
-    background-color: @presents-bg;
-    color: @presents-color;
-  }
-
   &.branding {
     color: @presents-bg;
     h2 {
       color: @presents-fade;
     }
   }
-
-  &.event h2, &.tweet footer {
-    color: @presents-color;
-  }
-  &.event {
-    .date, .location, .synopsis {
-      color: @presents-alternate;
-    }
-    .type {
-      color: @presents-highlight;
-    }
-    a, a:visited {
-      color: @presents-link;
-      border-color: @presents-link;
-    }
-  }
-  
-  &.event nav a, &.tweet a {
-    color: @presents-link;
-    background-color: @presents-link-bg;
-  }
-    &.event nav a:hover, &.tweet a:hover {
-      background-color: @presents-link-bg-hover;
-      border-bottom: none;
-    }
-    &.tweet:before {
-      color: @presents-link;
-    }
 }
 
 section {
@@ -307,7 +174,7 @@ section {
     color: @section-alternate;
   }
 }
- 
+
 
 nav {
   .multipack a:hover {
@@ -318,48 +185,5 @@ nav {
   }
   .presents a:hover {
     border-color: @presents-bg;
-  }
-}
-
-.photos li {
-  background: @section-nav-link-bg;
-
-  a:hover {
-    background: @section-nav-link-bg-dark;
-  }
-  img {
-    box-shadow: 0 1px 3px @section-nav-link-bg-dark;
-    box-shadow: 0 1px 3px rgba(0,0,0,.2);
-  }
-  .more a {
-    color: @section-alternate;
-  }
-}
-  
-.newsletter {
-  input {
-    background: @form-text-bg;
-    border: none;
-    &:focus {
-      outline: 1px solid @form-outline;
-    }
-  }
-  button[type=submit] {
-    background: @form-button-bg;
-    &:hover {
-      background-color: @form-button-bg-hover;
-    }
-  }
-}
-
-.top, .top:visited {
-  background: @section-nav-link-bg;
-  background: rgba(0,0,0,0.2);
-  color: @link;
-
-  &:hover, &:active {
-    background: rgba(0,0,0,0.3);
-    color: @link-hover;
-    border-bottom: none;
   }
 }

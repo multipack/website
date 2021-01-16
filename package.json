@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "rm -rf www && mkdir -p www/assets",
     "build:files": "eleventy --quiet",
-    "build:styles": "lessc src/assets/styles/style.less www/assets/styles/app.css",
+    "build:styles": "lessc src/assets/styles/app.less www/assets/styles/app.css",
     "build": "npm run build:styles && npm run build:files",
     "watch:files": "eleventy --quiet --serve",
     "watch:styles": "less-watch-compiler src/assets/styles/ www/assets/styles/ app.less",

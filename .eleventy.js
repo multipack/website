@@ -12,9 +12,6 @@ module.exports = function (eleventy) {
   // Filters
   eleventy.addFilter('markdownify', require('./lib/filters/markdownify.js'))
 
-  // Plugins
-  eleventy.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-
   // Transforms
   eleventy.addTransform('minify', require('./lib/transforms/minify.js'))
 

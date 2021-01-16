@@ -16,7 +16,7 @@
     "watch:scripts": "rollup --config etc/rollup.config.js --watch",
     "watch:styles": "less-watch-compiler src/assets/styles/ www/assets/styles/ app.less",
     "watch": "npm-run-all --parallel watch:*",
-    "lint:markdown": "markdownlint src/**/*.md",
+    "lint:markdown": "markdownlint *.md",
     "lint:scripts": "standardx src/**/*.js",
     "lint:styles": "stylelint src/**/*.css",
     "lint": "npm-run-all lint:*",

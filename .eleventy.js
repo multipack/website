@@ -34,7 +34,8 @@ module.exports = function (eleventy) {
   // Passthrough
   eleventy.addPassthroughCopy({
     './src/images': 'images',
-    './src/assets/*.ico': '/',
+    './src/assets/favicon.ico': '/favicon.ico',
+    './src/CNAME': '/CNAME',
     './README-DEPLOY.md': '/README.md'
   })
 

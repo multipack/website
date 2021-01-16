@@ -31,7 +31,6 @@
     "eslint": "^7.18.0",
     "html-minifier": "^4.0.0",
     "husky": "^4.3.8",
-    "json": "^10.0.0",
     "less": "^4.1.0",
     "less-watch-compiler": "^1.14.6",
     "lint-staged": "^10.5.3",
@@ -50,7 +49,6 @@
     "postcss-logical": "^4.0.0",
     "postcss-media-minmax": "^5.0.0",
     "push-dir": "^0.4.1",
-    "standard-version": "^9.1.0",
     "standardx": "^7.0.0",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
@@ -85,46 +83,5 @@
         100
       ]
     }
-  },
-  "standard-version": {
-    "changelogHeader": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n",
-    "infile": "SITE-CHANGELOG.md",
-    "scripts": {
-      "prebump": "json --in-place -f package.json -e '$date = new Date().toISOString().split(\"T\")[0]; this.updated=$date'"
-    },
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Bug Fixes"
-      },
-      {
-        "type": "chore",
-        "hidden": true
-      },
-      {
-        "type": "docs",
-        "hidden": true
-      },
-      {
-        "type": "style",
-        "hidden": true
-      },
-      {
-        "type": "refactor",
-        "hidden": true
-      },
-      {
-        "type": "perf",
-        "hidden": true
-      },
-      {
-        "type": "test",
-        "hidden": true
-      }
-    ]
   }
 }

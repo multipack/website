@@ -1,7 +1,5 @@
-.DS_STORE
-_multipack/model/results
-_multipack/cache/
-cache/
+.DS_Store
 logs
-node_modules/
-www/
+node_modules
+www
+package-lock.json

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>/show-and-tell/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/london/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/leamington/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/birmingham/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority></priority>
+  </url>
+</urlset>

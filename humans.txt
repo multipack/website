@@ -1,0 +1,7 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* MULTIPACK */
+  Trevor Morris
+  @trovster
+  https://www.trovster.com

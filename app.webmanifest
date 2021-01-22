@@ -1,0 +1,12 @@
+{
+  "lang": "en-gb",
+  "name": "Multipack",
+  "short_name": "Multipack",
+  "icons": [{
+    "src": "/images/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "theme_color": "#33cc66",
+  "background_color": "#33cc66"
+}

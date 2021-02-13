@@ -228,5 +228,15 @@ module.exports = {
       'country-name': 'United Kingdom',
       'postal-code': 'SW1P 3RF'
     }
+  },
+  'B1 1BL': {
+    title: 'Brewdog Birmingham',
+    address: {
+      'street-address': '81-87 John Bright Street',
+      locality: 'Birmingham',
+      region: 'West Midlands',
+      'country-name': 'United Kingdom',
+      'postal-code': 'B1 1BL'
+    }
   }
 }

@@ -6,9 +6,7 @@ module.exports = function (eleventy) {
 
   // Template libraries
   eleventy.setLiquidOptions({
-    cache: true,
-    dynamicPartials: true,
-    strictFilters: true
+    cache: true
   })
 
   // Filters

@@ -4,8 +4,10 @@
   "description": "A community of web designers & developers in the West Midlands",
   "author": "Trevor Morris",
   "version": "0.0.1",
-  "updated": "2019-10-27",
   "private": true,
+  "engines": {
+    "node": "^16.0.0"
+  },
   "scripts": {
     "prebuild": "rm -rf www && mkdir -p www/assets",
     "build:files": "eleventy --quiet",

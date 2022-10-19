@@ -37,7 +37,6 @@ module.exports = function (eleventy) {
   return {
     dir: {
       input: 'src',
-      output: 'www',
       includes: 'includes',
       layouts: 'layouts',
       data: 'data'

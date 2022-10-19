@@ -20,8 +20,7 @@
     "lint:scripts": "eslint *.js",
     "lint:styles": "stylelint src/**/*.css",
     "lint": "npm-run-all lint:*",
-    "debug": "DEBUG=* npx eleventy",
-    "deploy": "npm run build && push-dir --dir=www --branch=gh-pages --force"
+    "debug": "DEBUG=* npx eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
@@ -33,8 +32,7 @@
     "postcss-cli": "^10.0.0",
     "postcss-custom-selectors": "^6.0.0",
     "postcss-easy-import": "^4.0.0",
-    "postcss-extend-rule": "^4.0.0",
-    "push-dir": "^0.4.1"
+    "postcss-extend-rule": "^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.0",

@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "^16.0.0"
+    "node": "^18.11.0"
   },
   "scripts": {
     "prebuild": "rm -rf www && mkdir -p www/assets",
@@ -24,31 +24,31 @@
     "deploy": "npm run build && push-dir --dir=www --branch=gh-pages --force"
   },
   "dependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy": "^1.0.2",
     "cssnano": "^5.0.9",
     "html-minifier": "^4.0.0",
-    "markdown-it": "^12.0.4",
+    "markdown-it": "^13.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.6",
-    "postcss-cli": "^9.0.1",
+    "postcss-cli": "^10.0.0",
     "postcss-custom-selectors": "^6.0.0",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-extend-rule": "^3.0.0",
+    "postcss-easy-import": "^4.0.0",
+    "postcss-extend-rule": "^4.0.0",
     "push-dir": "^0.4.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
-    "eslint": "^7.12.1",
-    "eslint-config-standard": "^16.0.2",
+    "@commitlint/cli": "^17.1.0",
+    "@commitlint/config-conventional": "^17.1.0",
+    "eslint": "^8.25.0",
+    "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-promise": "^6.1.1",
     "husky": "^4.3.8",
-    "lint-staged": "^11.2.6",
-    "markdownlint-cli": "^0.29.0",
+    "lint-staged": "^13.0.3",
+    "markdownlint-cli": "^0.32.2",
     "stylelint": "^14.0.1",
-    "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-standard": "^29.0.0",
     "stylelint-order": "^5.0.0"
   },
   "repository": {

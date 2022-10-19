@@ -14,11 +14,8 @@ the project.
 ```bash
 npm run watch
 npm run build
-npm run deploy
 ```
 
 ## Deploying
 
-The website is hosted using Github Pages using the specific `gh-pages` branch.
-
-Eleventy can be compiled and deployed using `npm run deploy`
+The website is automatically deployed to Github Pages using the [`deploy`](/.github/workflows/deploy.yml) workflow.

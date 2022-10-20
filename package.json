@@ -15,7 +15,8 @@
     "lint:js": "eslint *.js",
     "lint:css": "stylelint src/**/*.css",
     "lint": "npm run lint:md && npm run lint:js && npm run lint:css",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary",
@@ -32,7 +33,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "husky": "^4.3.8",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "markdownlint-cli": "^0.32.2",
     "stylelint": "^14.0.1",
@@ -50,12 +51,6 @@
     "*.css": [
       "npm run lint:css"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
   },
   "commitlint": {
     "extends": [

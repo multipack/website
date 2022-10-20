@@ -9,7 +9,7 @@ start: 2011-02-12T16:15:00Z
 end: 2011-02-12T19:20:00Z
 location:
   postal-code: B5 5SE
-accent-color: "#45a"
+event-color: "#45a"
 ---
 Simply show us something you’ve made or have been involved in and tell us about it. We kick off with a social gathering at the Old Crown pub in Digbeth, at 2pm, where you can join us for a drink and a bite to eat, before heading to the offices of Birmingham web agency, One Black Bear, for the talks from around 4pm. 
 

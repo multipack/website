@@ -8,5 +8,5 @@ start: 2009-04-18T16:00:00
 end: 2009-04-18T19:00:00
 location:
   postal-code: B5 5SE
-accent-color: "#f62"
+event-color: "#f62"
 ---

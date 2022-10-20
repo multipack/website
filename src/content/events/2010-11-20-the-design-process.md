@@ -8,7 +8,7 @@ start: 2010-11-20T14:00:00Z
 end: 2010-11-20T20:00:00Z
 location:
   postal-code: B5 5SE
-accent-color: "#066"
+event-color: "#066"
 ---
 ## Styleguides for the Web
 

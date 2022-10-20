@@ -8,5 +8,5 @@ start: 2012-05-12T14:00:00Z
 end: 2012-05-12T19:30:00Z
 location:
   postal-code: 'B7 4BB'
-accent-color: "#07a"
+event-color: "#07a"
 ---

@@ -8,7 +8,7 @@ start: 2009-04-18T16:00:00+01:00
 end: 2009-04-18T19:00:00+01:00
 location:
   postal-code: B5 5SE
-accent-color: "#6a3"
+event-color: "#6a3"
 ---
 We have confirmed presentations from two people extremely passionate about eco issues and have been using the Web to make life greener.
 

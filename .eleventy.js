@@ -9,6 +9,9 @@ module.exports = function (eleventy) {
     cache: true
   })
 
+  // Extensions
+  eleventy.addExtension('css', require('./lib/extensions/css.js'))
+
   // Filters
   eleventy.addFilter('markdown', require('./lib/filters/markdown.js'))
 
@@ -41,7 +44,7 @@ module.exports = function (eleventy) {
       layouts: 'layouts',
       data: 'data'
     },
-    templateFormats: ['liquid', 'md'],
+    templateFormats: ['css', 'liquid', 'md'],
     passthroughFileCopy: true
   }
 }

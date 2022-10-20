@@ -12,14 +12,14 @@ a {
 
 a:hover {
   color: var(--color-accent);
-  text-decoration-color: currentColor;
+  text-decoration-color: currentcolor;
 }
 
 a[aria-current] {
   font-weight: bold;
 }
 
-/* Reset font size for smallprint/legal text */
+/* Reset font size for small print/legal text */
 small {
   font-size: 100%;
 }

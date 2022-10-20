@@ -10,12 +10,12 @@
   --color-neutral-lightest: hsl(var(--tint) 96%);
 
   /* Brand colours */
-  --color-multipack-blue: hsl(210, 100%, 40%);
-  --color-multipack-green: hsl(140, 60%, 50%);
-  --color-multipack-teal: hsl(180, 100%, 20%);
-  --color-multipack-orange: hsl(16, 80%, 40%);
-  --color-multipack-purple: hsl(320, 100%, 23%);
-  --color-leamington: hsl(198, 80%, 55%);
+  --color-multipack-blue: hsl(210deg 100% 40%);
+  --color-multipack-green: hsl(140deg 60% 50%);
+  --color-multipack-teal: hsl(180deg 100% 20%);
+  --color-multipack-orange: hsl(16deg 80% 40%);
+  --color-multipack-purple: hsl(320deg 100% 23%);
+  --color-leamington: hsl(198deg 80% 55%);
 
   /* Colour assignments */
   --color-background: white;
@@ -26,11 +26,11 @@
   --color-link: var(--color-multipack-blue);
   --color-link-underline: var(--color-multipack-blue);
 
-  --color-highlight: hsl(48 100% 80% / 75%);
-  --color-focus: hsl(48 100% 50%);
+  --color-highlight: hsl(48deg 100% 80% / 75%);
+  --color-focus: hsl(48deg 100% 50%);
 
   /* Typography */
-  --font-family-sans: 'Public Sans', sans-serif;
+  --font-family-sans: "Public Sans", sans-serif;
   --font-family-monospace: sfmono-regular, consolas, liberation mono, menlo, monospace;
   --line-height-tight: 1.25;
   --line-height-loose: 1.5;
@@ -71,7 +71,7 @@
     --color-neutral-lighter: hsl(var(--tint) 36%);
     --color-neutral-lightest: hsl(var(--tint) 16%);
     --color-background: hsl(var(--tint) 8%);
-    --color-highlight: hsl(60 100% 70% / 15%);
+    --color-highlight: hsl(60deg 100% 70% / 15%);
     --color-link: var(--color-accent);
     --color-link-hover: white;
     --color-link-underline: var(--color-accent);

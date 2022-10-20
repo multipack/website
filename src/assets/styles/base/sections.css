@@ -44,7 +44,7 @@ body {
   font-size: inherit;
   font-weight: inherit;
   margin: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 ::selection {

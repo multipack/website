@@ -12,13 +12,14 @@
         ]
       }
     ],
-    "declaration-empty-line-before": null,
     "custom-property-empty-line-before": null,
-    "media-feature-name-no-unknown": null,
+    "custom-property-pattern": null,
+    "declaration-empty-line-before": null,
     "order/order": [
       "custom-properties",
       "declarations"
     ],
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": null
   }
 }

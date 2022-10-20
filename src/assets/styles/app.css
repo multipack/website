@@ -1,4 +1,4 @@
-@import "./config/*.css";
-@import "./base/*.css";
-@import "./scopes/*.css";
-@import "./components/*.css";
+@import url("./config/*.css");
+@import url("./base/*.css");
+@import url("./scopes/*.css");
+@import url("./components/*.css");

@@ -10,7 +10,5 @@ module.exports = {
   ignorePatterns: ['!.eleventy.js'],
   parserOptions: {
     ecmaVersion: 12
-  },
-  rules: {
   }
 }

@@ -1,7 +1,6 @@
 .elsewhere {
   --color-link: var(--color-text);
   --color-link-underline: var(--color-accent);
-
   border-block-start: var(--border-width-thick) solid var(--color-offset);
   display: flex;
   flex-wrap: wrap;

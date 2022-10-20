@@ -4,10 +4,10 @@
  * https://html.spec.whatwg.org/#sections
  */
 
-/* 1. Prevent font size adjustment on orientation change in iOS. */
-html {
-  scroll-behavior: smooth;
-  text-size-adjust: 100%; /* 1 */
+@media screen {
+  html {
+    background: var(--color-offset);
+  }
 }
 
 *,
@@ -28,10 +28,6 @@ body {
 }
 
 @media screen {
-  html {
-    background: var(--color-offset);
-  }
-
   body {
     background: var(--color-background);
     box-shadow: calc(var(--border-width-thicker) * -1) calc(var(--border-width-thicker) * -1) 0 var(--color-accent);
@@ -39,33 +35,33 @@ body {
   }
 }
 
-:--heading {
+@media print {
+  nav {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend {
   break-after: avoid;
+  font-feature-settings: "ss02" 1, "case" 1;
   font-size: inherit;
   font-weight: inherit;
+  hanging-punctuation: first;
   margin: 0;
   text-rendering: optimizelegibility;
 }
 
-::selection {
-  background-color: var(--color-highlight);
-}
-
-:focus {
+:focus-visible {
   outline: var(--border-width-thicker) solid var(--color-focus);
   z-index: 1;
 }
 
-:-moz-focusring {
-  outline: var(--border-width-thicker) solid var(--color-focus);
-}
-
-:focus:not(:-moz-focusring) {
-  outline: 0;
-}
-
-@media print {
-  body {
-    background: none;
-  }
+::selection {
+  background-color: var(--color-highlight);
 }

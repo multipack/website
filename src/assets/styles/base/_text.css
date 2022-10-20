@@ -33,10 +33,6 @@ cite {
   font-style: italic;
 }
 
-:--heading cite {
-  font-style: normal;
-}
-
 code,
 var {
   font-family: var(--font-family-monospace);

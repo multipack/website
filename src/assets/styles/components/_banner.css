@@ -1,0 +1,20 @@
+.banner {
+  margin-block-end: var(--gap);
+}
+
+.banner__title {
+  color: var(--color-accent);
+  font-size: var(--step-3);
+  font-weight: bold;
+  line-height: 1;
+  margin-block-end: var(--space-block);
+  text-transform: uppercase;
+}
+
+.banner__summary {
+  color: var(--color-neutral-darker);
+  font-size: var(--step-1);
+  font-weight: normal;
+  hanging-punctuation: first;
+  line-height: var(--line-height-tight);
+}

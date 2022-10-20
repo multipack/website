@@ -9,13 +9,8 @@
     "node": "^18.11.0"
   },
   "scripts": {
-    "prebuild": "rm -rf _site && mkdir -p _site/assets",
-    "build:files": "eleventy --quiet",
-    "build:styles": "postcss src/assets/styles/app.css -o _site/assets/styles/app.css --config",
-    "build": "npm run build:styles && npm run build:files",
-    "watch:files": "eleventy --quiet --serve",
-    "watch:styles": "postcss src/assets/styles/app.css -o _site/assets/styles/app.css --config --watch",
-    "watch": "npm-run-all --parallel watch:*",
+    "build": "eleventy --quiet",
+    "watch": "eleventy --quiet --serve",
     "lint:markdown": "markdownlint *.md",
     "lint:scripts": "eslint *.js",
     "lint:styles": "stylelint src/**/*.css",
@@ -23,16 +18,12 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "cssnano": "^5.0.9",
+    "@11ty/eleventy": "^2.0.0-canary",
+    "browserslist": "^4.21.4",
     "html-minifier": "^4.0.0",
+    "lightningcss": "^1.16.0",
     "markdown-it": "^13.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.6",
-    "postcss-cli": "^10.0.0",
-    "postcss-custom-selectors": "^6.0.0",
-    "postcss-easy-import": "^4.0.0",
-    "postcss-extend-rule": "^4.0.0"
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.0",

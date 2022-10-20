@@ -3,14 +3,10 @@
 }
 
 .section__title {
-  @extend %heading;
-
+  font-size: var(--step-1);
+  font-weight: bold;
+  line-height: var(--line-height-tight);
   margin-block-end: var(--space-block);
-}
-
-.section__list {
-  --flow-inset: 0;
-  --list-display: block;
 }
 
 .section__list > * + * {

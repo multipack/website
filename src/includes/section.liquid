@@ -1,7 +1,7 @@
 {% if collection.length > 0 %}
   <section class="section">
     <h2 class="section__title">{{ title }}</h2>
-    <ul class="section__list">
+    <ul class="section__list" role="list">
     {% for item in collection reversed %}
       <li class="section__list-item">
         {%- include "item" %}

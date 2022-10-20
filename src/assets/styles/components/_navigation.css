@@ -1,15 +1,14 @@
 .navigation {
   --color-link: var(--color-text);
   --color-link-underline: var(--color-accent);
-
   margin-block-end: var(--gap);
 }
 
 .navigation__list {
-  @extend %body;
-
   display: flex;
   flex-wrap: wrap;
+  font-size: var(--step-0);
+  line-height: var(--line-height-loose);
   margin-block-start: calc(var(--inset-large) * -1);
   margin-inline-start: calc(var(--inset-large) * -1);
 }
@@ -17,10 +16,4 @@
 .navigation__list-item a {
   display: inline-block;
   padding: var(--inset-large);
-}
-
-@media print {
-  .navigation {
-    display: none;
-  }
 }

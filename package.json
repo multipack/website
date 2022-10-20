@@ -9,12 +9,12 @@
     "node": "^18.11.0"
   },
   "scripts": {
-    "prebuild": "rm -rf www && mkdir -p www/assets",
+    "prebuild": "rm -rf _site && mkdir -p _site/assets",
     "build:files": "eleventy --quiet",
-    "build:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config",
+    "build:styles": "postcss src/assets/styles/app.css -o _site/assets/styles/app.css --config",
     "build": "npm run build:styles && npm run build:files",
     "watch:files": "eleventy --quiet --serve",
-    "watch:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config --watch",
+    "watch:styles": "postcss src/assets/styles/app.css -o _site/assets/styles/app.css --config --watch",
     "watch": "npm-run-all --parallel watch:*",
     "lint:markdown": "markdownlint *.md",
     "lint:scripts": "eslint *.js",

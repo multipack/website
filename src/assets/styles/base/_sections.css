@@ -23,7 +23,6 @@ body {
   font-family: var(--font-family-sans);
   margin: var(--step-1) auto;
   max-inline-size: var(--line-measure);
-  min-block-size: 100vh;
   overflow-x: hidden;
 }
 

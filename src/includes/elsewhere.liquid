@@ -1,6 +1,6 @@
 <section class="elsewhere">
   <h2 class="elsewhere__title">Find us on</h2>
-  <ul class="elsewhere__list">
+  <ul class="elsewhere__list" role="list">
   {% for item in elsewhere %}
     <li class="elsewhere__list-item elsewhere__list-item--{{ item.label | slug }}">
       <a rel="me" href="{{ item.url }}">

@@ -8,7 +8,7 @@ start: 2012-11-10T14:00:00Z
 end: 2012-11-10T19:30:00Z
 location:
   postal-code: 'B7 4BB'
-accent-color: "#45a"
+event-color: "#45a"
 ---
 Retrospective is the theme of this year’s final *Multipack Presents* event, so come along and tell us how you've grown, what you've been up to and how 2012 has changed you.
 

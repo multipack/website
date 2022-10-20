@@ -1,3 +1,8 @@
+{% case brand %}
+  {% when "leamington" %}{% assign brand-color = "#30b1e8" %}
+  {% when "staffordshire" %}{% assign brand-color = "#75004e" %}
+  {% else %}{% assign brand-color = app.theme_color %}
+{% endcase %}
 <!doctype html>
 <html lang="en-gb">
 <head>
@@ -11,7 +16,7 @@
   <meta name="twitter:image" content="{{ app.icon | prepend: app.url }}">
   <meta name="twitter:site" content="@multipack">
 
-  <meta name="theme-color" content="{{ app.theme_color }}">
+  <meta name="theme-color" content="{{ event-color | default: brand-color }}">
   <meta name="supported-color-schemes" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="{% if hidden == true %}noindex{% else %}index{% endif %}, follow">
@@ -21,19 +26,17 @@
   <link rel="stylesheet" href="/assets/styles/app.css">
 
   <link rel="apple-touch-icon" href="{{ app.icon }}">
-  <link rel="mask-icon" href="{{ app.favicon }}" color="{{ app.theme_color }}">
+  <link rel="mask-icon" href="{{ app.favicon }}" color="{{ event-color | default: brand-color }}">
   <link rel="icon" href="{{ app.favicon }}">
-{% if accent-color %}
   <style>
     :root {
-      --color-page-accent: {{ accent-color }}
+      --color-accent: {{ event-color | default: brand-color }}
     }
   </style>
-{% endif %}
   <title>{% if title %}{{ title }} — {% endif %}{{ app.title }}</title>
 </head>
 
-<body class="brand-{{ brand | default: "multipack" }}{% if vocab %} | h-{{ vocab }}{% endif %}">
+<body{% if vocab %} class="h-{{ vocab }}"{% endif %}>
   {% include "navigation" %}
 
   {% include "banner" %}

@@ -8,7 +8,7 @@ start: 2009-06-13T16:00:00+01:00
 end: 2009-06-13T19:00:00+01:00
 location:
   postal-code: B5 5SE
-accent-color: "#26b"
+event-color: "#26b"
 ---
 This month’s Presents is on Coding Standards, with a hint of ASP.NET, looking at how to get decent standards-based markup with Microsoft’s tools and the dark art of bringing standards to a .Net team.
 

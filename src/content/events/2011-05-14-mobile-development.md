@@ -8,7 +8,7 @@ start: 2011-05-14T16:00:00+01:00
 end: 2011-05-14T19:00:00+01:00
 location:
   postal-code: B7 4BB
-accent-color: "#e32"
+event-color: "#e32"
 ---
 You’ll have a chance to learn from developers of first-class apps that have been launched on the various App Stores and App Marketplaces, as well as from those who have successfully launched mobile web apps at our free mini-conference event. 
 

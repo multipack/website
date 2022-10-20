@@ -29,6 +29,16 @@
   --color-highlight: hsl(48deg 100% 80% / 75%);
   --color-focus: hsl(48deg 100% 50%);
 
+  /* Type scale
+   *
+   * @link https://utopia.fyi/type/calculator/?c=320,18,1.125,1024,21,1.333,3,1
+   */
+  --step--1: clamp(0.98rem, calc(1.01rem + -0.04vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.04rem + 0.43vw), 1.31rem);
+  --step-1: clamp(1.27rem, calc(1.05rem + 1.10vw), 1.75rem);
+  --step-2: clamp(1.42rem, calc(1.01rem + 2.06vw), 2.33rem);
+  --step-3: clamp(1.60rem, calc(0.92rem + 3.42vw), 3.11rem);
+
   /* Typography */
   --font-family-sans: "Public Sans", sans-serif;
   --font-family-monospace: sfmono-regular, consolas, liberation mono, menlo, monospace;

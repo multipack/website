@@ -1,4 +1,23 @@
-@import url("./config/*.css");
-@import url("./base/*.css");
-@import url("./scopes/*.css");
-@import url("./components/*.css");
+/* Configuration */
+@import url("config/_custom-properties.css");
+@import url("config/_webfonts.css");
+
+/* Base */
+@import url("base/_embedded.css");
+@import url("base/_grouping.css");
+@import url("base/_sections.css");
+@import url("base/_tables.css");
+@import url("base/_text.css");
+
+/* Scopes */
+@import url("scopes/_linear.css");
+
+/* Components */
+@import url("components/_banner.css");
+@import url("components/_brand.css");
+@import url("components/_contentinfo.css");
+@import url("components/_elsewhere.css");
+@import url("components/_item.css");
+@import url("components/_main.css");
+@import url("components/_navigation.css");
+@import url("components/_section.css");

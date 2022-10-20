@@ -1,9 +1,12 @@
 .s-linear {
-  @extend %body;
-
   --flow-inset: 1.25em;
-  --list-display: list-item;
+  --flow-space: 1em;
   --linear-measure: var(--line-measure);
+  font-size: var(--step-0);
+  font-variant: oldstyle-nums;
+  font-weight: normal;
+  line-height: var(--line-height-loose);
+  word-spacing: var(--word-spacing);
 }
 
 .s-linear > * {
@@ -22,9 +25,10 @@
   margin-inline-start: 0;
 }
 
-.s-linear :--caption {
-  @extend %caption;
-
+.s-linear :is(caption, figcaption) {
+  color: var(--color-neutral-dark);
+  font-size: var(--step--1);
+  line-height: var(--line-height-loose);
   padding-block-start: var(--space-block);
 }
 
@@ -48,15 +52,13 @@
   max-inline-size: 100%;
 }
 
-.s-linear th,
-.s-linear td {
+.s-linear :is(th, td) {
   padding: var(--inset-small-squished);
   padding-block-end: var(--space-block);
   padding-inline-start: 0;
 }
 
-.s-linear tbody th,
-.s-linear tbody td {
+.s-linear tbody :is(th, td) {
   border-block-start: var(--border-width-thin) solid var(--color-rule);
 }
 
@@ -64,32 +66,34 @@
   color: var(--color-neutral);
 }
 
-.s-linear * + pre,
-.s-linear * + aside,
-.s-linear * + blockquote,
-.s-linear * + figure,
-.s-linear * + table {
+.s-linear * + :is(pre, aside, blockquote,  figure, table) {
   margin-block-start: var(--gap);
 }
 
-.s-linear h2:not([class]) {
-  @extend %heading;
+.s-linear h2 {
+  --flow-space: 2em;
+  font-size: var(--step-1);
+  font-weight: bold;
+  line-height: var(--line-height-tight);
 }
 
-.s-linear h3:not([class]) {
-  @extend %subhead;
+.s-linear h3 {
+  --flow-space: 1.5em;
+  font-size: var(--step-1);
+  line-height: var(--line-height-tight);
 }
 
-.s-linear h4:not([class]) {
+.s-linear h4 {
   color: var(--color-accent);
   margin-block-end: calc(var(--flow-space) * -0.5);
 }
 
-.s-linear li :--list {
-  margin-block-start: var(--flow-space);
+.s-linear li :is(dl, ol, ul) {
+  margin-block-start: calc(var(--flow-space) / 2);
 }
 
-.s-linear dt + dd {
+.s-linear dd {
+  --flow-inset: 0;
   margin-block-start: 0;
 }
 

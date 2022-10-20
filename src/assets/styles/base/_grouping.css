@@ -19,16 +19,17 @@ pre {
   white-space: pre;
 }
 
+address,
 figure,
 blockquote,
-:--flow {
+dl,
+p,
+ol,
+ul {
+  hanging-punctuation: first;
   margin: 0;
   orphans: 2;
   widows: 2;
-}
-
-:--list {
-  padding: 0; /* Reset default list padding */
 }
 
 ol,
@@ -36,10 +37,12 @@ ul {
   padding-inline-start: var(--flow-inset, 0);
 }
 
-li {
-  display: var(--list-display, block);
-}
-
 dd {
   margin-inline-start: var(--flow-inset, 0);
+}
+
+[role="list"],
+[role="listbox"] {
+  list-style: none;
+  padding-inline-start: 0;
 }

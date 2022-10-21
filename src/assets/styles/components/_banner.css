@@ -11,6 +11,12 @@
   text-transform: uppercase;
 }
 
+@media print {
+  .banner__title {
+    color: var(--color-text);
+  }
+}
+
 .banner__summary {
   color: var(--color-neutral-darker);
   font-size: var(--step-1);

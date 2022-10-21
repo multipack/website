@@ -21,16 +21,24 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-sans);
-  margin: var(--step-1) auto;
+  margin: 0 auto;
   max-inline-size: var(--line-measure);
-  overflow-x: hidden;
+  padding: var(--gap);
 }
 
 @media screen {
   body {
-    background: var(--color-background);
+    background-color: var(--color-background);
+    box-shadow: inset var(--border-width-thicker) 0 0 var(--color-accent);
+    min-block-size: 100dvh;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  body {
     box-shadow: calc(var(--border-width-thicker) * -1) calc(var(--border-width-thicker) * -1) 0 var(--color-accent);
-    padding: var(--gap);
+    margin: var(--step-1) auto;
+    min-block-size: auto;
   }
 }
 

@@ -25,11 +25,14 @@
   text-decoration-color: var(--elsewhere-brand-color);
 }
 
-.elsewhere__list-item a:hover {
+.elsewhere__list-item a:hover,
+.elsewhere__list-item a:focus,
+.elsewhere__list-item a:active {
   color: var(--elsewhere-brand-color);
 }
 
 .elsewhere__list-item svg {
+  color: var(--elsewhere-brand-color);
   fill: var(--elsewhere-brand-color);
   margin-inline-end: var(--space-inline);
 }
@@ -38,6 +41,7 @@
 .elsewhere__list-item--flickr { --elsewhere-brand-color: #ff0084; }
 .elsewhere__list-item--github { --elsewhere-brand-color: #4e277b; }
 .elsewhere__list-item--twitter { --elsewhere-brand-color: #1da1f2; }
+.elsewhere__list-item--mastodon { --elsewhere-brand-color: #6364ff; }
 .elsewhere__list-item--vimeo { --elsewhere-brand-color: #1ab7ea; }
 
 @media (prefers-color-scheme: dark) {

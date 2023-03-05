@@ -11,6 +11,9 @@ module.exports = [{
   label: 'Twitter',
   url: 'https://twitter.com/multipack'
 }, {
+  label: 'Mastodon',
+  url: 'https://fosstodon.org/@multipack'
+}, {
   label: 'Vimeo',
   url: 'https://vimeo.com/multipack'
 }]

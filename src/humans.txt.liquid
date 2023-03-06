@@ -4,11 +4,12 @@ permalink: /humans.txt
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
-/* MULTIPACK */
-  Trevor Morris
-  @trovster
-  https://www.trovster.com
+/* TEAM */
+{% for contributor in pkg.contributors %}
+  Contributor: {{ contributor.name }}
+  Site: {{ contributor.url }}
+{% endfor %}
 
-  Paul Robert Lloyd
-  @paulrobertlloyd
-  https://paulrobertlloyd.com
+/* SITE */
+  Doctype: HTML5
+  Components: Eleventy, liquid, svg

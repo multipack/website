@@ -1,9 +1,28 @@
 {
   "name": "multipack",
   "version": "0.0.1",
+  "private": true,
   "description": "A community of web designers and developers in the West Midlands.",
   "homepage": "https://multipack.co.uk",
-  "author": "Trevor Morris",
+  "author": "Multipack",
+  "contributors": [
+    {
+      "name": "Trevor Morris",
+      "url": "https://www.trovster.com"
+    },
+    {
+      "name": "Paul Robert Lloyd",
+      "url": "https://paulrobertlloyd.com"
+    },
+    {
+      "name": "Si Jobling",
+      "url": "https://sijobling.com"
+    },
+    {
+      "name": "Andrew Yates",
+      "url": "https://www.andydev.co.uk"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/multipack/website.git"
@@ -39,7 +58,6 @@
   "engines": {
     "node": "^18.11.0"
   },
-  "private": true,
   "lint-staged": {
     "*.js": [
       "npm run lint:js"

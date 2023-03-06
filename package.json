@@ -18,7 +18,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-canary",
+    "@11ty/eleventy": "^2.0.0",
     "browserslist": "^4.21.4",
     "html-minifier": "^4.0.0",
     "lightningcss": "^1.16.0",
@@ -32,8 +32,8 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "markdownlint-cli": "^0.33.0",
-    "stylelint": "^14.0.1",
-    "stylelint-config-standard": "^29.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^30.0.0",
     "stylelint-order": "^6.0.0"
   },
   "engines": {

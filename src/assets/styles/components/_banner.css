@@ -18,7 +18,7 @@
 }
 
 .banner__summary {
-  color: var(--color-neutral-darker);
+  color: var(--color-neutral-dark);
   font-size: var(--step-1);
   font-weight: normal;
   hanging-punctuation: first;

@@ -4,20 +4,15 @@
   /* Neutral palette */
   --tint: 210 15%;
   --color-neutral-darkest: hsl(var(--tint) 16%);
-  --color-neutral-darker: hsl(var(--tint) 36%);
-  --color-neutral-dark: hsl(var(--tint) 44%);
-  --color-neutral: hsl(var(--tint) 50%);
+  --color-neutral-dark: hsl(var(--tint) 32%);
+  --color-neutral: hsl(var(--tint) 48%);
   --color-neutral-light: hsl(var(--tint) 80%);
-  --color-neutral-lighter: hsl(var(--tint) 88%);
   --color-neutral-lightest: hsl(var(--tint) 96%);
 
   /* Brand colours */
   --color-multipack-blue: hsl(210deg 100% 40%);
   --color-multipack-green: hsl(140deg 60% 50%);
   --color-multipack-teal: hsl(180deg 100% 20%);
-  --color-multipack-orange: hsl(16deg 80% 40%);
-  --color-multipack-purple: hsl(320deg 100% 23%);
-  --color-leamington: hsl(198deg 80% 55%);
 
   /* Colour assignments */
   --color-background: white;

@@ -34,7 +34,7 @@ body {
   }
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (width >= 50rem) {
   body {
     box-shadow: calc(var(--border-width-thicker) * -1) calc(var(--border-width-thicker) * -1) 0 var(--color-accent);
     margin: var(--step-1) auto;

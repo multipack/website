@@ -1,9 +1,15 @@
+{% assign start = item.start | default: item.date | date: "%Y-%m-%d" %}
+{% assign now = 'now' | date: "%Y-%m-%d" %}
+
 <article class="item | h-{{ item.data.vocab }}">
   <h3 class="item__title | p-name">
     <a href="{{ item.url }}">
       {{ item.data.title | default: "Multipack" }}
     </a>
   </h3>
+  {% if start > now %}
+  <p class="item__summary | p-summary">{{ item.data.summary | markdown: "inline" }}</p>
+  {% endif %}
   <footer class="item__footer">
     <time class="dt-start" datetime="{{ item.date }}">{{ item.date | luxon: "dS LLLL yyyy" }}</time>
   </footer>

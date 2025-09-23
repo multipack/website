@@ -14,14 +14,14 @@
     <dt>Date</dt>
     {% assign start = start | default: date %}
     {% assign end = end | default: date %}
-    {% assign date-start = start | default: date | date: '%Y-%m-%d' %}
-    {% assign date-end = end | date: '%Y-%m-%d' %}
+    {% assign date-start = start | default: date | luxon: 'yyyy-LL-dd' %}
+    {% assign date-end = end | luxon: 'yyyy-LL-dd' %}
     <dd>
       {% if date-start != date-end %}
-        <time class="dt-start" datetime="{{ start }}">{{ start  | date: '%e %B %Y' }}</time> -
-        <time class="dt-end" datetime="{{ end }}">{{ end | date: '%e %B %Y' }}</time>
+        <time class="dt-start" datetime="{{ start }}">{{ start | luxon: 'dS LLLL yyyy' }}</time> -
+        <time class="dt-end" datetime="{{ end }}">{{ end | luxon: 'dS LLLL yyyy' }}</time>
       {% else %}
-        <time class="dt-start" datetime="{{ start }}">{{ start | date: '%A, %e %B %Y at %l:%M%P' }}</time>
+        <time class="dt-start" datetime="{{ start }}">{{ start | luxon: "cccc, dS LLLL yyyy" }} at {{ start | luxon: "h:mma" | downcase }}</time>
         <time class="dt-end" datetime="{{ end }}"></time>
       {% endif %}
     </dd>

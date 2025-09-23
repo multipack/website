@@ -2,6 +2,6 @@
   "layout": "event",
   "changefreq": "monthly",
   "tags": ["event"],
-  "permalink": "/events/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/",
+  "permalink": "/events/{{ page.date | luxon: 'yyyy' }}/{{ page.fileSlug }}/",
   "vocab": "event"
 }

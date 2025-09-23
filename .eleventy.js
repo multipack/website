@@ -14,6 +14,7 @@ module.exports = function (eleventy) {
 
   // Filters
   eleventy.addFilter('markdown', require('./lib/filters/markdown.js'))
+  eleventy.addFilter('luxon', require('./lib/filters/date.js'))
 
   // Shortcodes
   eleventy.addShortcode('icon', require('./lib/shortcodes/icon.js'))

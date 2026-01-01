@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "browserslist": "^4.21.4",
+    "browserslist": "^4.28.1",
     "html-minifier": "^4.0.0",
     "lightningcss": "^1.16.0",
     "markdown-it": "^14.0.0"
